@@ -1,0 +1,293 @@
+{
+  "date": "2026-10-10",
+  "purpose": "AZ-900無料問題・PDF・用語辞典の参照先（後日Codexで試験／辞書アプリを作成するため）",
+  "notice": "無料で閲覧可能であっても再配布・自作アプリへの大量転載が認められるとは限りません。公式演習問題の自動取得・転載は許可確認が必要です。非公式解答はMicrosoft Learnで照合してください。",
+  "sources": [
+    {
+      "group": "Microsoft公式",
+      "title": "AZ-900公式試験ページ（日本語・練習評価への入口）",
+      "url": "https://learn.microsoft.com/ja-jp/certifications/exams/az-900/",
+      "type": "online_practice",
+      "language": "ja",
+      "quantity": "非公開",
+      "access": "無料・Microsoftアカウント",
+      "reuse": "利用規約の確認が必要",
+      "note": "公式練習評価を利用。正答、理由、参照リンクあり。"
+    },
+    {
+      "group": "Microsoft公式",
+      "title": "AZ-900学習ガイド（2026-07-20版）",
+      "url": "https://learn.microsoft.com/ja-jp/credentials/certifications/resources/study-guides/az-900",
+      "type": "syllabus",
+      "language": "ja",
+      "quantity": "3領域",
+      "access": "無料",
+      "reuse": "参照用",
+      "note": "収集問題を2026年の試験領域に分類する基準。"
+    },
+    {
+      "group": "日本語で解ける問題",
+      "title": "Pass Harbor AZ-900",
+      "url": "https://www.pass-harbor.com/jp/ja/microsoft-azure-fundamentals-az-900-practice-test",
+      "type": "online_practice",
+      "language": "ja",
+      "quantity": "601問（サイト公称）",
+      "access": "無料・登録不要",
+      "reuse": "再転載の許諾確認が必要",
+      "note": "2026年版。日本語問題と24枚のフラッシュカード。"
+    },
+    {
+      "group": "日本語で解ける問題",
+      "title": "Azure資格の森 練習問題",
+      "url": "https://azure-exam-master.com/az-900/practice-test/",
+      "type": "online_practice",
+      "language": "ja",
+      "quantity": "20問",
+      "access": "無料・登録不要",
+      "reuse": "再転載の許諾確認が必要",
+      "note": "2026-08オリジナル問題、解説への参照。"
+    },
+    {
+      "group": "日本語で解ける問題",
+      "title": "IT資格道場",
+      "url": "https://www.shikaku-doujou.com/",
+      "type": "online_practice",
+      "language": "ja",
+      "quantity": "各資格50問は登録不要（サイト公称）",
+      "access": "一部無料・登録で無料模試",
+      "reuse": "再転載の許諾確認が必要",
+      "note": "サイト内からAZ-900を選択。問題集全体が無料とは限らない。"
+    },
+    {
+      "group": "英語で解ける問題",
+      "title": "CertBlaze AZ-900 Practice Questions",
+      "url": "https://www.certblaze.com/microsoft/az-900/questions",
+      "type": "online_practice",
+      "language": "en",
+      "quantity": "220問無料／427問中",
+      "access": "無料閲覧・登録不要",
+      "reuse": "再転載の許諾確認が必要",
+      "note": "2026-08更新。各問解説付き。"
+    },
+    {
+      "group": "英語で解ける問題",
+      "title": "Prep Arcade AZ-900",
+      "url": "https://preparcade.com/az900/practice-questions/",
+      "type": "online_practice",
+      "language": "en",
+      "quantity": "600問の問題バンク（サイト公称）",
+      "access": "サイトは無料利用と案内",
+      "reuse": "再転載の許諾確認が必要",
+      "note": "公式文書の引用出典つきと案内。"
+    },
+    {
+      "group": "英語で解ける問題",
+      "title": "CertCrush 2026演習",
+      "url": "https://www.certcrush.app/blog/az-900-practice-questions-25-exam-style-examples",
+      "type": "online_practice",
+      "language": "en",
+      "quantity": "25問",
+      "access": "無料",
+      "reuse": "再転載の許諾確認が必要",
+      "note": "正解・不正解の選択肢ごとの説明。"
+    },
+    {
+      "group": "英語で解ける問題",
+      "title": "ExamSprintLab AZ-900演習",
+      "url": "https://examsprintlab.com/exams/az-900/practice-test/",
+      "type": "online_practice",
+      "language": "en",
+      "quantity": "20問",
+      "access": "無料",
+      "reuse": "再転載の許諾確認が必要",
+      "note": "2026-09更新。分野ごとのオリジナル問題。"
+    },
+    {
+      "group": "英語で解ける問題",
+      "title": "Sailor.sh AZ-900演習",
+      "url": "https://sailor.sh/blog/az-900-practice-questions/",
+      "type": "online_practice",
+      "language": "en",
+      "quantity": "25問",
+      "access": "無料",
+      "reuse": "再転載の許諾確認が必要",
+      "note": "3領域に分類したケース問題。"
+    },
+    {
+      "group": "英語で解ける問題",
+      "title": "SaveMyCert AZ-900",
+      "url": "https://www.savemycert.com/practice/azure-fundamentals/",
+      "type": "online_practice",
+      "language": "en",
+      "quantity": "329問の問題バンク（サイト公称）",
+      "access": "無料ゲスト5問/日; 無料登録30問/日",
+      "reuse": "再転載の許諾確認が必要",
+      "note": "全329問を無制限に無料利用できるわけではない。"
+    },
+    {
+      "group": "GitHub・機械処理向け",
+      "title": "SiteQ8 AZ-900 Quiz / Glossary",
+      "url": "https://github.com/SiteQ8/AZ-900-Azure-Fundamentals",
+      "type": "github_repo",
+      "language": "en/ar",
+      "quantity": "60問 + 用語集",
+      "access": "無料・GitHub",
+      "reuse": "MITライセンス（ライセンス本文を確認）",
+      "note": "Quiz+Glossary+チートシート。Codex入力候補。"
+    },
+    {
+      "group": "GitHub・機械処理向け",
+      "title": "quizplay-io AZ-900 Question Set 1",
+      "url": "https://github.com/quizplay-io/quiz-player-quizzes-az-900-question-set-1",
+      "type": "github_repo",
+      "language": "en",
+      "quantity": "36問",
+      "access": "無料・GitHub",
+      "reuse": "AGPL-3.0（配布条件・ネットワーク利用時の条件に注意）",
+      "note": "quiz.jsonとquestionsフォルダ。AI生成問題のため内容精査が必要。"
+    },
+    {
+      "group": "GitHub・機械処理向け",
+      "title": "EricKart AZ-900 Study Kit",
+      "url": "https://github.com/EricKart/AZ-900_RE",
+      "type": "github_repo",
+      "language": "en",
+      "quantity": "45問×2回の模試 + 分野別クイズ",
+      "access": "無料・GitHub",
+      "reuse": "再利用ライセンス未確認",
+      "note": "quizzes/ に問題データ、modules/に解説、pdf/にPDF。"
+    },
+    {
+      "group": "GitHub・機械処理向け",
+      "title": "ddewaele QuizWebApp AZ-900",
+      "url": "https://github.com/ddewaele/QuizWebApp",
+      "type": "github_repo",
+      "language": "en",
+      "quantity": "問題数未検証",
+      "access": "無料・GitHub",
+      "reuse": "ライセンス確認が必要",
+      "note": "az-900/quiz/ 配下のJSON問題群と共通のJSON形式仕様。"
+    },
+    {
+      "group": "GitHub・機械処理向け",
+      "title": "roshmadosh AZ-900 Notes",
+      "url": "https://github.com/roshmadosh/azure-az900-notes",
+      "type": "github_repo",
+      "language": "en",
+      "quantity": "問題数未検証",
+      "access": "無料・GitHub",
+      "reuse": "ライセンス確認が必要",
+      "note": "HTML形式の演習＋Markdown解説。2023年基準のため古さに注意。"
+    },
+    {
+      "group": "PDFへの直リンク",
+      "title": "AZ-900 Sample Questions (20 questions, 18 pages)",
+      "url": "https://www.kasolution.com.br/cp/AZ-900-SampleQuestions.pdf",
+      "type": "pdf_practice",
+      "language": "en",
+      "quantity": "20問・18ページ",
+      "access": "無料PDF",
+      "reuse": "PDFの権利者・利用条件を確認",
+      "note": "2022-01版。Q17に解答と根拠説明が矛盾する箇所あり。参考用のみ。"
+    },
+    {
+      "group": "PDFへの直リンク",
+      "title": "SiteQ8 AZ-900 Quick Reference",
+      "url": "https://github.com/SiteQ8/AZ-900-Azure-Fundamentals/blob/main/AZ-900-Quick-Reference.pdf",
+      "type": "pdf_reference",
+      "language": "en",
+      "quantity": "早見表1ページ",
+      "access": "無料PDF（GitHub）",
+      "reuse": "リポジトリにMITと表記",
+      "note": "用語辞典アプリの語彙候補。"
+    },
+    {
+      "group": "PDFへの直リンク",
+      "title": "EricKart AZ-900 Complete Study Guide",
+      "url": "https://github.com/EricKart/AZ-900_RE/blob/main/pdf/AZ-900-Complete-Study-Guide.pdf",
+      "type": "pdf_reference",
+      "language": "en",
+      "quantity": "学習資料",
+      "access": "無料PDF（GitHub）",
+      "reuse": "再利用ライセンス未確認",
+      "note": "問題PDFではなく解説書。"
+    },
+    {
+      "group": "PDFへの直リンク",
+      "title": "EricKart AZ-900 Cheat Sheets",
+      "url": "https://github.com/EricKart/AZ-900_RE/blob/main/pdf/AZ-900-Cheat-Sheets.pdf",
+      "type": "pdf_reference",
+      "language": "en",
+      "quantity": "暗記資料",
+      "access": "無料PDF（GitHub）",
+      "reuse": "再利用ライセンス未確認",
+      "note": "重要用語整理に使いやすい。"
+    },
+    {
+      "group": "PDFへの直リンク",
+      "title": "EricKart AZ-900 Tricks and Mnemonics",
+      "url": "https://github.com/EricKart/AZ-900_RE/blob/main/pdf/AZ-900-Tricks-and-Mnemonics.pdf",
+      "type": "pdf_reference",
+      "language": "en",
+      "quantity": "暗記資料",
+      "access": "無料PDF（GitHub）",
+      "reuse": "再利用ライセンス未確認",
+      "note": "似たサービスの識別・暗記の参考。"
+    },
+    {
+      "group": "PDFへの直リンク",
+      "title": "GitHub AZ-900 Questions with Explanation",
+      "url": "https://github.com/saurabhj4in/Azure-AZ-900-StudyMaterial/blob/main/AZ-900%20Questions%20with%20Explanation.pdf",
+      "type": "pdf_practice",
+      "language": "en",
+      "quantity": "問題数未検証",
+      "access": "無料PDF（GitHub）",
+      "reuse": "転載元・利用許諾未確認",
+      "note": "旧資料の可能性。問題の出典・最新性を検証してから利用。"
+    },
+    {
+      "group": "PDFへの直リンク",
+      "title": "GitHub AZ900 Questions PDF",
+      "url": "https://github.com/saurabhj4in/Azure-AZ-900-StudyMaterial/blob/main/AZ900%20Questions.pdf",
+      "type": "pdf_practice",
+      "language": "en",
+      "quantity": "問題数未検証",
+      "access": "無料PDF（GitHub）",
+      "reuse": "転載元・利用許諾未確認",
+      "note": "旧資料の可能性あり。利用前に出典・正答の照合が必要。"
+    },
+    {
+      "group": "辞書・定義",
+      "title": "Microsoft Azure: IaaS/PaaS/SaaSとは",
+      "url": "https://azure.microsoft.com/ja-jp/resources/cloud-computing-dictionary/what-are-iaas-paas-and-saas",
+      "type": "glossary",
+      "language": "ja",
+      "quantity": "主要3モデル",
+      "access": "無料",
+      "reuse": "定義を参照して独自要約",
+      "note": "公式の用語解説。"
+    },
+    {
+      "group": "辞書・定義",
+      "title": "Microsoft Azure ドキュメント",
+      "url": "https://learn.microsoft.com/ja-jp/azure/",
+      "type": "glossary",
+      "language": "ja",
+      "quantity": "サービス全般",
+      "access": "無料",
+      "reuse": "引用・転載には条件",
+      "note": "辞書アプリの定義・裏取りに利用。"
+    },
+    {
+      "group": "辞書・定義",
+      "title": "bloomikko AZ-900 Notes and Definitions",
+      "url": "https://github.com/bloomikko/AZ-900",
+      "type": "glossary",
+      "language": "en",
+      "quantity": "用語ノート",
+      "access": "無料・GitHub",
+      "reuse": "MITライセンス（リポジトリ表記）",
+      "note": "Azure用語のクイックリファレンス。古い記述は更新確認。"
+    }
+  ]
+}
