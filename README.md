@@ -6,6 +6,14 @@ Microsoft Azure Fundamentals（AZ-900）を学ぶための、日本語の完全�
 
 独自問題 **127問**、独自日本語用語辞典 **156語**。2026-10-10に[Microsoft公式学習ガイド](https://learn.microsoft.com/ja-jp/credentials/certifications/resources/study-guides/az-900)を確認し、**2026年7月20日版**を基準にしています。Microsoftの公式製品ではありません。実際の試験問題・流出問題は収録していません。
 
+**公開アプリ → [https://kosukechun.github.io/az900/](https://kosukechun.github.io/az900/)**
+
+2026-10-10にGitHub Actionsのビルド・50件の自動テスト・Pagesデプロイ成功を確認しました。公開URLで演習、375px表示、オフラインでの回答復元も確認済みです。[公開時のActions実行](https://github.com/kosukechun/az900/actions/runs/38027450613)
+
+![PCのホーム画面](docs/screenshots/home-desktop.png)
+
+スマートフォンの画面例は[こちら](docs/screenshots/home-mobile.png)。
+
 ## すぐに起動する
 
 推奨環境は **Node.js 22.12以上（22系）、npm、Chrome/Edge/Firefox/Safariの現行版**です。以下はWindows PowerShellで実行できます。`PS C:\...>` は入力せず、コマンドだけを1行ずつ実行してください。
@@ -120,7 +128,7 @@ Zodで形式・バージョン・ID・型・値域をチェックします。100
 
 ## GitHub Pagesへ公開する
 
-現在のリモートは **https://github.com/kosukechun/az900.git** です。ここを使う場合の公開予定URLは **https://kosukechun.github.io/az900/** です。これは設定が完了したときのURLであり、READMEへの記載だけで公開済みになるものではありません。
+現在のリモートは **https://github.com/kosukechun/az900.git** です。**https://kosukechun.github.io/az900/** へ公開済みで、初回のPages設定も完了しています。次回は `main` にpushすると自動検証・公開されます。以下の初回設定は別のリポジトリに移す場合の手順です。
 
 ### 初回設定（GitHubの画面で1回だけ）
 

@@ -10,6 +10,7 @@
 | Playwright / Chromium | **21件成功** |
 | npm audit | 既知の脆弱性0件（実装時のインストール結果） |
 | 公開アーティファクト | PDF・個人データ・認証情報なし。独自教材のみ |
+| 開発者用インポート | 隔離した作業フォルダでJSON追加・CSV追加・重複拒否を確認 |
 
 単体・UI・DB検証は、正誤、順不同の複数選択、1タップ解説、二重クリック、回答固定、数字/Enter、初期OFFの自動遷移、再描画時の自動遷移タイマー、分野・テーマ・件数・重複なし・各学習モード、最新回答での状態再計算、連続日数、模試の終了時採点と二重採点防止、問題更新時の採点拒否、DB再開、v1→v2移行、バックアップ出力・置換・統合・ID重複・形式不正・衝突ロールバックをカバーする。
 
@@ -42,3 +43,11 @@ npm run test:e2e
 ```
 
 GitHub Actionsも同じ検証をLinux/Node 22で実行してからPagesへ公開する。
+
+## 公開環境での確認
+
+[GitHub Actions](https://github.com/kosukechun/az900/actions/runs/38027450613)で、アプリのコミット `b19894edb28b6cf8682c92059679cb2d5e869ca3` のbuild・deployともに成功。Linux環境でもVitest 29件とPlaywright 21件が成功している。
+
+[公開アプリ](https://kosukechun.github.io/az900/)はHTTP 200。127問・156語の配信、PWA manifestのscopeとstart_url=`/az900/`、1タップ回答・解説、375pxで横スクロールなし、Service Workerキャッシュ後のオフライン再読み込み・回答復元を本番URLで確認。JavaScript例外0件。確認用のブラウザは独立した一時プロファイルで、利用者の実際の学習記録を操作していない。
+
+[PC画面例](screenshots/home-desktop.png) / [モバイル画面例](screenshots/home-mobile.png) は公開アプリの初期状態。
