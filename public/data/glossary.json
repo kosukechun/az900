@@ -1,0 +1,2886 @@
+[
+  {
+    "id": "azure",
+    "japaneseName": "Azure",
+    "englishName": "Microsoft Azure",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "Microsoftが提供するクラウドサービス群。",
+    "description": "計算、保存、ネットワークなどを必要に応じて組み合わせ、アプリを動かす基盤を作れる。",
+    "example": "Webアプリとそのデータをクラウドで運用する。",
+    "keyPoint": "単一製品ではなく多くのサービスの集合。",
+    "relatedTermIds": [
+      "cloud-computing",
+      "subscription"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-core-architectural-components-of-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "cloud-computing",
+    "japaneseName": "クラウドコンピューティング",
+    "englishName": "Cloud Computing",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "ネットワーク越しにITリソースを利用する方式。",
+    "description": "サーバーなどを自分で所有する代わりに、サービスとして必要な量を利用する。",
+    "example": "短期間の検証用サーバーを借りる。",
+    "keyPoint": "利用形態と責任分担をセットで理解する。",
+    "relatedTermIds": [
+      "public-cloud",
+      "shared-responsibility"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-compute/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "iaas",
+    "japaneseName": "サービスとしてのインフラストラクチャ",
+    "englishName": "Infrastructure as a Service",
+    "abbreviation": "IaaS",
+    "category": "cloud",
+    "summary": "仮想マシンなどの基盤を借りるサービスモデル。",
+    "description": "物理設備は提供者が管理し、利用者は通常OSやアプリの更新を担当する。",
+    "example": "Azure VMに独自のOS設定と業務アプリを導入する。",
+    "keyPoint": "自由度が高い分、利用者の管理範囲も広い。",
+    "relatedTermIds": [
+      "paas",
+      "saas",
+      "vm"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-service-types/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "paas",
+    "japaneseName": "サービスとしてのプラットフォーム",
+    "englishName": "Platform as a Service",
+    "abbreviation": "PaaS",
+    "category": "cloud",
+    "summary": "アプリ開発・実行の土台を利用するモデル。",
+    "description": "OSなどの基盤管理を提供者に任せ、利用者はアプリやデータに集中できる。",
+    "example": "App ServiceにWebアプリを配置する。",
+    "keyPoint": "アプリとデータの責任は利用者に残る。",
+    "relatedTermIds": [
+      "iaas",
+      "saas",
+      "app-service"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-service-types/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "saas",
+    "japaneseName": "サービスとしてのソフトウェア",
+    "englishName": "Software as a Service",
+    "abbreviation": "SaaS",
+    "category": "cloud",
+    "summary": "完成したソフトウェアをサービスとして利用するモデル。",
+    "description": "利用者はアプリを一から運用せず、設定やユーザー、保存データを管理する。",
+    "example": "Microsoft 365で共同編集する。",
+    "keyPoint": "ソフトウェア利用でもデータ管理責任は残る。",
+    "relatedTermIds": [
+      "iaas",
+      "paas",
+      "shared-responsibility"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-service-types/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "public-cloud",
+    "japaneseName": "パブリッククラウド",
+    "englishName": "Public Cloud",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "事業者が広く顧客へ提供するクラウド。",
+    "description": "利用者は設備を購入せずサービスを使う。共有基盤でも利用者のデータが公開されるわけではない。",
+    "example": "Azureで新しいWebサービスを立ち上げる。",
+    "keyPoint": "「パブリック」はデータの公開を意味しない。",
+    "relatedTermIds": [
+      "private-cloud",
+      "hybrid-cloud"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-compute/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "private-cloud",
+    "japaneseName": "プライベートクラウド",
+    "englishName": "Private Cloud",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "特定の組織専用のクラウド環境。",
+    "description": "専用の環境を組織または委託先が管理する。運用責任や費用を考慮して選ぶ。",
+    "example": "社内専用設備にセルフサービス型の基盤を構築する。",
+    "keyPoint": "専用利用と管理負担をセットで考える。",
+    "relatedTermIds": [
+      "public-cloud",
+      "hybrid-cloud"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-compute/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "hybrid-cloud",
+    "japaneseName": "ハイブリッドクラウド",
+    "englishName": "Hybrid Cloud",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "プライベート環境とパブリッククラウドを組み合わせる方式。",
+    "description": "接続や運用の連携により、それぞれの強みを活用する。単に複数サービスを使うこととは区別する。",
+    "example": "社内システムとAzureをVPNで接続する。",
+    "keyPoint": "専用環境と公開クラウドの組み合わせ。",
+    "relatedTermIds": [
+      "private-cloud",
+      "public-cloud",
+      "vpn-gateway"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-compute/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "shared-responsibility",
+    "japaneseName": "責任共有モデル",
+    "englishName": "Shared Responsibility Model",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "提供者と利用者で管理責任を分担する考え方。",
+    "description": "物理設備は提供者、データやアカウントなどは利用者にも責任があり、OSなどの担当はモデルで変わる。",
+    "example": "IaaSのゲストOSを利用者が更新する。",
+    "keyPoint": "SaaSでも利用者の責任がゼロにはならない。",
+    "relatedTermIds": [
+      "iaas",
+      "paas",
+      "saas"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-compute/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "consumption-based",
+    "japaneseName": "従量課金",
+    "englishName": "Consumption-based Pricing",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "利用量に応じて費用が発生するモデル。",
+    "description": "利用する容量や時間などが費用に影響する。サービスによって課金単位は異なる。",
+    "example": "VMの利用時間に応じて料金を支払う。",
+    "keyPoint": "使わないリソースにも残存費用がないか確認。",
+    "relatedTermIds": [
+      "opex",
+      "cost-management"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-compute/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "capex",
+    "japaneseName": "設備投資",
+    "englishName": "Capital Expenditure",
+    "abbreviation": "CapEx",
+    "category": "cloud",
+    "summary": "設備などへ行う初期投資。",
+    "description": "自社サーバーの購入のように、長期間使う設備を先に取得する支出を指す。",
+    "example": "データセンターの機器を購入する。",
+    "keyPoint": "クラウドの運用支出との違いを理解する。",
+    "relatedTermIds": [
+      "opex",
+      "consumption-based"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-compute/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "opex",
+    "japaneseName": "運用支出",
+    "englishName": "Operational Expenditure",
+    "abbreviation": "OpEx",
+    "category": "cloud",
+    "summary": "運用のために継続して発生する支出。",
+    "description": "クラウドサービス利用料のように、日々の利用に応じて費用を負担する考え方。",
+    "example": "月ごとにクラウド利用料を支払う。",
+    "keyPoint": "初期投資を抑えても継続費用の管理が必要。",
+    "relatedTermIds": [
+      "capex",
+      "consumption-based"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-compute/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "serverless",
+    "japaneseName": "サーバーレス",
+    "englishName": "Serverless Computing",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "基盤の運用を意識せずコードなどを実行する方式。",
+    "description": "サーバーは存在するが提供者が管理する。課金やスケールの動作はサービスとプランで異なる。",
+    "example": "HTTP要求でFunctionsを起動する。",
+    "keyPoint": "サーバーが存在しないという意味ではない。",
+    "relatedTermIds": [
+      "functions",
+      "paas"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-compute/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "high-availability",
+    "japaneseName": "高可用性",
+    "englishName": "High Availability",
+    "abbreviation": "HA",
+    "category": "cloud",
+    "summary": "障害があってもサービスを利用しやすくする性質。",
+    "description": "複数の構成要素や障害範囲へ分散して、停止の影響を減らす。",
+    "example": "VMを複数の可用性ゾーンに配置する。",
+    "keyPoint": "可用性を高めるには適切な構成が必要。",
+    "relatedTermIds": [
+      "availability-zone",
+      "redundancy"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-benefits-use-cloud-services/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "scalability",
+    "japaneseName": "スケーラビリティ",
+    "englishName": "Scalability",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "需要に応じて処理能力を増減できる性質。",
+    "description": "単一リソースの能力を変える方法と、リソース数を変える方法がある。",
+    "example": "アクセス増加に合わせてVM数を増やす。",
+    "keyPoint": "縦方向と横方向のスケールを区別する。",
+    "relatedTermIds": [
+      "scale-up",
+      "scale-out",
+      "elasticity"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-benefits-use-cloud-services/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "elasticity",
+    "japaneseName": "弾力性",
+    "englishName": "Elasticity",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "負荷の変化に応じて容量を柔軟に合わせる性質。",
+    "description": "需要増加時だけ増強し、減少時は縮小することで性能と費用のバランスをとる。",
+    "example": "繁忙時間だけアプリのインスタンスを増やす。",
+    "keyPoint": "増やすことだけでなく縮小も含む。",
+    "relatedTermIds": [
+      "scalability",
+      "autoscale"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-benefits-use-cloud-services/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "scale-up",
+    "japaneseName": "スケールアップ",
+    "englishName": "Scale Up",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "一つのリソースの能力を上げること。",
+    "description": "CPUやメモリを増やす縦方向の拡張。縮小はスケールダウンという。",
+    "example": "VMのサイズを大きくする。",
+    "keyPoint": "台数を増やすスケールアウトと区別。",
+    "relatedTermIds": [
+      "scale-out",
+      "vm",
+      "scalability"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-benefits-use-cloud-services/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "scale-out",
+    "japaneseName": "スケールアウト",
+    "englishName": "Scale Out",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "リソースの数を増やすこと。",
+    "description": "複数インスタンスへ仕事を分散する横方向の拡張。減らす操作はスケールイン。",
+    "example": "Webサーバーを2台から4台に増やす。",
+    "keyPoint": "アプリ側も複数台構成に対応させる。",
+    "relatedTermIds": [
+      "scale-up",
+      "vm-scale-sets"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-benefits-use-cloud-services/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "reliability",
+    "japaneseName": "信頼性",
+    "englishName": "Reliability",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "障害から回復し、期待する機能を続ける性質。",
+    "description": "冗長化や復旧手順などを組み合わせ、故障が起きる前提でシステムを設計する。",
+    "example": "別リージョンの復旧環境を用意する。",
+    "keyPoint": "故障を完全に無くす前提にしない。",
+    "relatedTermIds": [
+      "high-availability",
+      "disaster-recovery"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-benefits-use-cloud-services/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "predictability",
+    "japaneseName": "予測可能性",
+    "englishName": "Predictability",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "性能や費用を見通しやすくする性質。",
+    "description": "適切な構成、監視、見積もりにより、将来の動作や支出を計画しやすくなる。",
+    "example": "想定負荷で構成を評価して月額を見積もる。",
+    "keyPoint": "構成と利用量の把握が予測の前提。",
+    "relatedTermIds": [
+      "pricing-calculator",
+      "monitor"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-benefits-use-cloud-services/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "governance",
+    "japaneseName": "ガバナンス",
+    "englishName": "Governance",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "組織の規則に沿って利用を管理する仕組み。",
+    "description": "リソース設定の基準、権限、費用などのルールを継続して適用・確認する。",
+    "example": "使用リージョンをAzure Policyで制限する。",
+    "keyPoint": "規則を決めるだけでなく適用と確認も行う。",
+    "relatedTermIds": [
+      "policy",
+      "rbac",
+      "cost-management"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-benefits-use-cloud-services/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "manageability",
+    "japaneseName": "管理の容易さ",
+    "englishName": "Manageability",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "リソースや運用を扱いやすくする性質。",
+    "description": "自動化、共通ツール、テンプレートなどで反復作業を減らし、管理を一貫させる。",
+    "example": "CLIで環境をまとめて作成する。",
+    "keyPoint": "クラウドの管理とクラウドによる管理を考える。",
+    "relatedTermIds": [
+      "azure-cli",
+      "arm"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-benefits-use-cloud-services/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "redundancy",
+    "japaneseName": "冗長性",
+    "englishName": "Redundancy",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "障害に備え複数の構成要素やコピーを持つこと。",
+    "description": "単一の故障で全体が止まらないようにする。ただしデータの誤削除への対策は別途必要。",
+    "example": "複数ゾーンにストレージのコピーを保持する。",
+    "keyPoint": "冗長化はバックアップの代わりとは限らない。",
+    "relatedTermIds": [
+      "zrs",
+      "backup",
+      "high-availability"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-redundancy",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "disaster-recovery",
+    "japaneseName": "災害復旧",
+    "englishName": "Disaster Recovery",
+    "abbreviation": "DR",
+    "category": "cloud",
+    "summary": "大きな障害の後にシステムを回復させる計画と手段。",
+    "description": "別拠点への複製、バックアップ、切り替え手順を準備し、復旧の目標を定める。",
+    "example": "リージョン障害時に別リージョンへ切り替える。",
+    "keyPoint": "通常の高可用性と復旧計画を合わせて設計する。",
+    "relatedTermIds": [
+      "reliability",
+      "region-pair",
+      "backup"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/2-virtual-machines",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "on-premises",
+    "japaneseName": "オンプレミス",
+    "englishName": "On-premises",
+    "abbreviation": "",
+    "category": "cloud",
+    "summary": "組織が自ら用意する施設内のIT環境。",
+    "description": "自社や契約した拠点に機器を設置して運用する。クラウドとの接続も可能。",
+    "example": "社内サーバールームで業務システムを動かす。",
+    "keyPoint": "場所の違いとクラウドモデルを混同しない。",
+    "relatedTermIds": [
+      "hybrid-cloud",
+      "arc"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cloud-compute/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "azure-resource",
+    "japaneseName": "Azureリソース",
+    "englishName": "Azure Resource",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "Azureで作成し管理する個々の対象。",
+    "description": "VMやストレージアカウントなどを一つの管理対象として扱う。",
+    "example": "業務アプリ用のVMを作成する。",
+    "keyPoint": "リソースを管理階層に沿って整理する。",
+    "relatedTermIds": [
+      "resource-group",
+      "arm"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-core-architectural-components-of-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "resource-group",
+    "japaneseName": "リソースグループ",
+    "englishName": "Resource Group",
+    "abbreviation": "RG",
+    "category": "services",
+    "summary": "関連するリソースをまとめる管理用の容器。",
+    "description": "同じライフサイクルのリソースを一緒に管理する。グループと各リソースのリージョンは同じでなくてもよい。",
+    "example": "検証環境のVMとネットワークをまとめる。",
+    "keyPoint": "リソースグループは入れ子にできない。",
+    "relatedTermIds": [
+      "azure-resource",
+      "subscription"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-core-architectural-components-of-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "subscription",
+    "japaneseName": "サブスクリプション",
+    "englishName": "Subscription",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "Azure利用の管理や課金の区切り。",
+    "description": "リソースグループを含み、権限や使用状況を整理する境界として使う。",
+    "example": "開発用と本番用を分ける。",
+    "keyPoint": "管理グループより下、リソースグループより上。",
+    "relatedTermIds": [
+      "management-group",
+      "resource-group"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-core-architectural-components-of-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "management-group",
+    "japaneseName": "管理グループ",
+    "englishName": "Management Group",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "複数サブスクリプションを束ねる管理階層。",
+    "description": "上位で設定したポリシーやアクセス権を下位へ適用し、組織全体の統制を支える。",
+    "example": "本番サブスクリプション群に共通の規則を適用する。",
+    "keyPoint": "サブスクリプションをまたぐ管理に使う。",
+    "relatedTermIds": [
+      "subscription",
+      "policy",
+      "rbac"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-core-architectural-components-of-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "region",
+    "japaneseName": "リージョン",
+    "englishName": "Region",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "Azureリソースを配置する地理的な領域。",
+    "description": "サービスの提供状況、遅延、所在地の要件などを考慮して選ぶ。",
+    "example": "利用者に近いリージョンへアプリを配置する。",
+    "keyPoint": "全リージョンで全サービスが使えるわけではない。",
+    "relatedTermIds": [
+      "availability-zone",
+      "region-pair"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-core-architectural-components-of-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "region-pair",
+    "japaneseName": "リージョンペア",
+    "englishName": "Region Pair",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "一部のリージョン間に定められた対応関係。",
+    "description": "広域障害への対策などに利用されるが、すべてのリージョンにペアがあるわけではない。",
+    "example": "対応サービスの地理冗長性を検討する。",
+    "keyPoint": "ペアがあるだけではアプリが自動複製されない。",
+    "relatedTermIds": [
+      "region",
+      "grs"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-core-architectural-components-of-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "availability-zone",
+    "japaneseName": "可用性ゾーン",
+    "englishName": "Availability Zone",
+    "abbreviation": "AZ",
+    "category": "services",
+    "summary": "一つのリージョン内の独立した障害範囲。",
+    "description": "電源や冷却、ネットワークを分離した場所へ配置し、施設障害の影響を減らす。",
+    "example": "Webサーバーを複数ゾーンに分散する。",
+    "keyPoint": "ゾーンは別リージョンではない。",
+    "relatedTermIds": [
+      "region",
+      "availability-set",
+      "zrs"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-core-architectural-components-of-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "datacenter",
+    "japaneseName": "データセンター",
+    "englishName": "Datacenter",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "サーバーやネットワーク設備を収める施設。",
+    "description": "電源、冷却、物理的な保護などを備え、Azureの物理基盤を構成する。",
+    "example": "Azureが物理サーバーを保守する。",
+    "keyPoint": "クラウド提供者の管理責任に含まれる。",
+    "relatedTermIds": [
+      "region",
+      "shared-responsibility"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-core-architectural-components-of-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "sovereign-region",
+    "japaneseName": "ソブリンリージョン",
+    "englishName": "Sovereign Region",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "特定の主権・規制要件に対応する分離環境のリージョン。",
+    "description": "通常のグローバルAzureとは分離されたクラウド環境に設けられるものがある。",
+    "example": "政府などの要件に適した環境を検討する。",
+    "keyPoint": "利用条件やサービス範囲は環境ごとに確認する。",
+    "relatedTermIds": [
+      "region",
+      "governance"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-core-architectural-components-of-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "vm",
+    "japaneseName": "Azure Virtual Machines",
+    "englishName": "Azure Virtual Machines",
+    "abbreviation": "VM",
+    "category": "services",
+    "summary": "Azureで仮想サーバーを実行するIaaS。",
+    "description": "利用者がゲストOSやソフトウェアを管理し、サイズやディスク、ネットワークを選ぶ。",
+    "example": "既存のサーバーアプリを移行する。",
+    "keyPoint": "物理機器の保守とゲストOSの保守を分ける。",
+    "relatedTermIds": [
+      "virtual-machine",
+      "iaas",
+      "managed-disks"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/2-virtual-machines",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "virtual-machine",
+    "japaneseName": "仮想マシン",
+    "englishName": "Virtual Machine",
+    "abbreviation": "VM",
+    "category": "services",
+    "summary": "ソフトウェアで構成する仮想的なコンピューター。",
+    "description": "仮想化基盤上でOSを実行する。Azure VMはそのクラウドサービスの一つ。",
+    "example": "一つの物理基盤で複数の仮想OSを動かす。",
+    "keyPoint": "コンテナーとのOS分離の違いを理解する。",
+    "relatedTermIds": [
+      "vm",
+      "container"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/2-virtual-machines",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "vm-scale-sets",
+    "japaneseName": "仮想マシンスケールセット",
+    "englishName": "Virtual Machine Scale Sets",
+    "abbreviation": "VMSS",
+    "category": "services",
+    "summary": "複数のVMをまとめて展開・管理するサービス。",
+    "description": "同種の処理をするVM群の規模を調整し、大量のインスタンスを扱いやすくする。",
+    "example": "負荷に応じてWebサーバーを増減する。",
+    "keyPoint": "台数の拡張はスケールアウト。",
+    "relatedTermIds": [
+      "vm",
+      "scale-out",
+      "autoscale"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/2-virtual-machines",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "availability-set",
+    "japaneseName": "可用性セット",
+    "englishName": "Availability Set",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "VMを異なる障害・更新の単位へ分散する仕組み。",
+    "description": "同時障害や保守による停止の影響を抑える。同一リージョン内のゾーン分散とは別の考え方。",
+    "example": "複数VMを障害ドメインと更新ドメインへ分ける。",
+    "keyPoint": "可用性ゾーンとの違いを押さえる。",
+    "relatedTermIds": [
+      "availability-zone",
+      "fault-domain",
+      "update-domain"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/2-virtual-machines",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "fault-domain",
+    "japaneseName": "障害ドメイン",
+    "englishName": "Fault Domain",
+    "abbreviation": "FD",
+    "category": "services",
+    "summary": "共通の設備障害の影響を受ける単位。",
+    "description": "可用性セットでは、共通の電源やネットワークを持つVM群を分ける。",
+    "example": "同一ラックの障害が全VMへ広がるのを抑える。",
+    "keyPoint": "予定保守の更新ドメインと区別。",
+    "relatedTermIds": [
+      "availability-set",
+      "update-domain"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/2-virtual-machines",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "update-domain",
+    "japaneseName": "更新ドメイン",
+    "englishName": "Update Domain",
+    "abbreviation": "UD",
+    "category": "services",
+    "summary": "予定保守でまとめて更新される単位。",
+    "description": "可用性セットではVM群を分け、保守で一度に全VMが停止しにくくする。",
+    "example": "更新時に一部VMがサービスを継続する。",
+    "keyPoint": "物理設備障害の単位とは異なる。",
+    "relatedTermIds": [
+      "fault-domain",
+      "availability-set"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/2-virtual-machines",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "virtual-desktop",
+    "japaneseName": "Azure Virtual Desktop",
+    "englishName": "Azure Virtual Desktop",
+    "abbreviation": "AVD",
+    "category": "services",
+    "summary": "Azure上でデスクトップやアプリを提供するサービス。",
+    "description": "離れた場所からWindowsのデスクトップ環境へ接続し、ユーザーの作業環境を集約する。",
+    "example": "在宅勤務者へ業務デスクトップを提供する。",
+    "keyPoint": "通常のVM用途とデスクトップ配信用途を区別。",
+    "relatedTermIds": [
+      "vm",
+      "entra-id"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/4-virtual-desktop",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "container",
+    "japaneseName": "コンテナー",
+    "englishName": "Container",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "アプリと実行に必要な依存関係をまとめる方式。",
+    "description": "ホスト側のOSカーネルを共有するため、一般にVMより軽量に扱える。",
+    "example": "同じアプリを開発環境とクラウドで実行する。",
+    "keyPoint": "VMのように個別OSを丸ごと持つ方式とは異なる。",
+    "relatedTermIds": [
+      "virtual-machine",
+      "container-instances",
+      "aks"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/5-containers",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "container-instances",
+    "japaneseName": "Azure Container Instances",
+    "englishName": "Azure Container Instances",
+    "abbreviation": "ACI",
+    "category": "services",
+    "summary": "VM管理をせずコンテナーを実行するサービス。",
+    "description": "比較的単純なコンテナーの実行に使え、実行基盤の用意を軽減できる。",
+    "example": "単発のデータ処理コンテナーを起動する。",
+    "keyPoint": "複雑なコンテナー管理には別の選択肢もある。",
+    "relatedTermIds": [
+      "container",
+      "aks",
+      "container-apps"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/5-containers",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "aks",
+    "japaneseName": "Azure Kubernetes Service",
+    "englishName": "Azure Kubernetes Service",
+    "abbreviation": "AKS",
+    "category": "services",
+    "summary": "Kubernetesを使ったコンテナー管理サービス。",
+    "description": "多数のコンテナーの展開、配置、スケールなどをオーケストレーションする。",
+    "example": "複数コンテナーで構成されたアプリを管理する。",
+    "keyPoint": "コンテナーを一つ実行することと管理基盤を区別。",
+    "relatedTermIds": [
+      "container",
+      "container-instances"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/5-containers",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "container-apps",
+    "japaneseName": "Azure Container Apps",
+    "englishName": "Azure Container Apps",
+    "abbreviation": "ACA",
+    "category": "services",
+    "summary": "コンテナーアプリを運用するマネージド基盤。",
+    "description": "Kubernetesの操作を直接担わず、コンテナー化したサービスの実行やスケールを扱える。",
+    "example": "イベント量に応じて処理サービスを増減する。",
+    "keyPoint": "コンテナーの実行方式は用途で選ぶ。",
+    "relatedTermIds": [
+      "container",
+      "aks",
+      "serverless"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/5-containers",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "app-service",
+    "japaneseName": "Azure App Service",
+    "englishName": "Azure App Service",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "WebアプリやAPIのためのPaaS。",
+    "description": "OSの管理を基盤へ任せ、アプリの配置やスケール、運用設定を行える。",
+    "example": "企業のWebサイトをホストする。",
+    "keyPoint": "OS管理を避けてWebアプリに集中する用途。",
+    "relatedTermIds": [
+      "paas",
+      "functions",
+      "vm"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/7-describe-application-hosting-options",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "functions",
+    "japaneseName": "Azure Functions",
+    "englishName": "Azure Functions",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "イベントに応じてコードを実行するサービス。",
+    "description": "HTTP要求やタイマーなどをきっかけに処理を起動する。費用やスケールはプランによる。",
+    "example": "ファイル追加時に画像を処理する。",
+    "keyPoint": "Functionsの全プランが同じ課金方式とは限らない。",
+    "relatedTermIds": [
+      "serverless",
+      "app-service"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/6-functions",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "managed-disks",
+    "japaneseName": "Azureマネージドディスク",
+    "englishName": "Azure Managed Disks",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "Azureがストレージ管理を担うVM用ディスク。",
+    "description": "OSやデータ用のブロックストレージを用意し、容量や性能の要件に合う種類を選ぶ。",
+    "example": "VMに業務データ用のディスクを追加する。",
+    "keyPoint": "VM停止後もディスク費用が残る場合がある。",
+    "relatedTermIds": [
+      "vm",
+      "storage-account"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/2-virtual-machines",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "vnet",
+    "japaneseName": "Azure仮想ネットワーク",
+    "englishName": "Azure Virtual Network",
+    "abbreviation": "VNet",
+    "category": "services",
+    "summary": "Azure上に作る論理的なプライベートネットワーク。",
+    "description": "VMなどの通信を構成し、サブネットで分割したり、社内環境と接続したりできる。",
+    "example": "アプリ用VMとデータ用VMをネットワークで結ぶ。",
+    "keyPoint": "Azure内外の接続の基本となる。",
+    "relatedTermIds": [
+      "subnet",
+      "vnet-peering",
+      "vpn-gateway"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/2-virtual-network",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "subnet",
+    "japaneseName": "サブネット",
+    "englishName": "Subnet",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "仮想ネットワークのアドレス範囲を分ける単位。",
+    "description": "役割やアクセス制御に合わせてネットワークを区切り、リソースを配置する。",
+    "example": "Web用とデータベース用の範囲を分ける。",
+    "keyPoint": "一つのVNet内に複数のサブネットを作れる。",
+    "relatedTermIds": [
+      "vnet",
+      "nsg"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/2-virtual-network",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "vnet-peering",
+    "japaneseName": "仮想ネットワークピアリング",
+    "englishName": "Virtual Network Peering",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "二つのVNetをAzureの基盤で接続する仕組み。",
+    "description": "異なるVNetのリソース間で、プライベートIPによる通信を可能にする。",
+    "example": "別部署のVNet同士を接続する。",
+    "keyPoint": "接続されたVNetが一つに統合されるわけではない。",
+    "relatedTermIds": [
+      "vnet",
+      "subnet"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/2-virtual-network",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "azure-dns",
+    "japaneseName": "Azure DNS",
+    "englishName": "Azure DNS",
+    "abbreviation": "DNS",
+    "category": "services",
+    "summary": "DNSレコードをAzureで管理するサービス。",
+    "description": "ドメイン名とアドレスなどの対応を管理する。ドメイン名の購入・登録とは別の役割。",
+    "example": "企業サイトの名前解決を提供する。",
+    "keyPoint": "DNSホスティングとドメイン登録を区別する。",
+    "relatedTermIds": [
+      "vnet",
+      "public-endpoint"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/5-domain-name-system",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "vpn-gateway",
+    "japaneseName": "Azure VPN Gateway",
+    "englishName": "Azure VPN Gateway",
+    "abbreviation": "VPN",
+    "category": "services",
+    "summary": "暗号化されたトンネルでネットワークを接続するゲートウェイ。",
+    "description": "インターネットなどを経由し、社内拠点や個人端末とAzureを接続できる。",
+    "example": "社内LANとAzure VNetを接続する。",
+    "keyPoint": "ExpressRouteの専用接続と区別。",
+    "relatedTermIds": [
+      "expressroute",
+      "site-to-site",
+      "point-to-site"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/3-virtual-private-networks",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "expressroute",
+    "japaneseName": "ExpressRoute",
+    "englishName": "Azure ExpressRoute",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "接続事業者を介してAzureへ私的に接続するサービス。",
+    "description": "通常のインターネット経路を経由せず、社内などとMicrosoftクラウドの接続を確立する。",
+    "example": "安定した大容量の拠点間接続を用意する。",
+    "keyPoint": "専用接続でも暗号化が自動保証されるわけではない。",
+    "relatedTermIds": [
+      "vpn-gateway",
+      "hybrid-cloud"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/4-expressroute",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "public-endpoint",
+    "japaneseName": "パブリックエンドポイント",
+    "englishName": "Public Endpoint",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "公開ネットワーク側から到達できる接続先。",
+    "description": "アクセス可否は認証やファイアウォールなどの設定にも依存する。",
+    "example": "公開URLを通してサービスへアクセスする。",
+    "keyPoint": "公開到達性と無認証アクセスは別。",
+    "relatedTermIds": [
+      "private-endpoint",
+      "authentication"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/2-virtual-network",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "private-endpoint",
+    "japaneseName": "プライベートエンドポイント",
+    "englishName": "Private Endpoint",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "VNet内のプライベートIPでサービスへ接続する入口。",
+    "description": "対応するPaaSなどへの通信をプライベートな経路へ限定する構成に使う。",
+    "example": "ストレージへの接続を社内接続経路で行う。",
+    "keyPoint": "サービスの公開側アクセス設定も確認する。",
+    "relatedTermIds": [
+      "vnet",
+      "public-endpoint"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/2-virtual-network",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "nsg",
+    "japaneseName": "ネットワークセキュリティグループ",
+    "englishName": "Network Security Group",
+    "abbreviation": "NSG",
+    "category": "services",
+    "summary": "送信・受信トラフィックを規則で制御する機能。",
+    "description": "IP、ポート、プロトコルなどを条件に通信を許可・拒否し、サブネットやNICへ関連付ける。",
+    "example": "管理用ポートへの接続元を制限する。",
+    "keyPoint": "ユーザーの操作権限を決めるRBACとは別。",
+    "relatedTermIds": [
+      "subnet",
+      "network-interface",
+      "rbac"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/2-virtual-network",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "network-interface",
+    "japaneseName": "ネットワークインターフェイス",
+    "englishName": "Network Interface",
+    "abbreviation": "NIC",
+    "category": "services",
+    "summary": "VMをネットワークへ接続するリソース。",
+    "description": "プライベートIPなどの構成を持ち、VMの通信に使われる。",
+    "example": "VMをアプリ用サブネットへ接続する。",
+    "keyPoint": "VM、VNet、ディスクの関係を押さえる。",
+    "relatedTermIds": [
+      "vm",
+      "vnet",
+      "private-ip"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-compute-networking-services/2-virtual-machines",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "public-ip",
+    "japaneseName": "パブリックIPアドレス",
+    "englishName": "Public IP Address",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "公開ネットワークから到達するためのIP。",
+    "description": "Azureリソースの外部接続に使う。割り当ててもアクセス規則やサービス設定は別に必要。",
+    "example": "公開する負荷分散装置へIPを割り当てる。",
+    "keyPoint": "VMすべてにパブリックIPが必須ではない。",
+    "relatedTermIds": [
+      "private-ip",
+      "public-endpoint"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/2-virtual-network",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "site-to-site",
+    "japaneseName": "サイト間VPN",
+    "englishName": "Site-to-site VPN",
+    "abbreviation": "S2S",
+    "category": "services",
+    "summary": "拠点ネットワークとAzureを結ぶVPN。",
+    "description": "拠点側のVPN装置とVPN Gatewayの間にトンネルを作り、複数端末からの通信に使う。",
+    "example": "支店のLANをAzureへ接続する。",
+    "keyPoint": "個人端末からのP2Sと区別する。",
+    "relatedTermIds": [
+      "vpn-gateway",
+      "point-to-site"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/3-virtual-private-networks",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "point-to-site",
+    "japaneseName": "ポイント対サイトVPN",
+    "englishName": "Point-to-site VPN",
+    "abbreviation": "P2S",
+    "category": "services",
+    "summary": "個人端末からAzureへ接続するVPN。",
+    "description": "VPNクライアントを使い、一台の端末からVNetへの安全な接続を確立する。",
+    "example": "在宅勤務のPCをAzure環境へ接続する。",
+    "keyPoint": "拠点LAN全体をつなぐS2Sとは異なる。",
+    "relatedTermIds": [
+      "vpn-gateway",
+      "site-to-site"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/3-virtual-private-networks",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "load-balancer",
+    "japaneseName": "Azure Load Balancer",
+    "englishName": "Azure Load Balancer",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "複数のリソースへ通信を振り分けるサービス。",
+    "description": "TCPやUDPの通信を複数のバックエンドへ分散し、正常性の確認と組み合わせる。",
+    "example": "複数VMへWebアクセスを分散する。",
+    "keyPoint": "補足学習：通信分散と自動スケールは別の役割。",
+    "relatedTermIds": [
+      "vm",
+      "high-availability",
+      "scale-out"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/load-balancer/load-balancer-overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "storage-account",
+    "japaneseName": "ストレージアカウント",
+    "englishName": "Storage Account",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "Azure Storage利用の共通管理リソース。",
+    "description": "データ保存サービス、アクセス、冗長性などの設定を管理する。種類によって使える機能が異なる。",
+    "example": "BlobとFilesを使うためのアカウントを用意する。",
+    "keyPoint": "保存するデータの種類と冗長性を選ぶ。",
+    "relatedTermIds": [
+      "blob-storage",
+      "azure-files",
+      "lrs"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/4-describe-azure-storage-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "blob-storage",
+    "japaneseName": "Azure Blob Storage",
+    "englishName": "Azure Blob Storage",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "画像や動画などの非構造化データを保存するサービス。",
+    "description": "オブジェクト単位で大量のデータを扱い、用途に応じてアクセス層を選ぶ。",
+    "example": "写真、ログ、バックアップファイルを保存する。",
+    "keyPoint": "ファイル共有やVMディスクとの用途差を理解する。",
+    "relatedTermIds": [
+      "azure-files",
+      "hot-tier",
+      "blob-container"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/4-describe-azure-storage-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "azure-files",
+    "japaneseName": "Azure Files",
+    "englishName": "Azure Files",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "クラウドで管理されるファイル共有。",
+    "description": "SMBやNFSなど対応する方式で複数の端末・サービスからファイルを扱う。",
+    "example": "既存の共有フォルダーをクラウドへ移す。",
+    "keyPoint": "Blobのオブジェクト保存と区別する。",
+    "relatedTermIds": [
+      "blob-storage",
+      "file-sync"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/4-describe-azure-storage-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "queue-storage",
+    "japaneseName": "Azure Queue Storage",
+    "englishName": "Azure Queue Storage",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "処理待ちメッセージを保持するストレージ。",
+    "description": "送信側と処理側を分離し、非同期で仕事を順次処理する構成に使う。",
+    "example": "注文処理の依頼をキューへ保存する。",
+    "keyPoint": "ファイルの保存ではなくメッセージの受け渡し。",
+    "relatedTermIds": [
+      "storage-account",
+      "functions"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/4-describe-azure-storage-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "table-storage",
+    "japaneseName": "Azure Table Storage",
+    "englishName": "Azure Table Storage",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "キーと属性を持つデータのためのNoSQLストレージ。",
+    "description": "柔軟なスキーマの構造化データを扱う。リレーショナル表の結合機能とは異なる。",
+    "example": "デバイス情報をキーで取得する。",
+    "keyPoint": "表という名前だけでSQLデータベースと判断しない。",
+    "relatedTermIds": [
+      "storage-account",
+      "blob-storage"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/4-describe-azure-storage-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "hot-tier",
+    "japaneseName": "ホットアクセス層",
+    "englishName": "Hot Access Tier",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "頻繁に読むBlob向けのオンライン層。",
+    "description": "保存費用と読み出し費用のバランスを、アクセスの多いデータ向けに調整する。",
+    "example": "日常的に配信する画像を保存する。",
+    "keyPoint": "層はアクセス頻度に合わせて選ぶ。",
+    "relatedTermIds": [
+      "cool-tier",
+      "cold-tier",
+      "archive-tier"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/access-tiers-overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "cool-tier",
+    "japaneseName": "クールアクセス層",
+    "englishName": "Cool Access Tier",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "アクセス頻度が低いBlob向けのオンライン層。",
+    "description": "保存費用を抑える一方で、アクセスなどの費用条件はホットと異なる。",
+    "example": "たまに参照する資料を保存する。",
+    "keyPoint": "オンラインで直接読み出せる点をアーカイブと区別。",
+    "relatedTermIds": [
+      "hot-tier",
+      "cold-tier",
+      "archive-tier"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/access-tiers-overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "cold-tier",
+    "japaneseName": "コールドアクセス層",
+    "englishName": "Cold Access Tier",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "さらに低頻度の参照に向くオンライン層。",
+    "description": "頻繁に読み出さないデータで保存費用を抑える選択肢。最低保持期間などの料金条件を確認する。",
+    "example": "長期間保管する低頻度の資料を保存する。",
+    "keyPoint": "低頻度でもオンラインで利用できる。",
+    "relatedTermIds": [
+      "cool-tier",
+      "archive-tier"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/access-tiers-overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "archive-tier",
+    "japaneseName": "アーカイブアクセス層",
+    "englishName": "Archive Access Tier",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "ほとんど参照しないBlob向けのオフライン層。",
+    "description": "読み出す前にオンライン層へ復元する処理が必要で、利用まで待ち時間が生じる。",
+    "example": "長期保存の監査資料を保管する。",
+    "keyPoint": "すぐ読めるホット・クール・コールドと区別。",
+    "relatedTermIds": [
+      "hot-tier",
+      "cool-tier",
+      "cold-tier"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/access-tiers-overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "lrs",
+    "japaneseName": "ローカル冗長ストレージ",
+    "englishName": "Locally Redundant Storage",
+    "abbreviation": "LRS",
+    "category": "services",
+    "summary": "局所的な設備障害に備えるストレージ複製。",
+    "description": "同一リージョンの局所的な範囲でコピーを持つ。リージョン災害への備えとは区別する。",
+    "example": "再作成可能なデータの保存費用を抑える。",
+    "keyPoint": "ゾーン分散や地理分散とは保護範囲が異なる。",
+    "relatedTermIds": [
+      "zrs",
+      "grs",
+      "redundancy"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-redundancy",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "zrs",
+    "japaneseName": "ゾーン冗長ストレージ",
+    "englishName": "Zone-redundant Storage",
+    "abbreviation": "ZRS",
+    "category": "services",
+    "summary": "同一リージョンの複数ゾーンへデータを複製する方式。",
+    "description": "ゾーン障害に備えて同期複製する。別リージョンへの複製は別の方式になる。",
+    "example": "一つのゾーンの停止に備える。",
+    "keyPoint": "ゾーンは一つのリージョンの中。",
+    "relatedTermIds": [
+      "lrs",
+      "gzrs",
+      "availability-zone"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-redundancy",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "grs",
+    "japaneseName": "geo冗長ストレージ",
+    "englishName": "Geo-redundant Storage",
+    "abbreviation": "GRS",
+    "category": "services",
+    "summary": "別リージョンにもストレージデータを複製する方式。",
+    "description": "プライマリ側の局所的な複製に加え、セカンダリへ非同期で複製する。",
+    "example": "広域災害に備えてデータを保持する。",
+    "keyPoint": "セカンダリの通常読み取りはRA付きと区別。",
+    "relatedTermIds": [
+      "lrs",
+      "ra-grs",
+      "gzrs"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-redundancy",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "gzrs",
+    "japaneseName": "geoゾーン冗長ストレージ",
+    "englishName": "Geo-zone-redundant Storage",
+    "abbreviation": "GZRS",
+    "category": "services",
+    "summary": "ゾーン分散と別リージョン複製を合わせる方式。",
+    "description": "プライマリでゾーン冗長性を持ち、セカンダリへ非同期で複製する。",
+    "example": "ゾーン障害と地域災害の両方に備える。",
+    "keyPoint": "ZRSに地理的な複製を加える。",
+    "relatedTermIds": [
+      "zrs",
+      "grs",
+      "ra-gzrs"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-redundancy",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "ra-grs",
+    "japaneseName": "読み取りアクセスgeo冗長ストレージ",
+    "englishName": "Read-access Geo-redundant Storage",
+    "abbreviation": "RA-GRS",
+    "category": "services",
+    "summary": "GRSのセカンダリ側からも読み取れる方式。",
+    "description": "主側とは異なる読み取り用接続先を利用できる。非同期複製のため最新とは限らない。",
+    "example": "主リージョン停止中も複製データを参照する。",
+    "keyPoint": "RAは読み取りであり通常の書き込みではない。",
+    "relatedTermIds": [
+      "grs",
+      "ra-gzrs"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-redundancy",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "ra-gzrs",
+    "japaneseName": "読み取りアクセスgeoゾーン冗長ストレージ",
+    "englishName": "Read-access Geo-zone-redundant Storage",
+    "abbreviation": "RA-GZRS",
+    "category": "services",
+    "summary": "GZRSにセカンダリ読み取りを加える方式。",
+    "description": "ゾーン冗長性、地理複製、セカンダリからの参照という特徴を組み合わせる。",
+    "example": "地域災害時の読み取り継続を計画する。",
+    "keyPoint": "非同期のため未複製データの損失リスクは残る。",
+    "relatedTermIds": [
+      "gzrs",
+      "ra-grs"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-redundancy",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "azcopy",
+    "japaneseName": "AzCopy",
+    "englishName": "AzCopy",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "Azure Storage向けのコマンドライン転送ツール。",
+    "description": "ローカルとストレージ間などでBlobやファイルをコピーし、転送作業を自動化する。",
+    "example": "多数のファイルをコマンドでアップロードする。",
+    "keyPoint": "GUIのStorage Explorerと使い分ける。",
+    "relatedTermIds": [
+      "storage-explorer",
+      "blob-storage"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/7-identify-azure-file-movement-options",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "storage-explorer",
+    "japaneseName": "Azure Storage Explorer",
+    "englishName": "Azure Storage Explorer",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "ストレージを操作するデスクトップGUIツール。",
+    "description": "アカウントやデータを画面で確認し、アップロードやダウンロードなどを行う。",
+    "example": "Blobを一覧表示して必要なファイルを取得する。",
+    "keyPoint": "ブラウザーのAzure portalとも異なるツール。",
+    "relatedTermIds": [
+      "azcopy",
+      "storage-account"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/7-identify-azure-file-movement-options",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "file-sync",
+    "japaneseName": "Azure File Sync",
+    "englishName": "Azure File Sync",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "Azure FilesとWindows Serverを連携させるサービス。",
+    "description": "クラウドの共有へデータを集約しつつ、サーバー側をキャッシュとして使える。",
+    "example": "各拠点のファイルサーバーをクラウドと同期する。",
+    "keyPoint": "単発コピーのAzCopyと継続同期を区別する。",
+    "relatedTermIds": [
+      "azure-files",
+      "azcopy"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/7-identify-azure-file-movement-options",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "azure-migrate",
+    "japaneseName": "Azure Migrate",
+    "englishName": "Azure Migrate",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "Azure移行の評価と作業を支援するサービス。",
+    "description": "オンプレミスのサーバーなどを調べ、移行計画や対応する移行処理をまとめて扱う。",
+    "example": "社内VMの移行前に構成と適合性を評価する。",
+    "keyPoint": "データの転送だけでなく評価も担う。",
+    "relatedTermIds": [
+      "data-box",
+      "vm"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/6-identify-azure-data-migration-options",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "data-box",
+    "japaneseName": "Azure Data Box",
+    "englishName": "Azure Data Box",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "物理デバイスを使って大量データを移すサービス。",
+    "description": "ネットワーク転送に時間がかかるデータをデバイスへコピーし、輸送してAzureへ取り込む。",
+    "example": "回線が遅い拠点から大量データを移行する。",
+    "keyPoint": "常時接続ではなくオフライン転送の選択肢。",
+    "relatedTermIds": [
+      "azure-migrate",
+      "azcopy"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/6-identify-azure-data-migration-options",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "blob-container",
+    "japaneseName": "Blobコンテナー",
+    "englishName": "Blob Container",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "Blobをまとめて保存する論理的な容器。",
+    "description": "ストレージアカウント内に作り、Blobの整理やアクセス設定に使う。",
+    "example": "画像用のコンテナーを作る。",
+    "keyPoint": "アプリ実行用のコンテナーと同名だが用途が違う。",
+    "relatedTermIds": [
+      "blob-storage",
+      "storage-account",
+      "container"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/4-describe-azure-storage-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "lifecycle-management",
+    "japaneseName": "Blobライフサイクル管理",
+    "englishName": "Blob Lifecycle Management",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "Blobの層変更や削除を規則で自動化する機能。",
+    "description": "データの経過時間などに応じた規則を適用し、保管費用や保持運用を管理する。",
+    "example": "古いログを低頻度の層へ移す。",
+    "keyPoint": "補足学習：変更先の層や料金条件を確認する。",
+    "relatedTermIds": [
+      "blob-storage",
+      "cool-tier",
+      "archive-tier"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/lifecycle-management-overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "object-storage",
+    "japaneseName": "オブジェクトストレージ",
+    "englishName": "Object Storage",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "データをオブジェクト単位で保存する方式。",
+    "description": "ファイル内容とメタデータなどを扱う。Azure Blob Storageは代表的な実装。",
+    "example": "写真や動画をHTTPで保存・取得する。",
+    "keyPoint": "ファイル共有やブロックディスクと用途を比較。",
+    "relatedTermIds": [
+      "blob-storage",
+      "azure-files",
+      "managed-disks"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-storage-services/4-describe-azure-storage-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "backup",
+    "japaneseName": "バックアップ",
+    "englishName": "Backup",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "過去のデータを復元するためにコピーを保持すること。",
+    "description": "障害や誤操作に備えて、別の時点へ戻せるコピーと復旧手順を用意する。",
+    "example": "誤削除したファイルを保存時点へ復元する。",
+    "keyPoint": "補足学習：最新状態を複製する冗長性とは別。",
+    "relatedTermIds": [
+      "redundancy",
+      "disaster-recovery"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/backup/backup-overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "entra-id",
+    "japaneseName": "Microsoft Entra ID",
+    "englishName": "Microsoft Entra ID",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "クラウドのIDとアクセスを管理するサービス。",
+    "description": "ユーザーやアプリのIDを管理し、認証やSSOなどを支える。旧称Azure ADとして説明された資料もある。",
+    "example": "企業のユーザーが複数のクラウドアプリへサインインする。",
+    "keyPoint": "オンプレミスのAD DSと同じ製品ではない。",
+    "relatedTermIds": [
+      "authentication",
+      "sso",
+      "entra-domain-services"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/2-directory-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "entra-domain-services",
+    "japaneseName": "Microsoft Entra Domain Services",
+    "englishName": "Microsoft Entra Domain Services",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "ドメイン機能を提供するマネージドサービス。",
+    "description": "ドメイン参加やLDAP、Kerberosなどを利用でき、ドメインコントローラーの運用を軽減する。",
+    "example": "従来のドメイン認証が必要なアプリを移す。",
+    "keyPoint": "Entra IDの認証機能とドメインサービスを区別。",
+    "relatedTermIds": [
+      "entra-id",
+      "vm"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/2-directory-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "tenant",
+    "japaneseName": "テナント",
+    "englishName": "Tenant",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "組織のMicrosoft Entra IDディレクトリを表す単位。",
+    "description": "組織のユーザーやアプリなどのID情報を保持する。サブスクリプションの課金境界とは役割が異なる。",
+    "example": "一つの組織のディレクトリでIDを管理する。",
+    "keyPoint": "補足学習：テナントとサブスクリプションを区別。",
+    "relatedTermIds": [
+      "entra-id",
+      "subscription"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/2-directory-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "authentication",
+    "japaneseName": "認証",
+    "englishName": "Authentication",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "アクセス主体が誰かを確認する処理。",
+    "description": "パスワード、認証器、生体情報などを使い、ユーザーやサービスのIDを検証する。",
+    "example": "サインイン時に認証器で本人確認する。",
+    "keyPoint": "何ができるかを決める認可とは異なる。",
+    "relatedTermIds": [
+      "authorization",
+      "mfa",
+      "passwordless"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/3-authentication-methods",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "authorization",
+    "japaneseName": "認可",
+    "englishName": "Authorization",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "確認された主体に何を許すかを決める処理。",
+    "description": "ロールや規則などを使って、操作やデータへのアクセス権限を評価する。",
+    "example": "閲覧だけを許可して変更は許可しない。",
+    "keyPoint": "本人確認の認証とは別の段階。",
+    "relatedTermIds": [
+      "authentication",
+      "rbac"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/6-role-based-access-control",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "sso",
+    "japaneseName": "シングルサインオン",
+    "englishName": "Single Sign-on",
+    "abbreviation": "SSO",
+    "category": "services",
+    "summary": "一度の認証で複数アプリを利用しやすくする仕組み。",
+    "description": "対応するアプリ間で認証状態を活用し、何度も資格情報を入力する負担を減らす。",
+    "example": "社内ポータルから別の業務アプリを開く。",
+    "keyPoint": "安全性の補強にはMFAなどを組み合わせる。",
+    "relatedTermIds": [
+      "entra-id",
+      "mfa"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/3-authentication-methods",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "mfa",
+    "japaneseName": "多要素認証",
+    "englishName": "Multifactor Authentication",
+    "abbreviation": "MFA",
+    "category": "services",
+    "summary": "異なる種類の要素を組み合わせる本人確認。",
+    "description": "知識、所持、生体などの要素を使う。パスワードを二つ聞くだけでは多要素にはならない。",
+    "example": "パスワードと認証器の承認を組み合わせる。",
+    "keyPoint": "要素の種類が異なることを押さえる。",
+    "relatedTermIds": [
+      "authentication",
+      "passwordless",
+      "conditional-access"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/3-authentication-methods",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "passwordless",
+    "japaneseName": "パスワードレス認証",
+    "englishName": "Passwordless Authentication",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "パスワード入力に頼らず本人を確認する方式。",
+    "description": "対応する認証器やセキュリティキーなどを使い、入力や盗難に伴う問題を減らす。",
+    "example": "Windows Helloやセキュリティキーを使う。",
+    "keyPoint": "認証を省くのではなく方法を変える。",
+    "relatedTermIds": [
+      "authentication",
+      "mfa"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/3-authentication-methods",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "external-id",
+    "japaneseName": "外部ID",
+    "englishName": "External Identities",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "組織外のユーザーのアクセスを管理する仕組み。",
+    "description": "取引先や顧客などが、適切なIDの仕組みを通じてアプリやリソースを利用できるようにする。",
+    "example": "取引先のユーザーを共同作業へ招待する。",
+    "keyPoint": "外部利用者にも権限と保護の設定が必要。",
+    "relatedTermIds": [
+      "b2b",
+      "entra-id"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/4-external-identities",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "b2b",
+    "japaneseName": "企業間コラボレーション",
+    "englishName": "Business-to-business Collaboration",
+    "abbreviation": "B2B",
+    "category": "services",
+    "summary": "外部組織のユーザーと共同作業する方式。",
+    "description": "ゲストなどに必要なアクセス権を与え、所属元のIDなどを活用する。",
+    "example": "取引先ユーザーへ特定アプリの利用を許可する。",
+    "keyPoint": "顧客向けのID管理とは用途が異なる。",
+    "relatedTermIds": [
+      "external-id",
+      "least-privilege"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/4-external-identities",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "conditional-access",
+    "japaneseName": "条件付きアクセス",
+    "englishName": "Conditional Access",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "サインインの状況に応じてアクセス条件を変える機能。",
+    "description": "ユーザー、端末、場所などのシグナルを評価し、MFA要求やアクセス拒否を判断する。",
+    "example": "社外からのサインインにMFAを要求する。",
+    "keyPoint": "状況の評価とアクセス制御を組み合わせる。",
+    "relatedTermIds": [
+      "entra-id",
+      "mfa",
+      "zero-trust"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/5-conditional-access",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "rbac",
+    "japaneseName": "ロールベースのアクセス制御",
+    "englishName": "Role-based Access Control",
+    "abbreviation": "RBAC",
+    "category": "services",
+    "summary": "ロールを通してAzureリソースへの権限を割り当てる仕組み。",
+    "description": "主体、ロール、適用範囲を組み合わせて「誰がどこで何をできるか」を定める。",
+    "example": "担当者に特定グループの閲覧権限を与える。",
+    "keyPoint": "リソース設定の適合性を扱うPolicyと区別。",
+    "relatedTermIds": [
+      "policy",
+      "authorization",
+      "role-assignment"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/6-role-based-access-control",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "zero-trust",
+    "japaneseName": "ゼロトラスト",
+    "englishName": "Zero Trust",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "場所だけを理由に信用せずアクセスを検証する考え方。",
+    "description": "明示的な確認、必要最小限の権限、侵害を想定した設計を組み合わせる。",
+    "example": "社内アクセスでも端末状態と本人を確認する。",
+    "keyPoint": "一つの製品を入れるだけで完成するものではない。",
+    "relatedTermIds": [
+      "least-privilege",
+      "conditional-access",
+      "defense-in-depth"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/7-describe-zero-trust-model",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "defense-in-depth",
+    "japaneseName": "多層防御",
+    "englishName": "Defense in Depth",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "複数の層で攻撃や被害を抑える設計。",
+    "description": "物理、ID、ネットワーク、アプリ、データなどを守り、一つの防御の突破で全体が危険にならないようにする。",
+    "example": "MFA、通信制御、暗号化を組み合わせる。",
+    "keyPoint": "防御を重ねて単一障害点を減らす。",
+    "relatedTermIds": [
+      "zero-trust",
+      "nsg",
+      "encryption-at-rest"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/8-describe-defense-depth",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "defender-for-cloud",
+    "japaneseName": "Microsoft Defender for Cloud",
+    "englishName": "Microsoft Defender for Cloud",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "クラウドの安全性評価や脅威保護を支えるサービス。",
+    "description": "構成上の問題や推奨事項を確認し、対応するプランでワークロードの脅威保護も行う。",
+    "example": "危険な構成を発見して改善する。",
+    "keyPoint": "利用する機能や保護プランに応じて確認する。",
+    "relatedTermIds": [
+      "defense-in-depth",
+      "advisor",
+      "monitor"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/9-describe-microsoft-defender-for-cloud",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "least-privilege",
+    "japaneseName": "最小特権",
+    "englishName": "Least Privilege",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "仕事に必要な範囲だけ権限を与える原則。",
+    "description": "権限の種類、範囲、期間を絞り、不正利用や誤操作の影響を抑える。",
+    "example": "閲覧担当に管理者権限を与えない。",
+    "keyPoint": "権限を広く与えてから放置しない。",
+    "relatedTermIds": [
+      "zero-trust",
+      "rbac",
+      "reader-role"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/7-describe-zero-trust-model",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "encryption-at-rest",
+    "japaneseName": "保存時の暗号化",
+    "englishName": "Encryption at Rest",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "保存されているデータを暗号化して保護すること。",
+    "description": "ディスクやストレージなどでデータを暗号化し、キー管理と組み合わせて利用する。",
+    "example": "ストレージ内のデータを暗号化する。",
+    "keyPoint": "補足学習：通信経路の暗号化とは別。",
+    "relatedTermIds": [
+      "encryption-in-transit",
+      "key-vault"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/9a-describe-encryption-key-management",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "encryption-in-transit",
+    "japaneseName": "転送時の暗号化",
+    "englishName": "Encryption in Transit",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "移動中のデータを暗号化して保護すること。",
+    "description": "HTTPSやVPNなどで通信内容を保護し、盗聴などのリスクを減らす。",
+    "example": "WebアクセスにHTTPSを利用する。",
+    "keyPoint": "補足学習：保存時の暗号化だけでは代替できない。",
+    "relatedTermIds": [
+      "encryption-at-rest",
+      "vpn-gateway"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/9a-describe-encryption-key-management",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "key-vault",
+    "japaneseName": "Azure Key Vault",
+    "englishName": "Azure Key Vault",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "キーやシークレット、証明書を管理するサービス。",
+    "description": "アプリの秘密情報をコードから分離し、アクセス権を設定して管理する。",
+    "example": "アプリで使うシークレットを保管する。",
+    "keyPoint": "補足学習：保管した秘密への権限設定も必要。",
+    "relatedTermIds": [
+      "managed-identity",
+      "encryption-at-rest"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/9a-describe-encryption-key-management",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "managed-identity",
+    "japaneseName": "マネージドID",
+    "englishName": "Managed Identity",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "Azureが資格情報を管理するリソース用のID。",
+    "description": "対応するリソースがトークンを取得し、パスワードをコードへ保存せず他サービスへ認証できる。",
+    "example": "VMからKey Vaultへアクセスする。",
+    "keyPoint": "補足学習：IDを有効にするだけでは権限は与えられない。",
+    "relatedTermIds": [
+      "service-principal",
+      "rbac",
+      "key-vault"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/entra/identity/managed-identities-azure-resources/overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "service-principal",
+    "japaneseName": "サービスプリンシパル",
+    "englishName": "Service Principal",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "アプリやサービスを表すIDの一種。",
+    "description": "ユーザー本人の代わりにアプリがアクセスする際、テナント内の主体として権限を付与する。",
+    "example": "自動化処理へ必要な操作権限を与える。",
+    "keyPoint": "補足学習：人のユーザーIDと区別する。",
+    "relatedTermIds": [
+      "managed-identity",
+      "entra-id",
+      "rbac"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/entra/identity-platform/app-objects-and-service-principals",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "entra-connect",
+    "japaneseName": "Microsoft Entra Connect",
+    "englishName": "Microsoft Entra Connect",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "オンプレミスIDとEntra IDの連携に使うツール。",
+    "description": "社内のAD DSにあるユーザー情報などをクラウドのディレクトリへ同期する。",
+    "example": "既存の社内IDをクラウド利用にも活用する。",
+    "keyPoint": "補足学習：ID同期とネットワーク接続は別。",
+    "relatedTermIds": [
+      "entra-id",
+      "hybrid-cloud"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/2-directory-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "private-ip",
+    "japaneseName": "プライベートIPアドレス",
+    "englishName": "Private IP Address",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "私的なネットワーク内で使うアドレス。",
+    "description": "VNet内のリソース間や、接続されたネットワークとの通信に利用する。",
+    "example": "VM同士がVNet内で通信する。",
+    "keyPoint": "パブリックIPなしでも私的な通信はできる。",
+    "relatedTermIds": [
+      "public-ip",
+      "vnet",
+      "network-interface"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-networking-services/2-virtual-network",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "identity",
+    "japaneseName": "ID",
+    "englishName": "Identity",
+    "abbreviation": "",
+    "category": "services",
+    "summary": "ユーザー、アプリ、端末などの主体を識別する情報。",
+    "description": "クラウドでの認証と権限管理の基礎になり、ユーザー以外の主体にも使われる。",
+    "example": "ユーザーや自動処理を別々の主体として管理する。",
+    "keyPoint": "IDの管理も利用者の重要な責任。",
+    "relatedTermIds": [
+      "entra-id",
+      "authentication",
+      "shared-responsibility"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/2-directory-services",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "cost-management",
+    "japaneseName": "Microsoft Cost Management",
+    "englishName": "Microsoft Cost Management",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "クラウドの費用を把握・分析・管理する機能群。",
+    "description": "実際の利用費用や予測、予算などを確認して支出を改善する。Azure Cost Managementと呼ばれる資料もある。",
+    "example": "部署別の費用を追跡する。",
+    "keyPoint": "見積もり用の料金計算ツールと区別。",
+    "relatedTermIds": [
+      "pricing-calculator",
+      "cost-analysis",
+      "budget"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cost-management-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "pricing-calculator",
+    "japaneseName": "Azure料金計算ツール",
+    "englishName": "Azure Pricing Calculator",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "構成と想定利用量から費用を見積もるツール。",
+    "description": "サービス、リージョン、数量などを入力し、導入前の計画に使う。請求額を保証するものではない。",
+    "example": "VMとストレージの月額を比較する。",
+    "keyPoint": "実際の費用分析はCost Managementで行う。",
+    "relatedTermIds": [
+      "cost-management",
+      "consumption-based"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cost-management-azure/3-compare-pricing-total-cost-of-ownership-calculators",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "budget",
+    "japaneseName": "予算",
+    "englishName": "Budget",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "費用を計画し、しきい値で通知する設定。",
+    "description": "実際または予測の費用に基づくアラートを設定できる。設定だけでリソースの消費を自動停止しない。",
+    "example": "月額の一定割合に達したら通知する。",
+    "keyPoint": "予算は費用の強制上限ではない。",
+    "relatedTermIds": [
+      "cost-management",
+      "cost-analysis"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/cost-management-billing/costs/tutorial-acm-create-budgets",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "cost-analysis",
+    "japaneseName": "コスト分析",
+    "englishName": "Cost Analysis",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "利用費用の内訳と変化を調べる機能。",
+    "description": "期間やサービス、タグなどで費用を分類し、増加の原因や改善対象を探す。",
+    "example": "前月との費用差をサービス別に調べる。",
+    "keyPoint": "費用の合計だけでなく内訳を見る。",
+    "relatedTermIds": [
+      "cost-management",
+      "tags",
+      "budget"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/cost-management-billing/costs/cost-analysis-common-uses",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "tags",
+    "japaneseName": "タグ",
+    "englishName": "Tags",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "リソースへ付ける名前と値のラベル。",
+    "description": "用途、担当、部門などを記録し、整理や費用分析に活用する。親のタグは自動継承とは限らない。",
+    "example": "CostCenterを付けて部門別費用を調べる。",
+    "keyPoint": "タグ自体はアクセス権を付与しない。",
+    "relatedTermIds": [
+      "cost-analysis",
+      "policy",
+      "resource-group"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cost-management-azure/7-describe-purpose-of-tags",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "reservation",
+    "japaneseName": "Azure予約",
+    "englishName": "Azure Reservations",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "一定期間の利用を約束して料金を抑える選択肢。",
+    "description": "対象サービスや条件に沿って割引を受ける。予約の購入と容量確保は常に同じ意味ではない。",
+    "example": "継続利用するVMの費用を見直す。",
+    "keyPoint": "補足学習：対象や契約条件を公式情報で確認。",
+    "relatedTermIds": [
+      "savings-plan",
+      "spot-vm",
+      "cost-management"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cost-management-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "savings-plan",
+    "japaneseName": "Azure節約プラン",
+    "englishName": "Azure Savings Plan for Compute",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "対象の計算利用へ時間当たりの支出を約束する料金方式。",
+    "description": "一定期間のコミットメントに応じて、条件に合う計算サービスの利用に割引を適用する。",
+    "example": "複数の計算サービスの継続費用を最適化する。",
+    "keyPoint": "補足学習：予約とは割引適用の柔軟性が異なる。",
+    "relatedTermIds": [
+      "reservation",
+      "cost-management"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cost-management-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "spot-vm",
+    "japaneseName": "AzureスポットVM",
+    "englishName": "Azure Spot Virtual Machines",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "余剰容量を割引料金で利用するVM。",
+    "description": "容量需要などにより退去される可能性があるため、中断へ対応できる処理に使う。",
+    "example": "再実行できるバッチを低コストで実行する。",
+    "keyPoint": "補足学習：停止できない処理への利用は慎重に判断。",
+    "relatedTermIds": [
+      "vm",
+      "reservation",
+      "cost-management"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cost-management-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "bandwidth",
+    "japaneseName": "帯域幅とデータ転送",
+    "englishName": "Bandwidth and Data Transfer",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "ネットワークの容量や転送量に関する概念。",
+    "description": "クラウドの費用は通信の方向や接続方式、リージョンなどによっても変わる。",
+    "example": "大量配信の転送費用を見積もる。",
+    "keyPoint": "すべての転送が同じ料金とは限らない。",
+    "relatedTermIds": [
+      "pricing-calculator",
+      "region"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cost-management-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "resource-location",
+    "japaneseName": "リソースの場所",
+    "englishName": "Resource Location",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "リソースを展開するリージョンなどの配置情報。",
+    "description": "同じサービスでも場所によって提供機能や料金が異なることがある。",
+    "example": "遅延と費用を比較して配置先を選ぶ。",
+    "keyPoint": "リソースグループの場所と各リソースの場所は別。",
+    "relatedTermIds": [
+      "region",
+      "pricing-calculator"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cost-management-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "resource-type",
+    "japaneseName": "リソースの種類",
+    "englishName": "Resource Type",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "VMやストレージなど管理対象の分類。",
+    "description": "種類とサイズ、性能などの構成によって必要な費用や管理方法が変わる。",
+    "example": "性能に合うVMサイズを選ぶ。",
+    "keyPoint": "使うサービスと構成が費用の要因になる。",
+    "relatedTermIds": [
+      "azure-resource",
+      "cost-management"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cost-management-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "billing",
+    "japaneseName": "課金",
+    "englishName": "Billing",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "サービス利用の費用を算定し請求する仕組み。",
+    "description": "契約、料金方式、使用量などに応じて請求される。管理権限と請求関連の権限は同一とは限らない。",
+    "example": "サブスクリプションの利用費用を確認する。",
+    "keyPoint": "利用量と契約条件を合わせて確認。",
+    "relatedTermIds": [
+      "subscription",
+      "consumption-based"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-cost-management-azure/",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "policy",
+    "japaneseName": "Azure Policy",
+    "englishName": "Azure Policy",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "リソース設定を組織の規則に合わせる仕組み。",
+    "description": "適合状況を評価し、設定によって不適合な作成を拒否したり、修復したりできる。",
+    "example": "許可するリージョンを制限する。",
+    "keyPoint": "誰が操作できるかはRBAC、設定の規則はPolicy。",
+    "relatedTermIds": [
+      "rbac",
+      "policy-assignment",
+      "initiative"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "initiative",
+    "japaneseName": "イニシアチブ",
+    "englishName": "Policy Initiative",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "複数のポリシー定義をまとめる単位。",
+    "description": "関連する規則をセットにして割り当て、一つの目的に向けて適合状態を管理する。",
+    "example": "セキュリティ基準のポリシーをまとめる。",
+    "keyPoint": "個別ルールの定義とルール群を区別する。",
+    "relatedTermIds": [
+      "policy",
+      "policy-definition",
+      "policy-assignment"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "policy-assignment",
+    "japaneseName": "ポリシーの割り当て",
+    "englishName": "Policy Assignment",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "ポリシーを適用対象の範囲へ関連付けること。",
+    "description": "管理グループ、サブスクリプションなどを指定してルールを適用する。",
+    "example": "本番サブスクリプションへ場所の制限を設定する。",
+    "keyPoint": "定義を作るだけでは適用範囲は決まらない。",
+    "relatedTermIds": [
+      "policy",
+      "policy-definition",
+      "management-group"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "purview",
+    "japaneseName": "Microsoft Purview",
+    "englishName": "Microsoft Purview",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "データのガバナンスや保護、コンプライアンスの製品群。",
+    "description": "データの把握や分類、保護などを支える機能を提供する。機能ごとの対象範囲を確認する。",
+    "example": "組織のデータ資産を探し管理する。",
+    "keyPoint": "Azureリソース構成の規則を扱うPolicyと区別。",
+    "relatedTermIds": [
+      "governance",
+      "policy",
+      "compliance"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-azure-for-governance-compliance/2-describe-purpose-microsoft-purview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "resource-lock",
+    "japaneseName": "リソースロック",
+    "englishName": "Resource Lock",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "重要なリソースを意図しない変更から守る設定。",
+    "description": "削除を防ぐCanNotDeleteと、読み取りに制限するReadOnlyがある。主に管理操作へ作用する。",
+    "example": "重要なリソースグループの削除を防ぐ。",
+    "keyPoint": "権限があってもロックの制限が適用される。",
+    "relatedTermIds": [
+      "delete-lock",
+      "read-only-lock",
+      "rbac"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/management/lock-resources",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "delete-lock",
+    "japaneseName": "削除ロック",
+    "englishName": "CanNotDelete Lock",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "削除を防ぎ、変更は許す種類のロック。",
+    "description": "リソースの設定変更を続けながら、管理操作による削除を抑止する。",
+    "example": "本番データベースのリソース削除を防ぐ。",
+    "keyPoint": "ReadOnlyより制限する操作が少ない。",
+    "relatedTermIds": [
+      "resource-lock",
+      "read-only-lock"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/management/lock-resources",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "read-only-lock",
+    "japaneseName": "読み取り専用ロック",
+    "englishName": "ReadOnly Lock",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "管理操作での変更や削除を制限するロック。",
+    "description": "読み取り以外を制限するため、通常の操作の一部にも影響することがある。",
+    "example": "固定した構成の変更を防ぐ。",
+    "keyPoint": "データプレーンのすべての書き込みを止める機能ではない。",
+    "relatedTermIds": [
+      "resource-lock",
+      "delete-lock"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/management/lock-resources",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "service-trust-portal",
+    "japaneseName": "Service Trust Portal",
+    "englishName": "Service Trust Portal",
+    "abbreviation": "STP",
+    "category": "management",
+    "summary": "Microsoftクラウドの監査やコンプライアンス資料への入口。",
+    "description": "認証や評価、監査報告などを確認し、組織の要件の検討に役立てる。",
+    "example": "クラウド導入時に関連する監査資料を確認する。",
+    "keyPoint": "補足学習：障害通知のService Healthとは別。",
+    "relatedTermIds": [
+      "compliance",
+      "purview"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-azure-for-governance-compliance/6-describe-purpose-service-trust-portal",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "compliance",
+    "japaneseName": "コンプライアンス",
+    "englishName": "Compliance",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "適用される規則や基準に沿うこと。",
+    "description": "組織は利用するサービスと設定、データの扱いを要件に照らして確認する必要がある。",
+    "example": "組織のデータ取り扱い基準に適した構成を選ぶ。",
+    "keyPoint": "サービスの認証だけで利用者の適合性は完成しない。",
+    "relatedTermIds": [
+      "governance",
+      "purview",
+      "service-trust-portal"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-azure-for-governance-compliance/2-describe-purpose-microsoft-purview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "azure-portal",
+    "japaneseName": "Azure portal",
+    "englishName": "Azure Portal",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "Azureをブラウザーで操作する管理画面。",
+    "description": "リソースの作成、状態確認、設定変更などを画面から行う。",
+    "example": "VMを作成して監視情報を確認する。",
+    "keyPoint": "CLIやPowerShellと同じ基盤を異なる方法で操作する。",
+    "relatedTermIds": [
+      "azure-cli",
+      "azure-powershell",
+      "arm"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "cloud-shell",
+    "japaneseName": "Azure Cloud Shell",
+    "englishName": "Azure Cloud Shell",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "ブラウザーから使える管理用シェル環境。",
+    "description": "用意されたAzure CLIやPowerShellで、ローカルへツールを入れずコマンド操作できる。",
+    "example": "portalからコマンドでリソースを確認する。",
+    "keyPoint": "BashとPowerShellの環境を選べる。",
+    "relatedTermIds": [
+      "azure-cli",
+      "azure-powershell",
+      "azure-portal"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "azure-cli",
+    "japaneseName": "Azure CLI",
+    "englishName": "Azure Command-line Interface",
+    "abbreviation": "CLI",
+    "category": "management",
+    "summary": "Azureをコマンドで操作するツール。",
+    "description": "スクリプトに組み込んで作成や変更を自動化でき、複数OSから利用できる。",
+    "example": "azコマンドでリソース一覧を取得する。",
+    "keyPoint": "Cloud Shell専用ではなくローカルでも利用可能。",
+    "relatedTermIds": [
+      "cloud-shell",
+      "azure-powershell"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "azure-powershell",
+    "japaneseName": "Azure PowerShell",
+    "englishName": "Azure PowerShell",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "PowerShellでAzureを管理するモジュール群。",
+    "description": "コマンドレットでリソース操作を行い、既存のPowerShell自動化と組み合わせる。",
+    "example": "スクリプトで複数VMを管理する。",
+    "keyPoint": "Azure CLIとはコマンド体系が異なる。",
+    "relatedTermIds": [
+      "azure-cli",
+      "cloud-shell"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "arm",
+    "japaneseName": "Azure Resource Manager",
+    "englishName": "Azure Resource Manager",
+    "abbreviation": "ARM",
+    "category": "management",
+    "summary": "Azureリソースの共通管理基盤。",
+    "description": "portalやCLIなどからの管理操作を扱い、アクセス制御やデプロイの一貫性を支える。",
+    "example": "テンプレートから関連リソースを展開する。",
+    "keyPoint": "ARMという基盤とARMテンプレートを区別。",
+    "relatedTermIds": [
+      "arm-template",
+      "azure-portal",
+      "rbac"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "arm-template",
+    "japaneseName": "ARMテンプレート",
+    "englishName": "ARM Template",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "JSONでリソースの望ましい構成を記述する形式。",
+    "description": "作る対象とプロパティなどを宣言し、繰り返し展開をしやすくする。",
+    "example": "同じ構成の検証環境を再作成する。",
+    "keyPoint": "手順の列挙ではなく構成を宣言する。",
+    "relatedTermIds": [
+      "arm",
+      "infrastructure-as-code",
+      "bicep"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "infrastructure-as-code",
+    "japaneseName": "コードとしてのインフラストラクチャ",
+    "englishName": "Infrastructure as Code",
+    "abbreviation": "IaC",
+    "category": "management",
+    "summary": "インフラ構成をコードや定義で管理する方法。",
+    "description": "バージョン管理やレビュー、自動展開を使い、構成の再現性を高める。",
+    "example": "構成ファイルをGitで管理する。",
+    "keyPoint": "手動設定だけに頼らず再現可能にする。",
+    "relatedTermIds": [
+      "arm-template",
+      "bicep"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "bicep",
+    "japaneseName": "Bicep",
+    "englishName": "Bicep",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "AzureのIaCに使う宣言的な言語。",
+    "description": "リソースの構成を記述し、ARMによるデプロイへつなげる。JSONテンプレートより簡潔に表現できる。",
+    "example": "ネットワークとVMの構成をファイルに記述する。",
+    "keyPoint": "補足学習：独自の実行サーバーを必要とするものではない。",
+    "relatedTermIds": [
+      "arm-template",
+      "infrastructure-as-code"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/bicep/overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "arc",
+    "japaneseName": "Azure Arc",
+    "englishName": "Azure Arc",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "Azure外のリソースもAzureの管理へつなぐ仕組み。",
+    "description": "オンプレミスや他クラウドの対応リソースをAzureで整理し、管理やガバナンスを適用する。",
+    "example": "社内サーバーをAzureの管理画面へ登録する。",
+    "keyPoint": "接続するだけでVMがAzureへ移行するわけではない。",
+    "relatedTermIds": [
+      "on-premises",
+      "policy",
+      "monitor"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-features-tools-manage-deploy-azure-resources/3-describe-purpose-of-azure-arc",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "monitor",
+    "japaneseName": "Azure Monitor",
+    "englishName": "Azure Monitor",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "監視データを集め分析し対応するためのサービス。",
+    "description": "ログ、メトリックなどでリソースやアプリの状態を把握し、アラートなどにつなげる。",
+    "example": "CPU負荷やアプリのエラーを監視する。",
+    "keyPoint": "推奨改善のAdvisorと役割を分ける。",
+    "relatedTermIds": [
+      "log-analytics",
+      "application-insights",
+      "monitor-alert"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/fundamentals/overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "advisor",
+    "japaneseName": "Azure Advisor",
+    "englishName": "Azure Advisor",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "利用状況や構成から改善案を示すサービス。",
+    "description": "信頼性、セキュリティ、性能、コスト、運用の観点で推奨事項を確認する。",
+    "example": "利用が少ないVMの見直しを提案される。",
+    "keyPoint": "監視ログを検索する機能そのものではない。",
+    "relatedTermIds": [
+      "monitor",
+      "cost-management"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/advisor/advisor-overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "service-health",
+    "japaneseName": "Azure Service Health",
+    "englishName": "Azure Service Health",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "自分の利用環境に関係するサービスの障害情報。",
+    "description": "サービス障害や予定保守などを確認し、通知の設定で影響を把握しやすくする。",
+    "example": "利用リージョンのサービス障害を確認する。",
+    "keyPoint": "全体情報と個別リソース状態も使い分ける。",
+    "relatedTermIds": [
+      "azure-status",
+      "resource-health",
+      "monitor"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/service-health/overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "resource-health",
+    "japaneseName": "Azure Resource Health",
+    "englishName": "Azure Resource Health",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "個々のリソースの正常性を確認する機能。",
+    "description": "特定のリソースが利用できるか、Azure側の問題があるかなどを調べる。",
+    "example": "一台のVMの利用不能理由を調べる。",
+    "keyPoint": "サービス全体の障害情報と区別する。",
+    "relatedTermIds": [
+      "service-health",
+      "azure-status"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/service-health/resource-health-overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "azure-status",
+    "japaneseName": "Azureの状態",
+    "englishName": "Azure Status",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "Azure全体のサービス状態を公開する情報。",
+    "description": "広範囲の障害などを全体から確認する。自分の利用状況に合わせた詳細情報はService Healthを使う。",
+    "example": "リージョンやサービスの状態を確認する。",
+    "keyPoint": "公開の全体情報と個別の影響情報を区別。",
+    "relatedTermIds": [
+      "service-health",
+      "resource-health"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/service-health/azure-status-overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "log-analytics",
+    "japaneseName": "Log Analytics",
+    "englishName": "Log Analytics",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "収集したログを検索・分析する機能。",
+    "description": "Log AnalyticsワークスペースのデータへKQLで問い合わせ、原因調査や集計を行う。",
+    "example": "エラーが増えた時間帯のログを調べる。",
+    "keyPoint": "Azure Monitorのログ分析として覚える。",
+    "relatedTermIds": [
+      "monitor",
+      "logs"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/fundamentals/overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "application-insights",
+    "japaneseName": "Application Insights",
+    "englishName": "Application Insights",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "アプリの性能や動作を調べる監視機能。",
+    "description": "要求時間、失敗、依存関係などのテレメトリを使ってアプリの問題を分析する。",
+    "example": "遅いAPIの原因を調べる。",
+    "keyPoint": "Azure Monitorに含まれるアプリ向けの機能。",
+    "relatedTermIds": [
+      "monitor",
+      "log-analytics"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/fundamentals/overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "monitor-alert",
+    "japaneseName": "Azure Monitorアラート",
+    "englishName": "Azure Monitor Alert",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "監視条件を満たしたときに通知などを行う機能。",
+    "description": "メトリックやログの条件を定め、異常時に担当者へ知らせたり対応を起動したりする。",
+    "example": "CPU負荷がしきい値を超えたら通知する。",
+    "keyPoint": "監視するデータと通知条件を両方設定する。",
+    "relatedTermIds": [
+      "monitor",
+      "metrics",
+      "logs"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/fundamentals/overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "metrics",
+    "japaneseName": "メトリック",
+    "englishName": "Metrics",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "CPU使用率など、時系列の数値の監視データ。",
+    "description": "一定時間ごとの値を集計・比較し、性能や状態の変化を把握する。",
+    "example": "CPU使用率のグラフを確認する。",
+    "keyPoint": "詳細なイベント記録のログと使い分ける。",
+    "relatedTermIds": [
+      "logs",
+      "monitor",
+      "monitor-alert"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/fundamentals/overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "logs",
+    "japaneseName": "ログ",
+    "englishName": "Logs",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "イベントや操作、処理の記録。",
+    "description": "構造化された記録などを検索し、何が起きたかを詳細に調べる。",
+    "example": "アプリの失敗記録を検索する。",
+    "keyPoint": "数値の推移だけでは分からない詳細を調べる。",
+    "relatedTermIds": [
+      "metrics",
+      "log-analytics",
+      "monitor"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/fundamentals/overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "autoscale",
+    "japaneseName": "自動スケーリング",
+    "englishName": "Autoscale",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "条件に応じてリソース数などを自動調整する機能。",
+    "description": "メトリックやスケジュールを使い、負荷に合わせて対応するリソースを増減する。",
+    "example": "繁忙時間にVMスケールセットを増やす。",
+    "keyPoint": "補足学習：対応リソースとルールを確認する。",
+    "relatedTermIds": [
+      "vm-scale-sets",
+      "elasticity",
+      "monitor"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/autoscale/autoscale-overview",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "role-assignment",
+    "japaneseName": "ロールの割り当て",
+    "englishName": "Role Assignment",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "主体へ特定範囲のロールを関連付けること。",
+    "description": "ユーザーやグループなどに、どのスコープでどの操作を許可するかを設定する。",
+    "example": "リソースグループへ閲覧者ロールを割り当てる。",
+    "keyPoint": "主体・ロール・範囲の三つを押さえる。",
+    "relatedTermIds": [
+      "rbac",
+      "reader-role",
+      "owner-role"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/training/modules/describe-azure-identity-access-security/6-role-based-access-control",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "core"
+  },
+  {
+    "id": "owner-role",
+    "japaneseName": "所有者ロール",
+    "englishName": "Owner Role",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "リソース管理とアクセス権の管理が可能な組み込みロール。",
+    "description": "割り当て範囲で広い管理権限を持ち、他の主体へ権限を与えることもできる。",
+    "example": "環境全体の管理責任者へ割り当てる。",
+    "keyPoint": "補足学習：共同作成者との差は権限管理。",
+    "relatedTermIds": [
+      "contributor-role",
+      "reader-role",
+      "least-privilege"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/role-based-access-control/built-in-roles",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "contributor-role",
+    "japaneseName": "共同作成者ロール",
+    "englishName": "Contributor Role",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "リソースの管理ができる組み込みロール。",
+    "description": "一般的なリソース操作は行えるが、Azure RBACロールの割り当ては許可しない。",
+    "example": "運用担当へリソース変更権限を与える。",
+    "keyPoint": "補足学習：他人へのアクセス権付与までできるとは限らない。",
+    "relatedTermIds": [
+      "owner-role",
+      "reader-role",
+      "rbac"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/role-based-access-control/built-in-roles",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "reader-role",
+    "japaneseName": "閲覧者ロール",
+    "englishName": "Reader Role",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "リソースの構成などを読む組み込みロール。",
+    "description": "管理プレーンのリソース参照はできるが、変更はできない。保存データへの読み取り権限とは別。",
+    "example": "監査担当へ構成の確認を許可する。",
+    "keyPoint": "補足学習：Blobの内容の読み取りには別の権限が必要。",
+    "relatedTermIds": [
+      "contributor-role",
+      "least-privilege",
+      "rbac"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/role-based-access-control/built-in-roles",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  },
+  {
+    "id": "policy-definition",
+    "japaneseName": "ポリシー定義",
+    "englishName": "Policy Definition",
+    "abbreviation": "",
+    "category": "management",
+    "summary": "Azure Policyの評価条件と効果を定める規則。",
+    "description": "どのリソースをどの条件で評価し、どの効果を適用するかを記述する。",
+    "example": "許可する場所以外での作成を拒否する規則を作る。",
+    "keyPoint": "補足学習：定義と割り当てを区別する。",
+    "relatedTermIds": [
+      "policy",
+      "policy-assignment",
+      "initiative"
+    ],
+    "officialUrl": "https://learn.microsoft.com/ja-jp/azure/governance/policy/concepts/definition-structure-basics",
+    "lastVerifiedAt": "2026-10-10",
+    "examScope": "supplementary"
+  }
+]

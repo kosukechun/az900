@@ -1,0 +1,2519 @@
+[
+  {
+    "id": "Q035",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "Azureの基本構造",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azureリージョンの説明として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "1人の利用者アカウント"
+      },
+      {
+        "id": "B",
+        "text": "毎月の請求書"
+      },
+      {
+        "id": "C",
+        "text": "近隣のデータセンターを含む地理的な領域"
+      },
+      {
+        "id": "D",
+        "text": "常に1台だけの物理サーバー"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "リージョンは地理的な領域で、その中に1つ以上のデータセンターがある。利用するサービスや機能の提供状況はリージョンごとに異なる。",
+    "optionExplanations": {
+      "A": "リージョンはIDの単位ではない。",
+      "B": "請求単位はサブスクリプションなど。",
+      "C": "低遅延のネットワークで結ばれた施設を含む。",
+      "D": "1台のサーバーを指す言葉ではない。"
+    },
+    "keyPoint": "リージョンは地理的な配置先。",
+    "relatedTermIds": [
+      "region"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q036",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "Azureの基本構造",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "可用性ゾーンの説明として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "異なる国に置かれたサブスクリプション"
+      },
+      {
+        "id": "B",
+        "text": "同じサーバーの中のフォルダー"
+      },
+      {
+        "id": "C",
+        "text": "料金を分類するタグ"
+      },
+      {
+        "id": "D",
+        "text": "同一リージョン内の独立した電源・冷却・ネットワークを持つ施設群"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "可用性ゾーンは同一リージョン内の物理的に分離されたデータセンター群である。対応リージョンやサービスを確認して使う。",
+    "optionExplanations": {
+      "A": "サブスクリプションは物理的な施設ではない。",
+      "B": "施設の障害分離を表していない。",
+      "C": "メタデータではない。",
+      "D": "ゾーン間で物理的な障害を分離する。"
+    },
+    "keyPoint": "ゾーンはリージョン内の障害分離単位。",
+    "relatedTermIds": [
+      "availability-zone",
+      "region"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q037",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "Azureの基本構造",
+    "difficulty": "standard",
+    "questionType": "single",
+    "questionText": "リージョンペアを使う場合の説明として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "すべてのサービスが自動複製・自動切替するとは限らない"
+      },
+      {
+        "id": "B",
+        "text": "全リージョンに必ず相互のペアがある"
+      },
+      {
+        "id": "C",
+        "text": "同一リージョン内の2つのタグを意味する"
+      },
+      {
+        "id": "D",
+        "text": "データ損失の可能性が常にゼロになる"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "リージョンペアは地域規模の障害に備える設計に関係する。ペアがあるだけで全サービスの復旧構成が自動的に完成するわけではない。",
+    "optionExplanations": {
+      "A": "サービスや構成によって利用者の設定が必要。",
+      "B": "従来のペアを持たないリージョンもある。",
+      "C": "別の地理的な配置先に関する概念。",
+      "D": "非同期複製などでは最新データが失われる可能性がある。"
+    },
+    "keyPoint": "ペアと自動復旧の設定を区別する。",
+    "relatedTermIds": [
+      "region"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q038",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "Azureの基本構造",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "ソブリンリージョンを検討する主な理由はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "全サービスを無条件に無料で使う"
+      },
+      {
+        "id": "B",
+        "text": "特定の法的・コンプライアンス要件へ対応する"
+      },
+      {
+        "id": "C",
+        "text": "必ず通信遅延をゼロにする"
+      },
+      {
+        "id": "D",
+        "text": "リソースグループの名前を変更する"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "ソブリンリージョンには政府向けなどの分離された環境がある。利用資格や提供されるサービスは対象環境に応じて確認する。",
+    "optionExplanations": {
+      "A": "無条件の無料利用を提供するものではない。",
+      "B": "一般のAzure環境と分離された環境が必要な場合に使う。",
+      "C": "遅延ゼロを保証する構成ではない。",
+      "D": "リージョンの用途とは別。"
+    },
+    "keyPoint": "分離環境は法令や利用要件と合わせて選ぶ。",
+    "relatedTermIds": [
+      "region",
+      "azure"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q039",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "Azureの基本構造",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "関連する仮想マシンやストレージを一つの管理単位にまとめたい。使用するのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "可用性ゾーン"
+      },
+      {
+        "id": "C",
+        "text": "リソースグループ"
+      },
+      {
+        "id": "D",
+        "text": "アクセス層"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "リソースグループは関連資源をまとめて管理するための論理コンテナーである。同じライフサイクルの資源をまとめると削除などを管理しやすい。",
+    "optionExplanations": {
+      "A": "DNSレコードを管理する。",
+      "B": "物理的な障害分離単位。",
+      "C": "関連するAzureリソースをまとめる論理コンテナー。",
+      "D": "Blobのアクセス頻度と費用を調整する。"
+    },
+    "keyPoint": "関連資源の管理単位はリソースグループ。",
+    "relatedTermIds": [
+      "resource-group"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q040",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "Azureの基本構造",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "リソースグループに関する正しい説明はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "リソースグループを別のリソースグループ内へ入れ子にできる"
+      },
+      {
+        "id": "B",
+        "text": "削除しても中の資源は必ず残る"
+      },
+      {
+        "id": "C",
+        "text": "同じ仮想マシンを同時に複数のグループへ所属させられる"
+      },
+      {
+        "id": "D",
+        "text": "グループを削除すると、その中の資源も削除対象になる"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "リソースグループの削除は含まれる資源の削除につながる。保護された資源がある場合は操作が拒否されることもあるため、対象を確認する。",
+    "optionExplanations": {
+      "A": "リソースグループは入れ子にできない。",
+      "B": "通常は含まれる資源も削除対象となる。",
+      "C": "1つの資源は同時に1つのグループに所属する。",
+      "D": "ロックなどにより削除が拒否される場合はある。"
+    },
+    "keyPoint": "グループ削除の影響を把握する。",
+    "relatedTermIds": [
+      "resource-group"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q041",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "Azureの基本構造",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "複数のサブスクリプションにまとめてガバナンスを適用したい。上位の管理単位はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "管理グループ"
+      },
+      {
+        "id": "B",
+        "text": "Blobコンテナー"
+      },
+      {
+        "id": "C",
+        "text": "サブネット"
+      },
+      {
+        "id": "D",
+        "text": "可用性セット"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "管理グループはサブスクリプションの上に位置する。複数のサブスクリプションへ共通のポリシーやアクセス権を適用できる。",
+    "optionExplanations": {
+      "A": "複数サブスクリプションをまとめ、ポリシーなどを適用する。",
+      "B": "ストレージ内のオブジェクトをまとめる。",
+      "C": "仮想ネットワークのIP範囲を分ける。",
+      "D": "仮想マシンの障害分離を支援する。"
+    },
+    "keyPoint": "管理グループはサブスクリプションの上位。",
+    "relatedTermIds": [
+      "subscription",
+      "policy"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q042",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "Azureの基本構造",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azureの論理的な管理階層として、上位から下位の正しい並びはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "リソース→管理グループ→リソースグループ→サブスクリプション"
+      },
+      {
+        "id": "B",
+        "text": "管理グループ→サブスクリプション→リソースグループ→リソース"
+      },
+      {
+        "id": "C",
+        "text": "サブネット→リージョン→管理グループ→タグ"
+      },
+      {
+        "id": "D",
+        "text": "可用性ゾーン→タグ→請求書→リソース"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "管理グループがサブスクリプションをまとめ、サブスクリプション内でリソースグループが資源をまとめる。上位スコープの設定には継承されるものがある。",
+    "optionExplanations": {
+      "A": "リソースは最下位。",
+      "B": "代表的な管理階層を正しく表す。",
+      "C": "論理的な管理階層ではない。",
+      "D": "物理構造やメタデータが混在している。"
+    },
+    "keyPoint": "管理グループ、サブスクリプション、グループ、資源の順。",
+    "relatedTermIds": [
+      "subscription",
+      "resource-group"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q043",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "Azureの基本構造",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azureサブスクリプションの役割として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "物理サーバーの冷却"
+      },
+      {
+        "id": "B",
+        "text": "Webアプリのソースコードを自動生成する"
+      },
+      {
+        "id": "C",
+        "text": "課金やアクセス管理の境界を提供する"
+      },
+      {
+        "id": "D",
+        "text": "Blobのファイル形式を必ず変更する"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "サブスクリプションはAzureサービスの利用、課金、アクセス管理の単位である。用途や部門に応じて複数に分ける設計もできる。",
+    "optionExplanations": {
+      "A": "クラウド施設の設備運用。",
+      "B": "サブスクリプションの役割ではない。",
+      "C": "Azureサービスの利用と費用・権限管理の単位となる。",
+      "D": "ストレージデータの形式とは無関係。"
+    },
+    "keyPoint": "課金・管理の境界はサブスクリプション。",
+    "relatedTermIds": [
+      "subscription"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q044",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "コンピューティング",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "同様の設定の仮想マシン群を作り、需要に応じて台数を増減したい。適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Files"
+      },
+      {
+        "id": "B",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "C",
+        "text": "Microsoft Purview"
+      },
+      {
+        "id": "D",
+        "text": "Virtual Machine Scale Sets"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "Virtual Machine Scale Setsは仮想マシン群を管理し、需要やスケジュールに合わせた台数調整を支援する。",
+    "optionExplanations": {
+      "A": "ファイル共有を提供する。",
+      "B": "名前解決を提供する。",
+      "C": "データのガバナンスなどを支援する。",
+      "D": "仮想マシン群の構成とスケーリングを管理する。"
+    },
+    "keyPoint": "VMの台数をまとめて管理するならScale Sets。",
+    "relatedTermIds": [
+      "vm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/2-virtual-machines"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q045",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "コンピューティング",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "計画メンテナンスや共通ハードウェア障害で複数VMが同時に影響を受ける可能性を下げる構成はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "可用性セット"
+      },
+      {
+        "id": "B",
+        "text": "全VMを同一の故障箇所に集中させる"
+      },
+      {
+        "id": "C",
+        "text": "1つのタグだけを設定する"
+      },
+      {
+        "id": "D",
+        "text": "同じパスワードを全VMで使う"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "可用性セットは複数VMを更新ドメインと障害ドメインへ分散し、同時影響の可能性を下げる。ゾーン全体の障害分離とは区別する。",
+    "optionExplanations": {
+      "A": "更新ドメインや障害ドメインを分ける。",
+      "B": "同時障害の危険性を高める。",
+      "C": "タグは物理的な障害分離を行わない。",
+      "D": "可用性の向上にならずセキュリティ面の問題もある。"
+    },
+    "keyPoint": "可用性セットは更新・障害ドメインを分離する。",
+    "relatedTermIds": [
+      "availability-set",
+      "vm",
+      "availability-zone"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/2-virtual-machines"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q046",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "コンピューティング",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azure上のWindowsデスクトップとアプリを、離れた場所の利用者へ提供するサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Queue Storage"
+      },
+      {
+        "id": "B",
+        "text": "Azure Virtual Desktop"
+      },
+      {
+        "id": "C",
+        "text": "Azure Policy"
+      },
+      {
+        "id": "D",
+        "text": "Azure Data Box"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "Azure Virtual DesktopはAzureでデスクトップとアプリを集中管理し、遠隔の端末へ提供できる。",
+    "optionExplanations": {
+      "A": "非同期メッセージを保持する。",
+      "B": "デスクトップとアプリの仮想化サービス。",
+      "C": "リソース構成のルールを評価する。",
+      "D": "物理機器で大量データを移送する。"
+    },
+    "keyPoint": "遠隔デスクトップの提供はAzure Virtual Desktop。",
+    "relatedTermIds": [
+      "vm",
+      "entra-id"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/4-virtual-desktop"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q047",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "コンピューティング",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "コンテナーと仮想マシンの比較として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "コンテナーごとに必ず独立したゲストOSを起動する"
+      },
+      {
+        "id": "B",
+        "text": "仮想マシンはOSを持たない"
+      },
+      {
+        "id": "C",
+        "text": "コンテナーはアプリと依存関係をまとめ、一般にVMより軽量である"
+      },
+      {
+        "id": "D",
+        "text": "コンテナーはどのOSでも条件なしに動く"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "コンテナーはアプリと依存関係をまとめた実行単位で、一般にVMより軽量である。VMは各自のゲストOSを持つ。",
+    "optionExplanations": {
+      "A": "通常のコンテナーはホストのカーネルを共有する。",
+      "B": "仮想マシンはゲストOSを持つ。",
+      "C": "通常はホストOSのカーネルを共有する。",
+      "D": "OSやCPUなどの互換性要件はある。"
+    },
+    "keyPoint": "VMはゲストOS、コンテナーは通常ホストカーネルを共有。",
+    "relatedTermIds": [
+      "vm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/5-containers"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q048",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "コンピューティング",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "自分でVMやKubernetesクラスターを用意せず、単純なコンテナーを実行したい。適した選択肢はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "Azure Files"
+      },
+      {
+        "id": "C",
+        "text": "Azure Monitor"
+      },
+      {
+        "id": "D",
+        "text": "Azure Container Instances"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "Azure Container Instancesはコンテナーを直接実行するためのマネージドサービスである。",
+    "optionExplanations": {
+      "A": "コンテナーの実行基盤ではない。",
+      "B": "ファイル共有であり実行基盤ではない。",
+      "C": "監視サービスでありコンテナー配置先ではない。",
+      "D": "VMやクラスターを管理せずコンテナーを実行できる。"
+    },
+    "keyPoint": "単純なコンテナー実行にはContainer Instancesを検討。",
+    "relatedTermIds": [
+      "paas"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/5-containers"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q049",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "コンピューティング",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "多数のコンテナーの配置・スケーリングなどをKubernetesで管理したい。適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Kubernetes Service"
+      },
+      {
+        "id": "B",
+        "text": "Azure Table Storage"
+      },
+      {
+        "id": "C",
+        "text": "Azure Cost Management"
+      },
+      {
+        "id": "D",
+        "text": "VPN Gateway"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "AKSはマネージドKubernetesサービスであり、コンテナーのオーケストレーションを行う。アプリやクラスター設定の運用責任は残る。",
+    "optionExplanations": {
+      "A": "Kubernetesによるコンテナーオーケストレーションを支援する。",
+      "B": "非リレーショナルデータの保存先。",
+      "C": "費用の分析・管理を行う。",
+      "D": "拠点などとAzureをVPNで接続する。"
+    },
+    "keyPoint": "コンテナー群のKubernetes管理はAKS。",
+    "relatedTermIds": [
+      "paas"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/5-containers"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q050",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "コンピューティング",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "HTTP要求やタイマーをきっかけに小さなコード処理を実行できるサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "Azure Functions"
+      },
+      {
+        "id": "C",
+        "text": "Azure Policy"
+      },
+      {
+        "id": "D",
+        "text": "Azure Files"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "FunctionsはHTTP、タイマー、メッセージなどをトリガーにコードを実行できる。基盤の管理負担を減らせる。",
+    "optionExplanations": {
+      "A": "名前解決のサービス。",
+      "B": "各種トリガーで関数を実行できる。",
+      "C": "構成ルールを評価する。",
+      "D": "ファイル共有を提供する。"
+    },
+    "keyPoint": "処理の起点となるイベントとFunctionsを結び付ける。",
+    "relatedTermIds": [
+      "functions"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/6-functions"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q051",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "コンピューティング",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "WebアプリやAPIをホストし、ホストOSの保守負担を減らすPaaSはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Virtual Network"
+      },
+      {
+        "id": "B",
+        "text": "Azure Data Box"
+      },
+      {
+        "id": "C",
+        "text": "Azure App Service"
+      },
+      {
+        "id": "D",
+        "text": "Azure Resource Health"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "App ServiceはWebアプリやAPIを実行するマネージド基盤を提供する。利用者はアプリのコードや設定に集中できる。",
+    "optionExplanations": {
+      "A": "ネットワークの基盤。",
+      "B": "大量データの移送サービス。",
+      "C": "マネージドなWebアプリ・APIのホスティング。",
+      "D": "個別資源の健全性を表示する。"
+    },
+    "keyPoint": "WebアプリのマネージドホストはApp Service。",
+    "relatedTermIds": [
+      "app-service",
+      "paas"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/7-describe-application-hosting-options"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q052",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "コンピューティング",
+    "difficulty": "standard",
+    "questionType": "multiple",
+    "questionText": "通常のAzure仮想マシンの構成に関連する資源を2つ選べ。",
+    "options": [
+      {
+        "id": "A",
+        "text": "用語辞典のお気に入り"
+      },
+      {
+        "id": "B",
+        "text": "学習サイトの回答履歴"
+      },
+      {
+        "id": "C",
+        "text": "OSディスク"
+      },
+      {
+        "id": "D",
+        "text": "ネットワークインターフェイス"
+      }
+    ],
+    "correctOptionIds": [
+      "C",
+      "D"
+    ],
+    "explanation": "仮想マシンにはOSディスクやネットワークインターフェイスなどの資源が関係する。パブリックIPはすべてのVMで必須ではない。",
+    "optionExplanations": {
+      "A": "仮想マシンのAzure資源ではない。",
+      "B": "仮想マシンの構成資源ではない。",
+      "C": "ゲストOSの保存に使う。",
+      "D": "VMを仮想ネットワークへ接続する。"
+    },
+    "keyPoint": "VM本体だけでなくディスクとネットワークも確認。",
+    "relatedTermIds": [
+      "vm",
+      "vnet"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/2-virtual-machines"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q053",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ネットワーク",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azureリソース間のプライベート通信の基本となるサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Virtual Network"
+      },
+      {
+        "id": "B",
+        "text": "Microsoft Purview"
+      },
+      {
+        "id": "C",
+        "text": "Azure Advisor"
+      },
+      {
+        "id": "D",
+        "text": "Azure Table Storage"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "Virtual NetworkはAzure内のプライベートネットワークの基盤である。サブネット、ルーティング、アクセス制御などと組み合わせる。",
+    "optionExplanations": {
+      "A": "Azure内の分離されたネットワークを構成する。",
+      "B": "データのガバナンスを支援する。",
+      "C": "構成改善の推奨事項を提供する。",
+      "D": "構造化された非リレーショナルデータを保存する。"
+    },
+    "keyPoint": "Azureのプライベート通信の基盤はVNet。",
+    "relatedTermIds": [
+      "vnet"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q054",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ネットワーク",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "仮想ネットワークのIPアドレス範囲を用途ごとに分割する単位はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "リソースロック"
+      },
+      {
+        "id": "B",
+        "text": "サブネット"
+      },
+      {
+        "id": "C",
+        "text": "管理グループ"
+      },
+      {
+        "id": "D",
+        "text": "ストレージ層"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "サブネットは仮想ネットワークのアドレス範囲を分割する。用途別に通信ルールや資源の配置を設計できる。",
+    "optionExplanations": {
+      "A": "資源の変更や削除を制限する。",
+      "B": "VNet内のIPアドレス範囲を分割する。",
+      "C": "サブスクリプションをまとめる。",
+      "D": "Blobのアクセス頻度に合わせる。"
+    },
+    "keyPoint": "VNetの内部区分はサブネット。",
+    "relatedTermIds": [
+      "vnet"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q055",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ネットワーク",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "2つのAzure仮想ネットワークを接続し、Microsoftのネットワークで資源間通信を行う機能はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "タグの継承"
+      },
+      {
+        "id": "B",
+        "text": "Blobのアーカイブ層"
+      },
+      {
+        "id": "C",
+        "text": "仮想ネットワークピアリング"
+      },
+      {
+        "id": "D",
+        "text": "料金計算ツール"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "仮想ネットワークピアリングでVNet同士を接続できる。アドレス範囲や経路などの条件を満たす必要がある。",
+    "optionExplanations": {
+      "A": "ネットワーク接続機能ではない。",
+      "B": "長期保存のアクセス層。",
+      "C": "VNet同士を接続する。",
+      "D": "費用を見積もるツール。"
+    },
+    "keyPoint": "VNet同士の接続はピアリング。",
+    "relatedTermIds": [
+      "vnet"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q056",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ネットワーク",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "拠点のネットワークとAzureを、公共インターネット上の暗号化トンネルで接続するサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "Azure Policy"
+      },
+      {
+        "id": "C",
+        "text": "Azure Files"
+      },
+      {
+        "id": "D",
+        "text": "Azure VPN Gateway"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "VPN Gatewayは公共インターネットを通じた暗号化された通信を提供する。拠点間接続や個別端末からの接続を構成できる。",
+    "optionExplanations": {
+      "A": "名前解決を提供する。",
+      "B": "資源の構成を評価する。",
+      "C": "ファイル共有を提供する。",
+      "D": "拠点とAzureをVPNで接続できる。"
+    },
+    "keyPoint": "インターネット上の暗号化接続はVPN。",
+    "relatedTermIds": [
+      "vpn-gateway",
+      "vnet"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q057",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ネットワーク",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "公共インターネットを経由しない接続で、オンプレミスとMicrosoftクラウドを結びたい。適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "ExpressRoute"
+      },
+      {
+        "id": "B",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "C",
+        "text": "パブリックIPだけ"
+      },
+      {
+        "id": "D",
+        "text": "Azure Queue Storage"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "ExpressRouteは接続事業者などを通じてプライベート接続を提供する。プライベート接続そのものと通信の暗号化は別の要件である。",
+    "optionExplanations": {
+      "A": "接続事業者を通じたプライベート接続を提供する。",
+      "B": "名前解決のサービス。",
+      "C": "インターネットを経由しない接続は作らない。",
+      "D": "メッセージを保存する。"
+    },
+    "keyPoint": "ExpressRouteは公共インターネットを経由しない。",
+    "relatedTermIds": [
+      "expressroute",
+      "vpn-gateway"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q058",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ネットワーク",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "リモート利用者の1台のPCからAzure VNetへVPN接続したい。適した接続方式はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "サイト対サイト"
+      },
+      {
+        "id": "B",
+        "text": "ポイント対サイト"
+      },
+      {
+        "id": "C",
+        "text": "可用性ゾーン"
+      },
+      {
+        "id": "D",
+        "text": "リソースグループ"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "ポイント対サイトVPNは個別の端末からAzureの仮想ネットワークへ接続するための方式である。",
+    "optionExplanations": {
+      "A": "一般に拠点のVPN装置とAzureを接続する。",
+      "B": "個別クライアント端末からVNetへ接続する。",
+      "C": "VPN接続方式ではない。",
+      "D": "ネットワークの接続方式ではない。"
+    },
+    "keyPoint": "PCからVNetはポイント対サイト。",
+    "relatedTermIds": [
+      "vpn-gateway",
+      "vnet"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q059",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ネットワーク",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "自社ドメインのDNSレコードをAzureの基盤でホストしたい。使用するサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure App Service"
+      },
+      {
+        "id": "B",
+        "text": "Azure Advisor"
+      },
+      {
+        "id": "C",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "D",
+        "text": "Azure Virtual Desktop"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "Azure DNSはDNSホスティングを提供する。ドメイン登録そのものとは別の役割である。",
+    "optionExplanations": {
+      "A": "アプリの実行基盤。",
+      "B": "改善の推奨事項を提供する。",
+      "C": "DNSゾーンとレコードのホスティングを提供する。",
+      "D": "デスクトップの仮想化。"
+    },
+    "keyPoint": "DNSレコードのホストとドメイン購入を区別する。",
+    "relatedTermIds": [
+      "vnet"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/azure/dns/dns-overview"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q060",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ネットワーク",
+    "difficulty": "standard",
+    "questionType": "single",
+    "questionText": "Azureの対応サービスをVNet内のプライベートIPアドレスで利用するための機能はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "公開設定のタグ"
+      },
+      {
+        "id": "B",
+        "text": "予算通知"
+      },
+      {
+        "id": "C",
+        "text": "可用性セット"
+      },
+      {
+        "id": "D",
+        "text": "プライベートエンドポイント"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "プライベートエンドポイントはVNet内にプライベートIPを持つネットワークインターフェイスを提供する。公開アクセスの停止は別途設定が必要な場合がある。",
+    "optionExplanations": {
+      "A": "タグは通信経路を作らない。",
+      "B": "費用の通知であり通信経路ではない。",
+      "C": "VMの障害分離機能。",
+      "D": "Private Linkを使いVNet内のIPでサービスへ接続する。"
+    },
+    "keyPoint": "プライベートIP経由のサービス接続はPrivate Endpoint。",
+    "relatedTermIds": [
+      "vnet"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q061",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ネットワーク",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "IPアドレス・ポート・プロトコルを基準にVMの受信・送信トラフィックを制御したい。適した機能はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "ネットワークセキュリティグループ（NSG）"
+      },
+      {
+        "id": "B",
+        "text": "コストのタグ"
+      },
+      {
+        "id": "C",
+        "text": "リソースロック"
+      },
+      {
+        "id": "D",
+        "text": "Azure Migrate"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "NSGのセキュリティ規則で通信を許可・拒否できる。アプリケーションの認証や権限管理とは役割が異なる。",
+    "optionExplanations": {
+      "A": "受信・送信規則でネットワーク通信をフィルターする。",
+      "B": "費用分類のメタデータであり通信を制御しない。",
+      "C": "管理操作を制限するがパケットをフィルターしない。",
+      "D": "評価や移行を支援する。"
+    },
+    "keyPoint": "NSGはネットワーク通信の規則。",
+    "relatedTermIds": [
+      "vnet"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q062",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ストレージ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "大量の画像・動画・ログなどの非構造化データをオブジェクトとして保存したい。適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Queue Storage"
+      },
+      {
+        "id": "B",
+        "text": "Azure Blob Storage"
+      },
+      {
+        "id": "C",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "D",
+        "text": "Azure Policy"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "Blob Storageは画像、動画、バックアップなどの非構造化データの保存に適している。",
+    "optionExplanations": {
+      "A": "非同期処理用のメッセージを保持する。",
+      "B": "テキストやバイナリの非構造化オブジェクトを保存する。",
+      "C": "DNSレコードのホスト。",
+      "D": "リソースの構成を評価する。"
+    },
+    "keyPoint": "非構造化のオブジェクト保存はBlob。",
+    "relatedTermIds": [
+      "blob-storage"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/4-describe-azure-storage-services"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q063",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ストレージ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "既存アプリで使うSMBの共有フォルダーをマネージドサービスへ移したい。適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Queue Storage"
+      },
+      {
+        "id": "B",
+        "text": "Azure Table Storage"
+      },
+      {
+        "id": "C",
+        "text": "Azure Files"
+      },
+      {
+        "id": "D",
+        "text": "Azure Monitor"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "Azure Filesは標準的なファイル共有プロトコルを使う共有を提供する。基盤のファイルサーバー設備を自分で保守する必要性を減らせる。",
+    "optionExplanations": {
+      "A": "ファイル共有プロトコルではない。",
+      "B": "非リレーショナルな構造化データの保存先。",
+      "C": "SMBなどを使うマネージドファイル共有。",
+      "D": "監視を提供する。"
+    },
+    "keyPoint": "共有フォルダーの用途はAzure Files。",
+    "relatedTermIds": [
+      "azure-files"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/4-describe-azure-storage-services"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q064",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ストレージ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "注文受付とバックグラウンド処理を切り離すため、処理依頼メッセージを一時保存したい。適したストレージはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Files"
+      },
+      {
+        "id": "B",
+        "text": "Azure Disks"
+      },
+      {
+        "id": "C",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "D",
+        "text": "Azure Queue Storage"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "Queue Storageはメッセージを保持し、アプリの構成要素を非同期に連携させる用途に使える。",
+    "optionExplanations": {
+      "A": "共有ファイルの保存が中心。",
+      "B": "VM用ブロックストレージ。",
+      "C": "名前解決のサービス。",
+      "D": "非同期処理用のメッセージを格納する。"
+    },
+    "keyPoint": "処理依頼の非同期連携にはQueue。",
+    "relatedTermIds": [
+      "queue-storage",
+      "functions"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/4-describe-azure-storage-services"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q065",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ストレージ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "リレーショナルな結合が不要な構造化データを、NoSQLのテーブルとして保存したい。適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Table Storage"
+      },
+      {
+        "id": "B",
+        "text": "Azure VPN Gateway"
+      },
+      {
+        "id": "C",
+        "text": "Azure Virtual Desktop"
+      },
+      {
+        "id": "D",
+        "text": "Azure DNS"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "Table Storageは非リレーショナルな構造化データの保存先である。リレーショナルDBの結合やスキーマ機能とは異なる。",
+    "optionExplanations": {
+      "A": "構造化された非リレーショナルデータを格納する。",
+      "B": "ネットワーク接続サービス。",
+      "C": "デスクトップの仮想化。",
+      "D": "DNSレコードをホストする。"
+    },
+    "keyPoint": "非リレーショナルな構造化データはTable。",
+    "relatedTermIds": [
+      "table-storage"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/4-describe-azure-storage-services"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q066",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ストレージ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azure VMのOSやデータ用のブロックレベルの保存領域に使うのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "Azure Managed Disks"
+      },
+      {
+        "id": "C",
+        "text": "Azure Policy"
+      },
+      {
+        "id": "D",
+        "text": "Microsoft Entra ID"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "Managed DisksはAzure VMで使うブロックレベルのストレージである。BlobやFilesの用途と区別する。",
+    "optionExplanations": {
+      "A": "名前解決のためのサービス。",
+      "B": "VMへ接続するブロックストレージ。",
+      "C": "構成のルールを評価する。",
+      "D": "IDと認証を管理する。"
+    },
+    "keyPoint": "VMのOS・データ用ボリュームはDisks。",
+    "relatedTermIds": [
+      "vm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/4-describe-azure-storage-services"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q067",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ストレージ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "毎日頻繁に参照する画像のBlobアクセス層として適したものはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "アーカイブ"
+      },
+      {
+        "id": "B",
+        "text": "コールド"
+      },
+      {
+        "id": "C",
+        "text": "ホット"
+      },
+      {
+        "id": "D",
+        "text": "リソースロック"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "ホット層は頻繁なアクセスに適する。低頻度向けの層では容量費用が下がる代わりにアクセス費用などが上がる。",
+    "optionExplanations": {
+      "A": "まれなアクセス向けで取り出しの待ち時間がある。",
+      "B": "アクセス頻度が低いデータ向け。",
+      "C": "頻繁にアクセスするデータに適する。",
+      "D": "Blobアクセス層ではない。"
+    },
+    "keyPoint": "アクセス頻度で層を選ぶ。",
+    "relatedTermIds": [
+      "blob-storage"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/4-describe-azure-storage-services"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q068",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ストレージ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "めったに取り出さない長期バックアップで、取り出しまでの待ち時間を許容できる。適したBlob層はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "ホット"
+      },
+      {
+        "id": "B",
+        "text": "管理グループ"
+      },
+      {
+        "id": "C",
+        "text": "サブネット"
+      },
+      {
+        "id": "D",
+        "text": "アーカイブ"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "アーカイブ層は長期保管向けで、読み出しにはリハイドレートなどの待ち時間を伴う。保管期間や取り出し費用も考慮する。",
+    "optionExplanations": {
+      "A": "頻繁なアクセス向け。",
+      "B": "保存のアクセス層ではない。",
+      "C": "ネットワークの区分。",
+      "D": "低頻度で長期保管するオフライン層。"
+    },
+    "keyPoint": "アーカイブは安い保管と遅い取り出しの組み合わせ。",
+    "relatedTermIds": [
+      "blob-storage"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/4-describe-azure-storage-services"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q069",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ストレージ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "同一リージョン内の3つの可用性ゾーンへ同期複製する冗長化方式はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "ZRS"
+      },
+      {
+        "id": "B",
+        "text": "LRS"
+      },
+      {
+        "id": "C",
+        "text": "GRS"
+      },
+      {
+        "id": "D",
+        "text": "タグ"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "ZRSは主リージョンの複数の可用性ゾーンへ同期複製する。リージョン全体の障害に備える地理冗長性とは区別する。",
+    "optionExplanations": {
+      "A": "ゾーン間で同期複製する。",
+      "B": "主リージョンの単一施設内で複製する。",
+      "C": "主リージョンのLRSから別リージョンへ非同期複製する。",
+      "D": "データを複製する機能ではない。"
+    },
+    "keyPoint": "ZRSはゾーン、GRSは別リージョンへの複製。",
+    "relatedTermIds": [
+      "availability-zone",
+      "blob-storage"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/3-redundancy"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q070",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ストレージ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "主リージョンでLRSを使い、離れたセカンダリリージョンにも非同期でデータを複製する方式はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "ZRS"
+      },
+      {
+        "id": "B",
+        "text": "GRS"
+      },
+      {
+        "id": "C",
+        "text": "LRS"
+      },
+      {
+        "id": "D",
+        "text": "NSG"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "GRSは主リージョンからセカンダリリージョンへ非同期複製する。障害時に最新の書き込みがセカンダリへ届いていない可能性がある。",
+    "optionExplanations": {
+      "A": "主リージョン内のゾーンへ同期複製する。",
+      "B": "主リージョンとセカンダリリージョンへ複製する。",
+      "C": "単一施設内の冗長性であり別リージョンへ複製しない。",
+      "D": "ネットワーク通信のフィルター。"
+    },
+    "keyPoint": "地理複製は非同期によるデータ差に注意。",
+    "relatedTermIds": [
+      "blob-storage",
+      "region"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/3-redundancy"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q071",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ストレージ",
+    "difficulty": "standard",
+    "questionType": "single",
+    "questionText": "地理冗長なセカンダリのデータを、フェールオーバー前から読み取りたい。選択する方式はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "LRS"
+      },
+      {
+        "id": "B",
+        "text": "ZRS"
+      },
+      {
+        "id": "C",
+        "text": "RA-GRS"
+      },
+      {
+        "id": "D",
+        "text": "ReadOnlyロック"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "RA-GRSは読み取りアクセス付き地理冗長ストレージである。複製が非同期のため、セカンダリのデータが最新とは限らない。",
+    "optionExplanations": {
+      "A": "別リージョンの読み取り先を提供しない。",
+      "B": "同一リージョン内の冗長性。",
+      "C": "セカンダリへの読み取りアクセスを提供する。",
+      "D": "管理操作の制限であり地理的複製ではない。"
+    },
+    "keyPoint": "RAはセカンダリへのRead Access。",
+    "relatedTermIds": [
+      "blob-storage",
+      "region"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/3-redundancy"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q072",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "ストレージ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "標準の汎用v2ストレージアカウントに関する説明として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "仮想マシンの実行しかできない"
+      },
+      {
+        "id": "B",
+        "text": "名前はどのアカウントとも同じでよい"
+      },
+      {
+        "id": "C",
+        "text": "すべてのデータを匿名公開しなければならない"
+      },
+      {
+        "id": "D",
+        "text": "Blob・Files・Queue・Tableなどを利用できる"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "標準の汎用v2アカウントは複数のStorageサービスに対応する。アカウント種類や冗長化の選択で機能や費用が変わる。",
+    "optionExplanations": {
+      "A": "保存のサービスを提供する。",
+      "B": "Azure内で一意の名前が必要。",
+      "C": "アクセスは制御できる。",
+      "D": "複数種類のAzure Storageサービスに対応する。"
+    },
+    "keyPoint": "汎用v2は複数の基本Storageサービスに対応。",
+    "relatedTermIds": [
+      "blob-storage",
+      "azure-files",
+      "queue-storage"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/2-accounts"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q073",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "移行ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "回線では現実的な期間に送れない大量のデータを、物理機器の輸送でAzureへ移したい。適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Data Box"
+      },
+      {
+        "id": "B",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "C",
+        "text": "Azure Policy"
+      },
+      {
+        "id": "D",
+        "text": "Azure Virtual Desktop"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "Data Boxは物理機器を利用して大量データを移送する。回線帯域が限られる場合などに検討する。",
+    "optionExplanations": {
+      "A": "物理機器を使って大量データをオフライン移送する。",
+      "B": "名前解決のサービス。",
+      "C": "構成ルールを評価する。",
+      "D": "デスクトップの提供サービス。"
+    },
+    "keyPoint": "物理機器で大量データを運ぶのはData Box。",
+    "relatedTermIds": [
+      "blob-storage"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/6-identify-azure-data-migration-options"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q074",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "移行ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "オンプレミスのサーバーなどをAzureへ移す前の評価と移行を、共通の窓口で管理したい。適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Advisor"
+      },
+      {
+        "id": "B",
+        "text": "Azure Migrate"
+      },
+      {
+        "id": "C",
+        "text": "Azure Queue Storage"
+      },
+      {
+        "id": "D",
+        "text": "Azure DNS"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "Azure Migrateはオンプレミス環境の評価とAzureへの移行を支援するハブである。",
+    "optionExplanations": {
+      "A": "主に既存Azure資源の改善推奨を行う。",
+      "B": "評価と移行のハブを提供する。",
+      "C": "メッセージを保持する。",
+      "D": "DNSレコードを管理する。"
+    },
+    "keyPoint": "移行計画の評価・実施をまとめるのはMigrate。",
+    "relatedTermIds": [
+      "vm",
+      "azure"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/6-identify-azure-data-migration-options"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q075",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "移行ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azure Storageとのファイルコピーをコマンドラインで行いたい。適したツールはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Policy"
+      },
+      {
+        "id": "B",
+        "text": "Azure Advisor"
+      },
+      {
+        "id": "C",
+        "text": "AzCopy"
+      },
+      {
+        "id": "D",
+        "text": "Azure Virtual Desktop"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "AzCopyはAzure Storageとのデータコピーなどに使うコマンドラインツールである。GUI中心のStorage Explorerと区別する。",
+    "optionExplanations": {
+      "A": "構成ルールの評価ツール。",
+      "B": "改善推奨サービス。",
+      "C": "Storageとのデータコピーを行うコマンドラインツール。",
+      "D": "デスクトップ仮想化サービス。"
+    },
+    "keyPoint": "CLIでのStorageコピーはAzCopy。",
+    "relatedTermIds": [
+      "blob-storage",
+      "azure-files"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/7-identify-azure-file-movement-options"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q076",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "移行ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Windows Serverのローカルファイル共有をAzure Filesと同期し、近くにキャッシュしたい。使うのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "Azure Monitor"
+      },
+      {
+        "id": "C",
+        "text": "Azure Table Storage"
+      },
+      {
+        "id": "D",
+        "text": "Azure File Sync"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "Azure File SyncはAzure Filesの共有とWindows Serverのファイルを同期する。ローカルでの高速アクセスを残しつつクラウドで集中管理できる。",
+    "optionExplanations": {
+      "A": "ファイルを同期しない。",
+      "B": "監視サービスでありファイル同期ではない。",
+      "C": "構造化データの保存先。",
+      "D": "Windows ServerとAzure Filesの同期を支援する。"
+    },
+    "keyPoint": "ローカルとAzure Filesの同期はFile Sync。",
+    "relatedTermIds": [
+      "azure-files"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/7-identify-azure-file-movement-options"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q077",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "IDと認証",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "クラウドでユーザーのIDやアプリのサインインを管理するMicrosoftのディレクトリサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Microsoft Entra ID"
+      },
+      {
+        "id": "B",
+        "text": "Azure Blob Storage"
+      },
+      {
+        "id": "C",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "D",
+        "text": "Azure Cost Management"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "Microsoft Entra IDはユーザーやアプリのID、認証、アクセス管理を提供する。Azure ADは以前の名称である。",
+    "optionExplanations": {
+      "A": "クラウドのIDとアクセス管理を提供する。",
+      "B": "オブジェクトの保存サービス。",
+      "C": "名前解決を提供する。",
+      "D": "費用を分析・管理する。"
+    },
+    "keyPoint": "Azure ADの現在の名称はMicrosoft Entra ID。",
+    "relatedTermIds": [
+      "entra-id"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/2-directory-services"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q078",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "IDと認証",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "パスワードに加え、所有している認証器など別種類の要素で確認する方法はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "同じパスワードを2回入力する"
+      },
+      {
+        "id": "B",
+        "text": "多要素認証（MFA）"
+      },
+      {
+        "id": "C",
+        "text": "公開IPアドレスを付ける"
+      },
+      {
+        "id": "D",
+        "text": "リソースにタグを付ける"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "MFAは知識、所有、生体など異なる種類の認証要素を組み合わせる。パスワードを繰り返すだけではMFAにならない。",
+    "optionExplanations": {
+      "A": "同一要素を繰り返しても別種類にはならない。",
+      "B": "異なる種類の要素を組み合わせる。",
+      "C": "身元確認の要素ではない。",
+      "D": "認証手段ではない。"
+    },
+    "keyPoint": "異なる種類の要素を使うのがMFA。",
+    "relatedTermIds": [
+      "entra-id"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/3-authentication-methods"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q079",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "IDと認証",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "一度のサインイン後、対応する複数のアプリを再入力の負担を減らして利用する仕組みはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "スケールアウト"
+      },
+      {
+        "id": "B",
+        "text": "LRS"
+      },
+      {
+        "id": "C",
+        "text": "シングルサインオン（SSO）"
+      },
+      {
+        "id": "D",
+        "text": "Data Box"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "SSOは一度の認証を用いて複数の対応アプリへアクセスする体験を提供する。追加の確認が求められる場合はある。",
+    "optionExplanations": {
+      "A": "サーバー台数を増やす。",
+      "B": "ストレージのローカル冗長化。",
+      "C": "認証状態を使って複数アプリへアクセスする。",
+      "D": "大量データの移送。"
+    },
+    "keyPoint": "SSOは複数アプリへのサインイン負担を減らす。",
+    "relatedTermIds": [
+      "entra-id"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/3-authentication-methods"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q080",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "IDと認証",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "場所や端末の状態などを評価し、必要に応じてMFAを要求する仕組みはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azureタグ"
+      },
+      {
+        "id": "B",
+        "text": "可用性セット"
+      },
+      {
+        "id": "C",
+        "text": "Azure Queue Storage"
+      },
+      {
+        "id": "D",
+        "text": "Microsoft Entra条件付きアクセス"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "条件付きアクセスはユーザー、場所、端末などのシグナルを評価し、許可、ブロック、MFA要求などを適用する。",
+    "optionExplanations": {
+      "A": "メタデータでありサインインを評価しない。",
+      "B": "VMの障害分離を行う。",
+      "C": "メッセージを保存する。",
+      "D": "サインインのシグナルに基づきアクセス条件を適用する。"
+    },
+    "keyPoint": "状況に応じたアクセス条件は条件付きアクセス。",
+    "relatedTermIds": [
+      "entra-id"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/5-conditional-access"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q081",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "アクセスとセキュリティ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "利用者に業務上必要な範囲だけのAzure操作権限を与える原則はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "最小特権"
+      },
+      {
+        "id": "B",
+        "text": "全員にOwnerを付与"
+      },
+      {
+        "id": "C",
+        "text": "全員のアカウント共有"
+      },
+      {
+        "id": "D",
+        "text": "認証の廃止"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "最小特権では必要な権限だけを付与する。Azure RBACではロールとスコープを選んで実現する。",
+    "optionExplanations": {
+      "A": "必要な操作だけを必要な範囲で許可する。",
+      "B": "必要以上の権限になる可能性が高い。",
+      "C": "操作主体を区別できず安全な権限管理を損なう。",
+      "D": "アクセス権の制御を弱める。"
+    },
+    "keyPoint": "権限は業務に必要な最小範囲にする。",
+    "relatedTermIds": [
+      "rbac",
+      "entra-id"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/6-role-based-access-control",
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/7-describe-zero-trust-model"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q082",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "アクセスとセキュリティ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "ゼロトラストの考え方として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "社内ネットワーク内は常に安全と見なす"
+      },
+      {
+        "id": "B",
+        "text": "明示的に検証し、最小特権を使い、侵害を想定する"
+      },
+      {
+        "id": "C",
+        "text": "パスワードを共有して操作を簡単にする"
+      },
+      {
+        "id": "D",
+        "text": "侵害は絶対に起きない前提で設計する"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "ゼロトラストではネットワーク内にいるだけで信頼せず、状況を検証する。最小特権と侵害を前提とした設計を組み合わせる。",
+    "optionExplanations": {
+      "A": "場所だけで自動的に信頼しない。",
+      "B": "ゼロトラストの基本原則。",
+      "C": "安全な検証と権限管理を損なう。",
+      "D": "侵害を想定する原則と逆。"
+    },
+    "keyPoint": "検証・最小特権・侵害想定を組み合わせる。",
+    "relatedTermIds": [
+      "entra-id",
+      "rbac"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/7-describe-zero-trust-model"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q083",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "IDと認証",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "LDAPやKerberosなどを使う既存アプリに、マネージドなドメイン機能を提供したい。適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNSのみ"
+      },
+      {
+        "id": "B",
+        "text": "Azure Filesのみ"
+      },
+      {
+        "id": "C",
+        "text": "Microsoft Entra Domain Services"
+      },
+      {
+        "id": "D",
+        "text": "Azure Cost Management"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "Entra Domain Servicesは従来のドメイン機能をマネージドで提供する。Entra IDのクラウド認証だけで従来の全プロトコルが同じように使えるわけではない。",
+    "optionExplanations": {
+      "A": "DNSだけではドメイン参加やKerberos認証を提供しない。",
+      "B": "ファイル共有だけでドメイン機能を提供しない。",
+      "C": "ドメイン参加、LDAP、Kerberosなどのマネージドな機能を提供する。",
+      "D": "費用の管理サービス。"
+    },
+    "keyPoint": "従来のドメイン機能はEntra Domain Services。",
+    "relatedTermIds": [
+      "entra-id"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/2-directory-services"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q084",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "IDと認証",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "取引先の利用者を外部のIDのまま招待し、必要なアプリだけへアクセスさせたい。利用する考え方はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "全員のパスワード共有"
+      },
+      {
+        "id": "B",
+        "text": "全資源の匿名公開"
+      },
+      {
+        "id": "C",
+        "text": "タグに外部と書くことだけ"
+      },
+      {
+        "id": "D",
+        "text": "Microsoft Entraの外部IDとB2Bコラボレーション"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "Entraの外部ID機能で組織外の利用者との連携を支援できる。ゲストに必要な権限のみを与え、不要になったアクセスを見直す。",
+    "optionExplanations": {
+      "A": "個別の本人確認や権限管理を損なう。",
+      "B": "必要な相手だけへ権限を絞れない。",
+      "C": "IDの認証とアクセス許可を設定しない。",
+      "D": "外部利用者をゲストとして招待し、権限を管理する。"
+    },
+    "keyPoint": "外部利用者にはゲストアクセスを管理する。",
+    "relatedTermIds": [
+      "entra-id",
+      "rbac"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/4-external-identities"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q085",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "IDと認証",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "パスワードを入力せず、安全な認証器などでサインインする方法の例はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "FIDO2セキュリティキーなどのパスワードレス認証"
+      },
+      {
+        "id": "B",
+        "text": "誰でも認証を省略する"
+      },
+      {
+        "id": "C",
+        "text": "同じパスワードを全員へ公開する"
+      },
+      {
+        "id": "D",
+        "text": "毎回別のユーザー名だけを入力する"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "パスワードレスではセキュリティキーなどを使ってサインインする。パスワードを使わなくても、本人確認や権限管理は必要である。",
+    "optionExplanations": {
+      "A": "パスワードを入力する代わりに安全な認証方式を使う。",
+      "B": "パスワードレスは本人確認の廃止ではない。",
+      "C": "本人確認と秘密の保護を損なう。",
+      "D": "ユーザー名だけで十分な本人確認にならない。"
+    },
+    "keyPoint": "パスワードレスは認証をなくすことではない。",
+    "relatedTermIds": [
+      "entra-id"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/3-authentication-methods"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q086",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "アクセスとセキュリティ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "1つの対策が突破されても別の層で攻撃を抑えるため、物理・ID・ネットワーク・アプリなどに対策を重ねる考え方はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "単一のパスワードだけを信頼する"
+      },
+      {
+        "id": "B",
+        "text": "多層防御"
+      },
+      {
+        "id": "C",
+        "text": "同一障害点への集中"
+      },
+      {
+        "id": "D",
+        "text": "すべてのログの停止"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "多層防御は複数の層で対策を組み合わせる。ある層の侵害だけでデータまで到達しないように設計する。",
+    "optionExplanations": {
+      "A": "1つの対策への依存になる。",
+      "B": "複数の防御層を使って侵害の進行を抑える。",
+      "C": "防御層を増やすことではない。",
+      "D": "侵害の検知を難しくする。"
+    },
+    "keyPoint": "防御を1つの層だけに依存させない。",
+    "relatedTermIds": [
+      "entra-id",
+      "vnet"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/8-describe-defense-depth"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q087",
+    "version": 1,
+    "domain": "services",
+    "subcategory": "アクセスとセキュリティ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "クラウド資源のセキュリティ態勢の評価や、ワークロードの脅威保護を支援するサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "Azure Files"
+      },
+      {
+        "id": "C",
+        "text": "Microsoft Defender for Cloud"
+      },
+      {
+        "id": "D",
+        "text": "Azure Data Box"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "Defender for Cloudはセキュリティ態勢の評価や保護を支援する。無料で使える範囲と有料の保護プランを区別して確認する。",
+    "optionExplanations": {
+      "A": "名前解決のサービス。",
+      "B": "ファイル共有サービス。",
+      "C": "セキュリティ態勢管理とワークロード保護を支援する。",
+      "D": "大量データの物理移送。"
+    },
+    "keyPoint": "セキュリティ態勢と脅威保護はDefender for Cloud。",
+    "relatedTermIds": [
+      "azure"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/9-describe-microsoft-defender-for-cloud"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  }
+]

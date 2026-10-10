@@ -1,0 +1,1637 @@
+[
+  {
+    "id": "Q001",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドサービスモデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "既存の社内サーバーを、OS設定を保ったままAzureへ移したい。OSの管理権限を必要とする場合に適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Virtual Machines"
+      },
+      {
+        "id": "B",
+        "text": "Azure App Service"
+      },
+      {
+        "id": "C",
+        "text": "Microsoft 365"
+      },
+      {
+        "id": "D",
+        "text": "Azure Functions"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "Azure Virtual MachinesではゲストOSを利用者が管理できる。既存サーバーを大きく作り替えず移す用途に適している。",
+    "optionExplanations": {
+      "A": "OSとアプリケーションを自分で管理できるIaaS。",
+      "B": "Webアプリ向けPaaSで、ホストOSを直接管理する用途ではない。",
+      "C": "完成したアプリケーションを利用するSaaS。",
+      "D": "イベントでコードを実行するサービスで、OS管理が目的ではない。"
+    },
+    "keyPoint": "OSの細かな制御が必要ならIaaSを検討する。",
+    "relatedTermIds": [
+      "iaas",
+      "vm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/2-describe-infrastructure-service",
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/2-virtual-machines"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q002",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドサービスモデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Webアプリのコードに集中し、ホストOSの更新作業をサービス提供者に任せたい。適したモデルはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "IaaS"
+      },
+      {
+        "id": "B",
+        "text": "PaaS"
+      },
+      {
+        "id": "C",
+        "text": "オンプレミス"
+      },
+      {
+        "id": "D",
+        "text": "プライベートネットワーク"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "PaaSでは開発・実行基盤をサービスとして利用する。アプリケーションやデータの管理は利用者に残る。",
+    "optionExplanations": {
+      "A": "ゲストOSの更新は基本的に利用者の責任。",
+      "B": "OSや実行基盤を提供者が管理し、利用者はアプリを開発する。",
+      "C": "通常は物理設備からアプリまで自社で管理する。",
+      "D": "通信の構成でありクラウドサービスモデルではない。"
+    },
+    "keyPoint": "PaaSは基盤運用を減らして開発に集中する。",
+    "relatedTermIds": [
+      "paas",
+      "app-service"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/3-describe-platform-service"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q003",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドサービスモデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "完成したメール・共同作業アプリをサービスとして利用するMicrosoft 365は、どのモデルの代表例か。",
+    "options": [
+      {
+        "id": "A",
+        "text": "IaaS"
+      },
+      {
+        "id": "B",
+        "text": "PaaS"
+      },
+      {
+        "id": "C",
+        "text": "SaaS"
+      },
+      {
+        "id": "D",
+        "text": "可用性ゾーン"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "SaaSは完成したソフトウェアをサービスとして利用する。利用者はメールサーバーのOSやアプリ本体の更新を管理しない。",
+    "optionExplanations": {
+      "A": "仮想サーバーなどの基盤を借りるモデル。",
+      "B": "自分でアプリを作成・配置するための基盤。",
+      "C": "提供済みのソフトウェアを利用するモデル。",
+      "D": "物理的な障害分離単位でありサービスモデルではない。"
+    },
+    "keyPoint": "完成したアプリの利用はSaaS。",
+    "relatedTermIds": [
+      "saas"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/4-describe-software-service"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q004",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "責任共有モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "IaaSの仮想マシンで、ゲストOSにセキュリティ更新を適用する基本的な責任を持つのは誰か。",
+    "options": [
+      {
+        "id": "A",
+        "text": "データセンターの建築会社"
+      },
+      {
+        "id": "B",
+        "text": "インターネット回線事業者"
+      },
+      {
+        "id": "C",
+        "text": "常にMicrosoftのみ"
+      },
+      {
+        "id": "D",
+        "text": "利用者"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "IaaSでは物理ホストなどは提供者が管理し、ゲストOSの設定・更新は利用者が管理する。",
+    "optionExplanations": {
+      "A": "ゲストOSを管理する主体ではない。",
+      "B": "回線とゲストOSの更新責任は別。",
+      "C": "IaaSのゲストOSは利用者の管理対象。",
+      "D": "更新の自動化サービスを使っても管理責任は利用者に残る。"
+    },
+    "keyPoint": "物理ホストとゲストOSの責任を区別する。",
+    "relatedTermIds": [
+      "shared-responsibility",
+      "iaas",
+      "vm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model",
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/2-describe-infrastructure-service"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q005",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "責任共有モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "IaaS・PaaS・SaaSのいずれでも、利用者に残る責任はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "自社データと利用者アカウントの適切な管理"
+      },
+      {
+        "id": "B",
+        "text": "データセンターの冷却設備の交換"
+      },
+      {
+        "id": "C",
+        "text": "物理サーバーの交換"
+      },
+      {
+        "id": "D",
+        "text": "提供者の施設への入退室管理"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "サービスモデルが変わっても、保存するデータ、アカウント、接続する端末などについて利用者の管理責任はなくならない。",
+    "optionExplanations": {
+      "A": "モデルが変わっても利用者の責任として残る。",
+      "B": "クラウド提供者が管理する。",
+      "C": "クラウド提供者が管理する。",
+      "D": "クラウド提供者が管理する。"
+    },
+    "keyPoint": "SaaSでも自社データとIDは自分で管理する。",
+    "relatedTermIds": [
+      "shared-responsibility",
+      "saas"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q006",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "責任共有モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azureデータセンターの電源・冷却・物理的な入退室管理を担当するのは誰か。",
+    "options": [
+      {
+        "id": "A",
+        "text": "サブスクリプションの所有者"
+      },
+      {
+        "id": "B",
+        "text": "Microsoftなどのクラウド提供者"
+      },
+      {
+        "id": "C",
+        "text": "アプリのエンドユーザー"
+      },
+      {
+        "id": "D",
+        "text": "利用者と提供者が毎回交代する"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "クラウドの物理インフラストラクチャの管理は提供者の責任である。利用者はその設備を直接所有・交換しない。",
+    "optionExplanations": {
+      "A": "クラウド施設を直接管理しない。",
+      "B": "物理的な施設とホストを管理する。",
+      "C": "施設の管理責任は持たない。",
+      "D": "サービス利用のたびに責任が交代する仕組みではない。"
+    },
+    "keyPoint": "物理設備は提供者が管理する。",
+    "relatedTermIds": [
+      "shared-responsibility"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q007",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "責任共有モデル",
+    "difficulty": "standard",
+    "questionType": "multiple",
+    "questionText": "PaaSのデータベースを使用するとき、利用者が管理する対象を2つ選べ。",
+    "options": [
+      {
+        "id": "A",
+        "text": "データセンターの空調"
+      },
+      {
+        "id": "B",
+        "text": "物理ディスクの交換"
+      },
+      {
+        "id": "C",
+        "text": "格納する業務データ"
+      },
+      {
+        "id": "D",
+        "text": "誰にアクセスを許可するか"
+      }
+    ],
+    "correctOptionIds": [
+      "C",
+      "D"
+    ],
+    "explanation": "PaaSでも、データの適切な取り扱いとアクセス許可の設定は利用者の責任に含まれる。設備運用の委譲とデータ管理の委譲は同じではない。",
+    "optionExplanations": {
+      "A": "提供者の責任。",
+      "B": "提供者の責任。",
+      "C": "データの内容や取り扱いは利用者の責任。",
+      "D": "利用者が適切な権限を設定する。"
+    },
+    "keyPoint": "基盤を任せてもデータとアクセス権を管理する。",
+    "relatedTermIds": [
+      "shared-responsibility",
+      "paas"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model",
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/3-describe-platform-service"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q008",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウド展開モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "広く利用者に提供されるAzureの一般的なクラウド環境は、どの展開モデルに分類されるか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "オンプレミスのみ"
+      },
+      {
+        "id": "B",
+        "text": "プライベートクラウドのみ"
+      },
+      {
+        "id": "C",
+        "text": "ハイブリッドクラウドのみ"
+      },
+      {
+        "id": "D",
+        "text": "パブリッククラウド"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "パブリッククラウドはクラウド提供者が管理し、サービスを利用したい組織へ提供するモデルである。",
+    "optionExplanations": {
+      "A": "Azureは自社設備だけで運用する環境ではない。",
+      "B": "単一組織専用の環境という定義に限定されない。",
+      "C": "社内環境との組み合わせが必須ではない。",
+      "D": "第三者の提供者が広く利用者へサービスを提供する。"
+    },
+    "keyPoint": "パブリックはデータが誰でも読めるという意味ではない。",
+    "relatedTermIds": [
+      "public-cloud",
+      "azure"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q009",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウド展開モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "単一の組織専用に使われるクラウド環境を何と呼ぶか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "プライベートクラウド"
+      },
+      {
+        "id": "B",
+        "text": "パブリッククラウド"
+      },
+      {
+        "id": "C",
+        "text": "マルチクラウド"
+      },
+      {
+        "id": "D",
+        "text": "サーバーレス"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "プライベートクラウドは単一組織が専用で利用する。必ず自社敷地内に置く必要はなく、第三者の専用施設に配置することもある。",
+    "optionExplanations": {
+      "A": "単一組織専用のクラウド。",
+      "B": "幅広い利用者に提供される。",
+      "C": "複数のクラウド提供者を使う構成。",
+      "D": "サーバー管理を抽象化する実行方式。"
+    },
+    "keyPoint": "専用利用と物理的な設置場所を混同しない。",
+    "relatedTermIds": [
+      "private-cloud"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q010",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウド展開モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "社内のプライベートクラウドとAzureを相互接続して、一体として運用する構成はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "SaaS"
+      },
+      {
+        "id": "B",
+        "text": "ハイブリッドクラウド"
+      },
+      {
+        "id": "C",
+        "text": "可用性セット"
+      },
+      {
+        "id": "D",
+        "text": "単一のプライベートクラウド"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "ハイブリッドクラウドはパブリッククラウドとプライベートクラウドを組み合わせた環境である。段階的な移行や一部データの社内保持に使える。",
+    "optionExplanations": {
+      "A": "完成したソフトウェアの提供モデル。",
+      "B": "プライベートとパブリックを組み合わせて接続する。",
+      "C": "仮想マシンの障害分離機能。",
+      "D": "Azureとの組み合わせを表していない。"
+    },
+    "keyPoint": "社内とパブリックの組み合わせはハイブリッド。",
+    "relatedTermIds": [
+      "hybrid-cloud",
+      "private-cloud",
+      "public-cloud"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q011",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウド展開モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azureと別のパブリッククラウド提供者を併用する構成を最も直接的に表す言葉はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "スケールアップ"
+      },
+      {
+        "id": "B",
+        "text": "単一テナント"
+      },
+      {
+        "id": "C",
+        "text": "マルチクラウド"
+      },
+      {
+        "id": "D",
+        "text": "可用性ゾーン"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "複数のパブリッククラウド提供者を使う構成はマルチクラウドである。ハイブリッドの定義とは着目点が異なる。",
+    "optionExplanations": {
+      "A": "単一リソースの性能を上げる。",
+      "B": "利用組織の単位を表す。",
+      "C": "複数のクラウド提供者を利用する。",
+      "D": "同一リージョン内の障害分離単位。"
+    },
+    "keyPoint": "マルチクラウドは提供者の複数利用。",
+    "relatedTermIds": [
+      "public-cloud",
+      "hybrid-cloud",
+      "arc"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q012",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウド展開モデル",
+    "difficulty": "standard",
+    "questionType": "single",
+    "questionText": "機密性の高い処理を社内に残しつつ、一時的な需要増をAzureで処理したい。適した構成はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "すべての設備を廃止する"
+      },
+      {
+        "id": "B",
+        "text": "接続を持たない社内設備だけ"
+      },
+      {
+        "id": "C",
+        "text": "可用性セットだけ"
+      },
+      {
+        "id": "D",
+        "text": "ハイブリッドクラウド"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "ハイブリッド構成では社内とクラウドの配置先を選べる。ただしセキュリティや法令の要件を満たすための接続・権限設計は必要である。",
+    "optionExplanations": {
+      "A": "社内に処理を残す要件を満たさない。",
+      "B": "Azureで需要を処理する要件を満たさない。",
+      "C": "社内とAzureの組み合わせを実現するモデルではない。",
+      "D": "配置先を使い分け、一時的需要をクラウド側へ広げられる。"
+    },
+    "keyPoint": "ハイブリッドは配置の柔軟性を提供する。",
+    "relatedTermIds": [
+      "hybrid-cloud"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q013",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "従量課金と価格モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "利用した計算資源の量や時間に応じて料金を支払う考え方はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "従量課金"
+      },
+      {
+        "id": "B",
+        "text": "買い切りの設備投資のみ"
+      },
+      {
+        "id": "C",
+        "text": "すべて永久に無料"
+      },
+      {
+        "id": "D",
+        "text": "ユーザー数に関係なく設備を所有する義務"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "従量課金ではサービスの使用量に基づいて費用が発生する。使い終えたリソースを適切に解放すると無駄な費用を抑えやすい。",
+    "optionExplanations": {
+      "A": "利用量に応じた課金モデル。",
+      "B": "消費量ではなく事前の資産購入。",
+      "C": "クラウド利用が無条件に無料という意味ではない。",
+      "D": "従量課金の条件ではない。"
+    },
+    "keyPoint": "使った量を把握して費用を管理する。",
+    "relatedTermIds": [
+      "cloud-computing",
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/6-describe-consumption-based-model"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q014",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "従量課金と価格モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "自社データセンター用の物理サーバーを最初に購入する支出は、一般にどれに分類されるか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "OpEx"
+      },
+      {
+        "id": "B",
+        "text": "CapEx"
+      },
+      {
+        "id": "C",
+        "text": "可用性"
+      },
+      {
+        "id": "D",
+        "text": "弾力性"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "CapExは物理設備などへの事前の資本的支出である。クラウドのサービス利用費は一般にOpExとして扱う。",
+    "optionExplanations": {
+      "A": "継続的な運用費用を表す。",
+      "B": "初期の資本的支出を表す。",
+      "C": "利用可能な状態の程度。",
+      "D": "需要に合わせた資源調整の性質。"
+    },
+    "keyPoint": "CapExは初期設備、OpExは継続利用の支出。",
+    "relatedTermIds": [
+      "cloud-computing"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/6-describe-consumption-based-model"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q015",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "従量課金と価格モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "クラウドサービスを毎月使った分だけ支払う費用は、一般にどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "物理設備の所有権"
+      },
+      {
+        "id": "B",
+        "text": "CapExだけ"
+      },
+      {
+        "id": "C",
+        "text": "OpEx"
+      },
+      {
+        "id": "D",
+        "text": "サービスレベル"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "クラウドの継続的なサービス利用費は一般にOpExと分類される。大量の物理設備を事前に購入する必要性を抑えられる。",
+    "optionExplanations": {
+      "A": "サービス利用料で所有権を購入するわけではない。",
+      "B": "通常の継続利用費は資本的支出ではない。",
+      "C": "継続的な運用支出。",
+      "D": "費用分類ではない。"
+    },
+    "keyPoint": "従量課金の利用料は一般に運用支出。",
+    "relatedTermIds": [
+      "cloud-computing",
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/6-describe-consumption-based-model"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q016",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "従量課金と価格モデル",
+    "difficulty": "standard",
+    "questionType": "single",
+    "questionText": "需要が予測できない短期テストで、長期の利用約束を避けたい。最も適した基本的な価格モデルはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "3年間の予約を必ず購入"
+      },
+      {
+        "id": "B",
+        "text": "使わない設備を大量購入"
+      },
+      {
+        "id": "C",
+        "text": "クラウド利用量を記録しない"
+      },
+      {
+        "id": "D",
+        "text": "従量課金"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "従量課金は長期の使用量が読めない場合にも柔軟に使える。予約などの割引は長期の安定した利用が見込めるときに比較する。",
+    "optionExplanations": {
+      "A": "短期で不確実な需要に長期約束を課す。",
+      "B": "無駄な初期投資になりやすい。",
+      "C": "費用管理を難しくする。",
+      "D": "使用した分を支払い、必要に応じて開始・停止できる。"
+    },
+    "keyPoint": "短期・変動需要では柔軟な従量課金を比較する。",
+    "relatedTermIds": [
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/6-describe-consumption-based-model",
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/2-describe-factors-affect-costs-azure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q017",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドの利点",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Webサーバーを2台から6台に増やして需要を処理する操作はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "スケールアウト"
+      },
+      {
+        "id": "B",
+        "text": "スケールアップ"
+      },
+      {
+        "id": "C",
+        "text": "スケールイン"
+      },
+      {
+        "id": "D",
+        "text": "スケールダウン"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "スケールアウトはリソースの数を増やす方法である。負荷分散などと組み合わせて増えた需要を処理する。",
+    "optionExplanations": {
+      "A": "台数を増やす水平スケーリング。",
+      "B": "1台のCPUやメモリを増やす垂直スケーリング。",
+      "C": "台数を減らす操作。",
+      "D": "1台の性能を下げる操作。"
+    },
+    "keyPoint": "横に台数を増やすのがスケールアウト。",
+    "relatedTermIds": [
+      "cloud-computing",
+      "vm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/2-high-availability-scalability-cloud"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q018",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドの利点",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "仮想マシン1台のメモリを8GBから32GBへ増やす操作はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "スケールイン"
+      },
+      {
+        "id": "B",
+        "text": "スケールアップ"
+      },
+      {
+        "id": "C",
+        "text": "スケールアウト"
+      },
+      {
+        "id": "D",
+        "text": "ジオレプリケーション"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "スケールアップはCPUやメモリなど、1つのリソースの能力を高める垂直スケーリングである。",
+    "optionExplanations": {
+      "A": "台数を減らす。",
+      "B": "単一リソースの処理能力を増やす。",
+      "C": "台数を増やす。",
+      "D": "地理的に離れた場所へ複製する。"
+    },
+    "keyPoint": "縦に性能を増やすのがスケールアップ。",
+    "relatedTermIds": [
+      "vm",
+      "cloud-computing"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/2-high-availability-scalability-cloud"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q019",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドの利点",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "需要が減ったため、同じ性能のサーバー台数を6台から2台へ減らす操作はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "スケールアップ"
+      },
+      {
+        "id": "B",
+        "text": "スケールアウト"
+      },
+      {
+        "id": "C",
+        "text": "スケールイン"
+      },
+      {
+        "id": "D",
+        "text": "認証"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "スケールインはリソースの台数を減らす。需要に応じて容量を戻すことで過剰な支出を抑えられる。",
+    "optionExplanations": {
+      "A": "単一リソースの性能を上げる。",
+      "B": "台数を増やす。",
+      "C": "台数を減らす水平スケーリング。",
+      "D": "利用者の身元を確認する。"
+    },
+    "keyPoint": "スケールインは台数の削減。",
+    "relatedTermIds": [
+      "cloud-computing",
+      "vm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/2-high-availability-scalability-cloud"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q020",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドの利点",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "必要なときにサービスを利用できる状態を維持し、停止時間を小さくする考え方はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "資本的支出"
+      },
+      {
+        "id": "B",
+        "text": "ベンダーロックイン"
+      },
+      {
+        "id": "C",
+        "text": "単一障害点"
+      },
+      {
+        "id": "D",
+        "text": "高可用性"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "高可用性は障害や保守の際もサービスをできるだけ利用可能にする考え方である。冗長化などの設計が必要になる。",
+    "optionExplanations": {
+      "A": "設備投資の費用分類。",
+      "B": "特定の提供者への依存。",
+      "C": "障害が全体停止へつながる箇所。",
+      "D": "サービスの利用可能な時間を高める設計目標。"
+    },
+    "keyPoint": "高可用性は停止時間を減らす。",
+    "relatedTermIds": [
+      "availability-zone",
+      "cloud-computing"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/2-high-availability-scalability-cloud"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q021",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドの利点",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "障害から回復し、処理を継続できるシステムの性質はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "信頼性"
+      },
+      {
+        "id": "B",
+        "text": "無制限の無料利用"
+      },
+      {
+        "id": "C",
+        "text": "データを公開すること"
+      },
+      {
+        "id": "D",
+        "text": "すべての冗長化を削除すること"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "信頼性は障害から回復し継続動作する能力に関係する。複数リージョンなどを利用した復旧設計で支えられる。",
+    "optionExplanations": {
+      "A": "障害に備えて回復・継続できる性質。",
+      "B": "クラウドの性質ではない。",
+      "C": "回復能力とは関係しない。",
+      "D": "信頼性を低下させる可能性がある。"
+    },
+    "keyPoint": "障害が起きる前提で回復を設計する。",
+    "relatedTermIds": [
+      "region",
+      "availability-zone"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/3-reliability-predictability-cloud"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q022",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドの利点",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "クラウドの費用の予測可能性を高める行動はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "使用量を見ずにリソースを追加する"
+      },
+      {
+        "id": "B",
+        "text": "使用量を分析し、料金計算ツールで見積もる"
+      },
+      {
+        "id": "C",
+        "text": "サービスごとの価格差を無視する"
+      },
+      {
+        "id": "D",
+        "text": "予算通知をすべて無効にする"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "使用量の分析や見積もりは将来の費用予測に役立つ。クラウドの費用が自動的に一定額になるわけではない。",
+    "optionExplanations": {
+      "A": "費用増加を把握しにくくなる。",
+      "B": "利用傾向と料金を把握できる。",
+      "C": "見積もりの誤差が増えやすい。",
+      "D": "支出増への気付きが遅れる。"
+    },
+    "keyPoint": "費用予測には監視と見積もりが必要。",
+    "relatedTermIds": [
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/3-reliability-predictability-cloud"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q023",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドの利点",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "組織の標準に合わないリソース設定を検出し、配置ルールを維持する活動はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "CPUの仮想化のみ"
+      },
+      {
+        "id": "B",
+        "text": "匿名の公開アクセス"
+      },
+      {
+        "id": "C",
+        "text": "ガバナンス"
+      },
+      {
+        "id": "D",
+        "text": "必ずすべて手動で設定すること"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "ガバナンスは組織の標準や要件に沿うよう資源を管理する。クラウドにはポリシーや監査を支援する仕組みがある。",
+    "optionExplanations": {
+      "A": "組織全体のルール管理を表さない。",
+      "B": "標準の維持ではない。",
+      "C": "組織の規則や管理基準に沿った運用を行う。",
+      "D": "ガバナンスは自動化も利用できる。"
+    },
+    "keyPoint": "ガバナンスはルールの維持と監査。",
+    "relatedTermIds": [
+      "policy"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/4-security-governance-cloud"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q024",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドの利点",
+    "difficulty": "standard",
+    "questionType": "multiple",
+    "questionText": "クラウドの管理の容易さを活用する方法を2つ選べ。",
+    "options": [
+      {
+        "id": "A",
+        "text": "全リソースを毎回別の手順で手動作成する"
+      },
+      {
+        "id": "B",
+        "text": "監視をなくして障害を無視する"
+      },
+      {
+        "id": "C",
+        "text": "テンプレートで同じ構成を展開する"
+      },
+      {
+        "id": "D",
+        "text": "しきい値に基づくアラートを設定する"
+      }
+    ],
+    "correctOptionIds": [
+      "C",
+      "D"
+    ],
+    "explanation": "テンプレートによる展開と監視アラートにより、作業の一貫性を高め、状態変化への対応を助けられる。",
+    "optionExplanations": {
+      "A": "設定のばらつきや作業量を増やしやすい。",
+      "B": "健全性の把握や復旧に役立たない。",
+      "C": "反復可能で一貫した配置を支援する。",
+      "D": "状態変化を自動的に把握できる。"
+    },
+    "keyPoint": "構成の再利用と監視を自動化する。",
+    "relatedTermIds": [
+      "arm",
+      "monitor"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/5-manageability-cloud"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q025",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドサービスモデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "IaaS・PaaS・SaaSを比べて、一般に利用者が最も広くOSやソフトウェアを制御できるのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "IaaS"
+      },
+      {
+        "id": "B",
+        "text": "PaaS"
+      },
+      {
+        "id": "C",
+        "text": "SaaS"
+      },
+      {
+        "id": "D",
+        "text": "3種類とも必ず同一"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "IaaSは柔軟な制御と引き換えに、利用者の運用責任が大きくなる。",
+    "optionExplanations": {
+      "A": "ゲストOSやインストールするソフトウェアを管理する。",
+      "B": "実行基盤は提供者が管理する。",
+      "C": "完成したアプリの利用が中心。",
+      "D": "管理範囲はサービスモデルで変わる。"
+    },
+    "keyPoint": "制御が多いIaaSでは管理責任も多い。",
+    "relatedTermIds": [
+      "iaas",
+      "paas",
+      "saas"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/2-describe-infrastructure-service"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q026",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドサービスモデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "SaaSを選ぶと通常は不要になる利用者の作業はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "自社データのアクセス管理"
+      },
+      {
+        "id": "B",
+        "text": "提供されたアプリ本体の更新基盤の運用"
+      },
+      {
+        "id": "C",
+        "text": "利用者アカウントの管理"
+      },
+      {
+        "id": "D",
+        "text": "不適切な共有の防止"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "SaaSではアプリケーション自体の提供・保守は提供者が行う。一方、利用者アカウントや情報共有の管理は利用者に残る。",
+    "optionExplanations": {
+      "A": "SaaSでも必要。",
+      "B": "提供者がアプリ本体を管理する。",
+      "C": "SaaSでも利用者の責任が残る。",
+      "D": "自社データの取り扱いとして必要。"
+    },
+    "keyPoint": "SaaSはアプリ運用を減らすが管理責任はゼロではない。",
+    "relatedTermIds": [
+      "saas",
+      "shared-responsibility"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/4-describe-software-service",
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q027",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "サーバーレス",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "サーバーレスの説明として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "サーバーが物理的に存在しない"
+      },
+      {
+        "id": "B",
+        "text": "すべての実行が永久に無料"
+      },
+      {
+        "id": "C",
+        "text": "利用者が基盤サーバーの管理を意識せずコードなどを実行できる"
+      },
+      {
+        "id": "D",
+        "text": "ネットワークが不要になる"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "サーバーレスでも計算用のサーバーは存在する。利用者がその配置や保守を直接管理しないことが中心である。",
+    "optionExplanations": {
+      "A": "サーバーは存在し、提供者が管理する。",
+      "B": "料金はプランや利用量により発生する。",
+      "C": "基盤の運用が抽象化される。",
+      "D": "通信やアクセス設計は引き続き必要。"
+    },
+    "keyPoint": "サーバーレスはサーバー管理の抽象化。",
+    "relatedTermIds": [
+      "functions",
+      "cloud-computing"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/6-functions"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q028",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "サーバーレス",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "ファイル到着をきっかけに短い処理を実行したい。イベント駆動のサーバーレス実行に適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "Azure Files"
+      },
+      {
+        "id": "C",
+        "text": "Azure Policy"
+      },
+      {
+        "id": "D",
+        "text": "Azure Functions"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "Azure Functionsはイベント駆動で処理を実行できる。課金や実行制限はホスティングプランによって異なる。",
+    "optionExplanations": {
+      "A": "名前解決のサービス。",
+      "B": "ファイル共有のサービス。",
+      "C": "構成ルールの評価・適用を行う。",
+      "D": "イベントやタイマーをきっかけにコードを実行する。"
+    },
+    "keyPoint": "イベントをきっかけに実行する処理にはFunctions。",
+    "relatedTermIds": [
+      "functions"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/6-functions"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q029",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドコンピューティング",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "クラウドコンピューティングの説明として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "ネットワーク経由で計算・保存などのIT資源をサービスとして利用すること"
+      },
+      {
+        "id": "B",
+        "text": "必ず自社で物理サーバーを所有すること"
+      },
+      {
+        "id": "C",
+        "text": "すべてのデータを一般公開すること"
+      },
+      {
+        "id": "D",
+        "text": "インターネットの速度だけを測定すること"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "クラウドは計算、ストレージ、ネットワークなどをサービスとして提供する。必要な資源を調達するまでの時間を短くできる。",
+    "optionExplanations": {
+      "A": "必要な資源をサービスとして利用する。",
+      "B": "物理設備の所有はクラウド利用の必須条件ではない。",
+      "C": "アクセスは適切に制御できる。",
+      "D": "計算・保存・ネットワークなどを提供する概念。"
+    },
+    "keyPoint": "IT資源を必要に応じてサービスとして使う。",
+    "relatedTermIds": [
+      "cloud-computing",
+      "azure"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/3-what-cloud-compute"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q030",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドコンピューティング",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "新しい開発環境を素早く用意するクラウドの利点を活用した行動はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "設備購入が終わるまで数か月待つ"
+      },
+      {
+        "id": "B",
+        "text": "必要な仮想マシンを作成し、テスト後に不要な資源を解放する"
+      },
+      {
+        "id": "C",
+        "text": "テスト終了後も不要な資源を放置する"
+      },
+      {
+        "id": "D",
+        "text": "最初から将来の最大需要分だけ物理設備を購入する"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "クラウドは資源を必要に応じて素早く用意し解放できる。テスト終了後は付随するストレージなども確認する。",
+    "optionExplanations": {
+      "A": "クラウドの迅速な調達を活用していない。",
+      "B": "短い期間だけ資源を利用できる。",
+      "C": "無駄な継続課金の原因になる。",
+      "D": "クラウドの柔軟な資源調整を活用しない。"
+    },
+    "keyPoint": "必要なときに調達し、不要なら解放する。",
+    "relatedTermIds": [
+      "vm",
+      "cloud-computing"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/3-what-cloud-compute",
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/6-describe-consumption-based-model"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q031",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドの利点",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "クラウドのSLAについて適切な説明はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "どのサービスも停止が絶対に発生しないという約束"
+      },
+      {
+        "id": "B",
+        "text": "利用者の権限一覧"
+      },
+      {
+        "id": "C",
+        "text": "サービスごとの可用性などに関する合意"
+      },
+      {
+        "id": "D",
+        "text": "すべてのサービスの料金表"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "SLAはサービスレベルに関する合意で、対象条件や可用性の水準はサービスごとに異なる。アプリ全体の可用性には構成設計も関係する。",
+    "optionExplanations": {
+      "A": "絶対に停止しないことを保証するものではない。",
+      "B": "アクセス制御はRBACなどで管理する。",
+      "C": "対象のサービスや構成、条件により内容が異なる。",
+      "D": "SLAは価格表そのものではない。"
+    },
+    "keyPoint": "SLAは対象サービスと条件を確認する。",
+    "relatedTermIds": [
+      "cloud-computing"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/2-high-availability-scalability-cloud"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q032",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウド展開モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "パブリッククラウドの「パブリック」が意味することとして適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "保存したデータは自動的にすべて公開される"
+      },
+      {
+        "id": "B",
+        "text": "誰でも他社の仮想マシンを操作できる"
+      },
+      {
+        "id": "C",
+        "text": "すべての通信が暗号化できない"
+      },
+      {
+        "id": "D",
+        "text": "サービスが広く利用者に提供される"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "パブリッククラウドはサービスの提供対象を表す。保存したデータの公開設定やアクセス権を表す言葉ではない。",
+    "optionExplanations": {
+      "A": "公開・非公開は権限や設定で制御する。",
+      "B": "他組織の資源への権限は与えられない。",
+      "C": "暗号化や安全な接続を利用できる。",
+      "D": "単一組織だけに限定されない提供モデル。"
+    },
+    "keyPoint": "公開サービスと公開データを区別する。",
+    "relatedTermIds": [
+      "public-cloud"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q033",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "クラウドの利点",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "世界各地の利用者の近くにアプリを配置する主な利点はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "距離に起因する通信遅延を小さくしやすい"
+      },
+      {
+        "id": "B",
+        "text": "すべての法令確認が不要になる"
+      },
+      {
+        "id": "C",
+        "text": "利用料が必ずゼロになる"
+      },
+      {
+        "id": "D",
+        "text": "認証を省略できる"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "クラウドの広域な配置先を利用すると、利用者の近くで処理できる。遅延、サービス対応、費用、データ所在地を合わせて検討する。",
+    "optionExplanations": {
+      "A": "利用者に近い配置で遅延の改善が期待できる。",
+      "B": "地域やデータに関する要件は確認が必要。",
+      "C": "配置先によって料金も異なる。",
+      "D": "地理的位置と認証要件は別。"
+    },
+    "keyPoint": "グローバル配置は遅延や回復性の設計に役立つ。",
+    "relatedTermIds": [
+      "region",
+      "cloud-computing"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/3-what-cloud-compute",
+      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/3-reliability-predictability-cloud"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q034",
+    "version": 1,
+    "domain": "cloud",
+    "subcategory": "責任共有モデル",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "オンプレミスのデータセンターからクラウドへ移行するとき、責任の変化について適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "利用者はすべての責任を失う"
+      },
+      {
+        "id": "B",
+        "text": "物理基盤の管理は提供者へ移るが、利用者の責任も残る"
+      },
+      {
+        "id": "C",
+        "text": "すべてのOS更新を利用者が不要にできる"
+      },
+      {
+        "id": "D",
+        "text": "提供者はどの設備にも責任を持たない"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "クラウド移行では提供者と利用者が責任を分担する。分担範囲をサービスモデルに合わせて理解することが必要である。",
+    "optionExplanations": {
+      "A": "データやアカウント管理などは残る。",
+      "B": "サービスモデルによって管理の分担が変わる。",
+      "C": "IaaSではゲストOSの管理責任が残る。",
+      "D": "物理インフラストラクチャを管理する。"
+    },
+    "keyPoint": "責任はなくなるのではなく分担される。",
+    "relatedTermIds": [
+      "shared-responsibility",
+      "iaas",
+      "paas"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  }
+]

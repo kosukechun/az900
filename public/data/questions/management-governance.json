@@ -1,0 +1,1913 @@
+[
+  {
+    "id": "Q088",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "コスト管理",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "まだ作成していないAzure構成の月額費用を見積もりたい。使うツールはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Resource Health"
+      },
+      {
+        "id": "B",
+        "text": "Azure Monitor"
+      },
+      {
+        "id": "C",
+        "text": "Azure料金計算ツール"
+      },
+      {
+        "id": "D",
+        "text": "Azure VPN Gateway"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "料金計算ツールは配置前の概算に使う。ツールへ資源を追加するだけで実際のAzure資源が作成されることはない。",
+    "optionExplanations": {
+      "A": "個別資源の健全性を確認する。",
+      "B": "ログやメトリックを収集・分析する。",
+      "C": "サービス・地域・構成・使用量に基づき見積もる。",
+      "D": "ネットワーク接続を提供する。"
+    },
+    "keyPoint": "配置前の概算は料金計算ツール。",
+    "relatedTermIds": [
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/3-compare-pricing-total-cost-of-ownership-calculators"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q089",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "コスト管理",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "既に利用したAzure費用を、サブスクリプションやサービス別に分析する機能はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "可用性セット"
+      },
+      {
+        "id": "C",
+        "text": "Azure File Sync"
+      },
+      {
+        "id": "D",
+        "text": "Cost Managementのコスト分析"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "コスト分析では利用費用をさまざまな単位で確認できる。配置前の料金見積もりとは用途が異なる。",
+    "optionExplanations": {
+      "A": "名前解決サービス。",
+      "B": "VMの障害分離。",
+      "C": "ファイル同期サービス。",
+      "D": "実際の費用を集計・分析できる。"
+    },
+    "keyPoint": "実績費用の把握はコスト分析。",
+    "relatedTermIds": [
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/6-describe-azure-tool"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q090",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "コスト管理",
+    "difficulty": "standard",
+    "questionType": "single",
+    "questionText": "Cost Managementの予算アラートについて正しい説明はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "設定したしきい値に達したとき通知できるが、通知だけで全資源が自動停止するわけではない"
+      },
+      {
+        "id": "B",
+        "text": "予算を超えたらすべての資源が必ず削除される"
+      },
+      {
+        "id": "C",
+        "text": "料金が永久に固定される"
+      },
+      {
+        "id": "D",
+        "text": "課金記録が自動的に消去される"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "予算アラートは費用のしきい値到達を通知する。アクショングループなどによる追加の自動化を構成しなければ、通常の資源が自動停止するわけではない。",
+    "optionExplanations": {
+      "A": "自動停止などは別途連携と設定が必要。",
+      "B": "予算アラート自体は削除を保証しない。",
+      "C": "予算は固定料金の契約ではない。",
+      "D": "費用記録を消す機能ではない。"
+    },
+    "keyPoint": "予算通知と利用停止を区別する。",
+    "relatedTermIds": [
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/6-describe-azure-tool"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q091",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "コスト管理",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "VMを削除したあとも課金が続く可能性がある理由として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azureでは削除済みVM本体を必ず永久課金する"
+      },
+      {
+        "id": "B",
+        "text": "残ったディスクなどの関連資源が料金を発生させる"
+      },
+      {
+        "id": "C",
+        "text": "問題演習の履歴が増えた"
+      },
+      {
+        "id": "D",
+        "text": "リソース名を短くした"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "VM削除時にディスクなどの資源が残る場合がある。不要な付随資源や予約なども確認して費用を管理する。",
+    "optionExplanations": {
+      "A": "削除済みのVM本体が永久に稼働課金されるわけではない。",
+      "B": "付随資源を別途確認する必要がある。",
+      "C": "本アプリの履歴はAzureへ保存しない。",
+      "D": "名前の長さがVMの基本課金要因ではない。"
+    },
+    "keyPoint": "削除後は関連資源の残存を確認。",
+    "relatedTermIds": [
+      "vm",
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/2-describe-factors-affect-costs-azure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q092",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "コスト管理",
+    "difficulty": "standard",
+    "questionType": "multiple",
+    "questionText": "同じ種類のAzure資源でも料金が変わり得る要因を2つ選べ。",
+    "options": [
+      {
+        "id": "A",
+        "text": "資源に付ける名前の文字数だけ"
+      },
+      {
+        "id": "B",
+        "text": "本アプリのテーマ設定"
+      },
+      {
+        "id": "C",
+        "text": "配置するリージョン"
+      },
+      {
+        "id": "D",
+        "text": "使用量とサービスのサイズ・層"
+      }
+    ],
+    "correctOptionIds": [
+      "C",
+      "D"
+    ],
+    "explanation": "料金はリージョン、サイズ、サービス層、使用量などで変わる。最新の価格を使って構成単位で見積もる。",
+    "optionExplanations": {
+      "A": "一般的な料金決定要因ではない。",
+      "B": "Azure利用費を変えない。",
+      "C": "地域により料金が異なる場合がある。",
+      "D": "消費量や構成は費用に影響する。"
+    },
+    "keyPoint": "費用は地域・構成・使用量で変わる。",
+    "relatedTermIds": [
+      "cost-management",
+      "region"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/2-describe-factors-affect-costs-azure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q093",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "コスト管理",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "長期間にわたって安定した対象資源の利用が見込める。従量課金と比較する割引方式はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "ReadOnlyロック"
+      },
+      {
+        "id": "C",
+        "text": "仮想ネットワークピアリング"
+      },
+      {
+        "id": "D",
+        "text": "Azure Reservations"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "予約は対象資源の継続利用が見込める場合の費用削減に役立つ。割引適用条件や利用見込みを確認して選ぶ。",
+    "optionExplanations": {
+      "A": "名前解決サービス。",
+      "B": "管理操作を制限する。",
+      "C": "VNet同士を接続する。",
+      "D": "一定期間の利用を約束して対象資源の割引を受ける。"
+    },
+    "keyPoint": "予約割引は安定した対象利用に向く。",
+    "relatedTermIds": [
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7a-describe-cost-optimization-options"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q094",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "コスト管理",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "割り込み後にやり直せるバッチ処理で、未使用のAzure容量を低い価格で使いたい。適したVM方式はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Spot Virtual Machines"
+      },
+      {
+        "id": "B",
+        "text": "必ず停止できない処理専用のSpot VM"
+      },
+      {
+        "id": "C",
+        "text": "ReadOnlyロック"
+      },
+      {
+        "id": "D",
+        "text": "Microsoft Purview"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "Spot VMは未使用容量を利用する価格方式で、容量が回収されると割り込まれる可能性がある。中断に耐えられる処理に向く。",
+    "optionExplanations": {
+      "A": "容量回収による割り込みを許容できる処理に適する。",
+      "B": "Spotには割り込みの可能性がある。",
+      "C": "VMの低価格方式ではない。",
+      "D": "データのガバナンスを支援する。"
+    },
+    "keyPoint": "Spotは安価さと割り込み可能性をセットで考える。",
+    "relatedTermIds": [
+      "vm",
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7a-describe-cost-optimization-options"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q095",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "コスト管理",
+    "difficulty": "standard",
+    "questionType": "single",
+    "questionText": "Azure savings plan for computeの基本的な約束の対象はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "どのリソースにも無料タグを付ける"
+      },
+      {
+        "id": "B",
+        "text": "対象コンピューティング利用への1時間当たりの支出額"
+      },
+      {
+        "id": "C",
+        "text": "単一アカウントのパスワードの長さ"
+      },
+      {
+        "id": "D",
+        "text": "すべてのVMのOSを同じにすること"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "Savings plan for computeは一定期間、1時間当たりの対象利用の支出を約束する。特定のVM構成への予約と比べて適用の柔軟性がある。",
+    "optionExplanations": {
+      "A": "タグは無料利用契約を作らない。",
+      "B": "一定期間の支出を約束し対象利用に割引を適用する。",
+      "C": "価格割引とは関係しない。",
+      "D": "基本的な支出約束の定義ではない。"
+    },
+    "keyPoint": "Savings planは時間当たりの支出約束。",
+    "relatedTermIds": [
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7a-describe-cost-optimization-options"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q096",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "コスト管理",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "不要なコストを減らす行動として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "使っていない資源を作り続ける"
+      },
+      {
+        "id": "B",
+        "text": "すべてのVMを最大サイズに固定する"
+      },
+      {
+        "id": "C",
+        "text": "利用状況を確認し、不要資源を解放してサイズを適正化する"
+      },
+      {
+        "id": "D",
+        "text": "コスト分析を見ない"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "費用最適化では実際の使用量や需要を確認する。不要な資源の解放と適切なサイズへの変更は基本的な手段である。",
+    "optionExplanations": {
+      "A": "費用を増やす。",
+      "B": "需要に対して過剰な費用になりやすい。",
+      "C": "無駄な容量や継続利用を減らす。",
+      "D": "無駄な利用を把握しにくくする。"
+    },
+    "keyPoint": "最適化は実際の使用量を見て行う。",
+    "relatedTermIds": [
+      "cost-management",
+      "advisor"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/2-describe-factors-affect-costs-azure",
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/6-describe-azure-tool"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q097",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "タグ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "各資源に部門名や管理担当者などの情報を付けたい。適した機能はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "VPN Gateway"
+      },
+      {
+        "id": "B",
+        "text": "可用性ゾーン"
+      },
+      {
+        "id": "C",
+        "text": "アーカイブ層"
+      },
+      {
+        "id": "D",
+        "text": "タグ"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "タグは資源に付ける名前と値のメタデータである。部門、所有者、環境、コストセンターなどの整理に役立つ。",
+    "optionExplanations": {
+      "A": "ネットワーク接続サービス。",
+      "B": "物理的な障害分離単位。",
+      "C": "Blob保存のアクセス層。",
+      "D": "名前と値の組でメタデータを付ける。"
+    },
+    "keyPoint": "タグは名前と値で資源を分類する。",
+    "relatedTermIds": [
+      "cost-management",
+      "resource-group"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7-describe-purpose-of-tags"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q098",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "タグ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "リソースグループにタグを付けた場合、配下の資源への動作として正しいのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "通常、資源にタグが自動継承されるわけではない"
+      },
+      {
+        "id": "B",
+        "text": "すべての配下資源へ無条件に自動継承される"
+      },
+      {
+        "id": "C",
+        "text": "タグを付けると全資源が停止する"
+      },
+      {
+        "id": "D",
+        "text": "グループを削除しても資源が保護される"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "タグはリソースグループやサブスクリプションから無条件に自動継承されない。Policyのmodifyなどを使った付与は別途構成する。",
+    "optionExplanations": {
+      "A": "継承を実現するにはPolicyなどの別の設定を使える。",
+      "B": "通常のタグは自動継承されない。",
+      "C": "タグは停止命令ではない。",
+      "D": "タグは削除保護機能ではない。"
+    },
+    "keyPoint": "タグの継承は別途設計する。",
+    "relatedTermIds": [
+      "resource-group",
+      "policy"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7-describe-purpose-of-tags"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q099",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "タグ",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "すべての資源にCostCenterタグを付ける規則を強制・監査したい。適したサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "Azure Policy"
+      },
+      {
+        "id": "C",
+        "text": "Azure Virtual Desktop"
+      },
+      {
+        "id": "D",
+        "text": "Azure Queue Storage"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "Azure Policyで必要なタグに関するルールを定義できる。選択する効果により監査、拒否、変更などの動作が異なる。",
+    "optionExplanations": {
+      "A": "タグ規則を評価しない。",
+      "B": "必要なタグなどの構成ルールを適用する。",
+      "C": "デスクトップの提供。",
+      "D": "メッセージの保存。"
+    },
+    "keyPoint": "タグを組織の規則にするならPolicy。",
+    "relatedTermIds": [
+      "policy",
+      "cost-management"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7-describe-purpose-of-tags",
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q100",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "ガバナンス",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "資源を特定リージョンだけに作成できるよう制限したい。使う機能はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Monitor"
+      },
+      {
+        "id": "B",
+        "text": "Azure Files"
+      },
+      {
+        "id": "C",
+        "text": "Azure Policy"
+      },
+      {
+        "id": "D",
+        "text": "Azure DNS"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "Policyは許可するリージョンやVMサイズなどを制御できる。ユーザーに操作権限があっても、構成が拒否ルールに違反すれば作成できない。",
+    "optionExplanations": {
+      "A": "監視用データの収集・分析。",
+      "B": "マネージドファイル共有。",
+      "C": "許可する場所などの構成ルールを評価・適用する。",
+      "D": "名前解決。"
+    },
+    "keyPoint": "どの構成を許すかはPolicy。",
+    "relatedTermIds": [
+      "policy",
+      "region"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q101",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "ガバナンス",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azure RBACとAzure Policyの役割の組み合わせとして適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "RBACはデータ移送、PolicyはDNS"
+      },
+      {
+        "id": "B",
+        "text": "RBACは費用推定、PolicyはVM実行"
+      },
+      {
+        "id": "C",
+        "text": "両方とも同じ権限管理だけを行う"
+      },
+      {
+        "id": "D",
+        "text": "RBACは誰が何を操作できるか、Policyは資源の構成ルール"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "RBACはアクセス権を、Policyは資源の構成やコンプライアンスを扱う。両方を使い、権限と許可された構成を管理する。",
+    "optionExplanations": {
+      "A": "どちらも記載の用途ではない。",
+      "B": "権限と構成ルールの役割を表していない。",
+      "C": "Policyは資源の構成を評価する。",
+      "D": "役割が異なるため併用できる。"
+    },
+    "keyPoint": "RBACは操作権、Policyは構成条件。",
+    "relatedTermIds": [
+      "rbac",
+      "policy"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/6-role-based-access-control",
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q102",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "ガバナンス",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "複数のAzure Policy定義を一つの目的でまとめたものを何と呼ぶか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "イニシアティブ"
+      },
+      {
+        "id": "B",
+        "text": "サブネット"
+      },
+      {
+        "id": "C",
+        "text": "アクセス層"
+      },
+      {
+        "id": "D",
+        "text": "可用性ゾーン"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "イニシアティブは関連するポリシー定義をまとめる。複数の設定を共通の目標で管理しやすくなる。",
+    "optionExplanations": {
+      "A": "関連するポリシー定義の集合。",
+      "B": "仮想ネットワークの区分。",
+      "C": "Blobのアクセス頻度に応じた層。",
+      "D": "物理的な障害分離単位。"
+    },
+    "keyPoint": "Policyの定義集合はイニシアティブ。",
+    "relatedTermIds": [
+      "policy"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q103",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "ガバナンス",
+    "difficulty": "standard",
+    "questionType": "single",
+    "questionText": "構成違反を見つけて報告しつつ、その作成を拒否しないポリシー効果はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Deny"
+      },
+      {
+        "id": "B",
+        "text": "Audit"
+      },
+      {
+        "id": "C",
+        "text": "ReadOnly"
+      },
+      {
+        "id": "D",
+        "text": "Delete"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "Auditは条件違反を記録して確認を支援する。Denyのように作成・更新を拒否する効果とは区別する。",
+    "optionExplanations": {
+      "A": "構成違反の要求を拒否する。",
+      "B": "違反を監査として記録する。",
+      "C": "リソースロックの種類でありPolicy効果ではない。",
+      "D": "この用途の監査効果を表していない。"
+    },
+    "keyPoint": "監査はAudit、禁止はDeny。",
+    "relatedTermIds": [
+      "policy"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy",
+      "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-basics"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q104",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "ガバナンス",
+    "difficulty": "standard",
+    "questionType": "single",
+    "questionText": "構成が許可された条件に合わない資源の作成要求を拒否するポリシー効果はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Audit"
+      },
+      {
+        "id": "B",
+        "text": "タグ"
+      },
+      {
+        "id": "C",
+        "text": "Deny"
+      },
+      {
+        "id": "D",
+        "text": "SSO"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "Denyは条件に違反する作成や更新の要求を拒否できる。既存資源を必ず自動削除する効果ではない。",
+    "optionExplanations": {
+      "A": "通常は記録し、作成を拒否しない。",
+      "B": "メタデータでありPolicy効果ではない。",
+      "C": "不適合な要求を拒否する。",
+      "D": "認証状態を複数アプリで利用する。"
+    },
+    "keyPoint": "Denyは違反要求を拒否する。",
+    "relatedTermIds": [
+      "policy"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy",
+      "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-basics"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q105",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "ガバナンス",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "データの検出・分類・系統などを把握し、データガバナンスを支援するMicrosoftのソリューションはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "Virtual Machine Scale Sets"
+      },
+      {
+        "id": "C",
+        "text": "ExpressRoute"
+      },
+      {
+        "id": "D",
+        "text": "Microsoft Purview"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "Purviewは組織のデータ資産の把握、分類、系統などを支援する。リソース構成のPolicyとは役割が異なる。",
+    "optionExplanations": {
+      "A": "名前解決サービス。",
+      "B": "VM群の構成・台数を管理する。",
+      "C": "プライベートネットワーク接続。",
+      "D": "データガバナンス・リスク・コンプライアンスを支援する。"
+    },
+    "keyPoint": "データの発見・分類・系統はPurview。",
+    "relatedTermIds": [
+      "azure",
+      "policy"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/2-describe-purpose-microsoft-purview"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q106",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "リソースロック",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "重要な資源の削除を防ぎつつ、設定変更を許可したい。適したロックはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "CanNotDelete"
+      },
+      {
+        "id": "B",
+        "text": "ReadOnly"
+      },
+      {
+        "id": "C",
+        "text": "タグ"
+      },
+      {
+        "id": "D",
+        "text": "MFA"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "CanNotDeleteは削除を防ぐロックである。ロックは主にARMを介した管理面の操作に作用し、すべてのデータ操作を止めるものではない。",
+    "optionExplanations": {
+      "A": "管理面の削除を禁止し、変更は通常許可する。",
+      "B": "削除だけでなく管理面の変更も制限する。",
+      "C": "削除防止機能ではない。",
+      "D": "認証方法であり削除ロックではない。"
+    },
+    "keyPoint": "削除だけを防ぐのはCanNotDelete。",
+    "relatedTermIds": [
+      "arm",
+      "resource-group"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/4-describe-purpose-resource-locks",
+      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q107",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "リソースロック",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "資源の管理面の更新と削除を制限したい。適したロックはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "CanNotDelete"
+      },
+      {
+        "id": "B",
+        "text": "ReadOnly"
+      },
+      {
+        "id": "C",
+        "text": "CostCenterタグ"
+      },
+      {
+        "id": "D",
+        "text": "Spot VM"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "ReadOnlyロックは管理面の変更と削除を制限する。サービスによっては読み取りに見える管理操作もPOSTを使うなどの理由で影響を受ける。",
+    "optionExplanations": {
+      "A": "通常は更新を許可する。",
+      "B": "読み取り以外の管理操作を制限する。",
+      "C": "費用分類のためのメタデータ。",
+      "D": "VMの価格方式。"
+    },
+    "keyPoint": "ReadOnlyは更新にも影響する。",
+    "relatedTermIds": [
+      "arm",
+      "resource-group"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/4-describe-purpose-resource-locks",
+      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q108",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "リソースロック",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "資源を操作できる権限がある担当者の誤削除を防ぐために、RBACと組み合わせるのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "料金計算ツール"
+      },
+      {
+        "id": "B",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "C",
+        "text": "リソースロック"
+      },
+      {
+        "id": "D",
+        "text": "Blobのホット層"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "RBACは誰に操作を許すかを決める。リソースロックは許可された担当者による削除などにも追加の制限を設ける。ロックを外せる権限は別に管理する。",
+    "optionExplanations": {
+      "A": "操作の保護をしない。",
+      "B": "削除の保護をしない。",
+      "C": "権限がある人の誤操作に対する追加の保護になる。",
+      "D": "削除保護の構成ではない。"
+    },
+    "keyPoint": "権限管理と誤操作保護は併用する。",
+    "relatedTermIds": [
+      "rbac",
+      "arm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/4-describe-purpose-resource-locks",
+      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/6-role-based-access-control",
+      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q109",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "管理ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "ブラウザのGUIでAzure資源を作成・管理するための主な画面はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "AzCopy"
+      },
+      {
+        "id": "B",
+        "text": "Azure CLI"
+      },
+      {
+        "id": "C",
+        "text": "ARMテンプレート"
+      },
+      {
+        "id": "D",
+        "text": "Azure portal"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "Azure portalはブラウザからAzureを管理するGUIである。CLIやPowerShellも同じ資源の管理に使える。",
+    "optionExplanations": {
+      "A": "Storageコピーのコマンドラインツール。",
+      "B": "コマンドラインから操作する。",
+      "C": "構成を宣言的に記述する。",
+      "D": "Webベースの管理画面。"
+    },
+    "keyPoint": "GUI操作はAzure portal。",
+    "relatedTermIds": [
+      "arm",
+      "azure"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q110",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "管理ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "ローカルへ管理ツールをインストールせず、ブラウザでAzure CLIやPowerShellを実行したい。適した機能はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Cloud Shell"
+      },
+      {
+        "id": "B",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "C",
+        "text": "Azure Filesだけ"
+      },
+      {
+        "id": "D",
+        "text": "Microsoft Purview"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "Cloud ShellはAzureの管理に必要なツールを備えたブラウザのシェル環境である。選択する保存構成などで付随資源の料金が発生する場合がある。",
+    "optionExplanations": {
+      "A": "ブラウザから使える認証済みのシェル環境。",
+      "B": "名前解決サービス。",
+      "C": "ファイル共有自体はコマンド実行環境ではない。",
+      "D": "データのガバナンスサービス。"
+    },
+    "keyPoint": "ブラウザでの管理シェルはCloud Shell。",
+    "relatedTermIds": [
+      "arm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q111",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "管理ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azure資源の管理をazコマンドで自動化するツールはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure PowerShell"
+      },
+      {
+        "id": "B",
+        "text": "Azure CLI"
+      },
+      {
+        "id": "C",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "D",
+        "text": "Azure Service Health"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "Azure CLIはAzure資源をコマンドラインから管理するツールである。スクリプトによる反復作業の自動化に使える。",
+    "optionExplanations": {
+      "A": "PowerShellのコマンドレットを使用する。",
+      "B": "azコマンドでAzureを管理する。",
+      "C": "コマンドラインツールの名称ではない。",
+      "D": "サービスの健全性を確認する。"
+    },
+    "keyPoint": "azコマンドはAzure CLI。",
+    "relatedTermIds": [
+      "arm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q112",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "管理ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "PowerShellのコマンドレットを用いてAzure資源を管理するツールはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "AzCopy"
+      },
+      {
+        "id": "B",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "C",
+        "text": "Azure PowerShell"
+      },
+      {
+        "id": "D",
+        "text": "Blobのクール層"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "Azure PowerShellはPowerShellのコマンドレットでAzure資源を管理する。反復作業や既存PowerShellの手順との統合に利用できる。",
+    "optionExplanations": {
+      "A": "Storageコピー用ツール。",
+      "B": "名前解決のサービス。",
+      "C": "PowerShellからAzureを操作するモジュール群。",
+      "D": "保存のアクセス層。"
+    },
+    "keyPoint": "PowerShellのAzure管理はAzure PowerShell。",
+    "relatedTermIds": [
+      "arm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q113",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "管理ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azure外のサーバーやKubernetesを、Azureの管理機能へつなぎたい。使うサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "Azure Table Storage"
+      },
+      {
+        "id": "C",
+        "text": "Azure Virtual Desktop"
+      },
+      {
+        "id": "D",
+        "text": "Azure Arc"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "Arcはオンプレミス、他クラウド、エッジなどの資源をAzureの管理機能へ接続する。資源の物理的なAzure移行が必須という意味ではない。",
+    "optionExplanations": {
+      "A": "DNSの管理が中心。",
+      "B": "構造化データの保存先。",
+      "C": "デスクトップの提供。",
+      "D": "オンプレミスや他クラウドへAzureの管理機能を広げる。"
+    },
+    "keyPoint": "Azure外へ管理を広げるのはArc。",
+    "relatedTermIds": [
+      "arc",
+      "hybrid-cloud"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/3-describe-purpose-of-azure-arc"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q114",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "IaC",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "コードとしてのインフラストラクチャ（IaC）の主な利点はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "資源構成を記述し、繰り返し一貫して展開できる"
+      },
+      {
+        "id": "B",
+        "text": "すべての資源が無料になる"
+      },
+      {
+        "id": "C",
+        "text": "認証やアクセス管理が不要になる"
+      },
+      {
+        "id": "D",
+        "text": "どの失敗も起きなくなる"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "IaCは構成をコードで定義し、同じ手順を再利用できる。レビューや変更追跡により手動作業のばらつきを減らせる。",
+    "optionExplanations": {
+      "A": "構成をレビュー・バージョン管理できる。",
+      "B": "コード化しても利用料金は発生する。",
+      "C": "配置の権限管理は必要。",
+      "D": "権限・制限・依存関係などの失敗は起こり得る。"
+    },
+    "keyPoint": "IaCは再現性と変更管理を支援する。",
+    "relatedTermIds": [
+      "arm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q115",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "IaC",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azureの資源を作成・更新・削除する共通の管理・デプロイ層はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "B",
+        "text": "Azure Resource Manager（ARM）"
+      },
+      {
+        "id": "C",
+        "text": "Azure Queue Storage"
+      },
+      {
+        "id": "D",
+        "text": "SMB"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "ARMはAzureの管理・展開の層である。portal、CLI、PowerShellなどの管理ツールもARMへ要求を送る。",
+    "optionExplanations": {
+      "A": "名前解決のサービス。",
+      "B": "Azureの管理面の操作を提供する。",
+      "C": "非同期メッセージの保存。",
+      "D": "ファイル共有の通信プロトコル。"
+    },
+    "keyPoint": "管理ツールの共通の層はARM。",
+    "relatedTermIds": [
+      "arm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q116",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "IaC",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "ARMテンプレートの基本的な記述形式と考え方はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "音声ファイルで操作を録音する"
+      },
+      {
+        "id": "B",
+        "text": "画像でクリック位置だけを保存する"
+      },
+      {
+        "id": "C",
+        "text": "JSONで必要な資源と構成を宣言する"
+      },
+      {
+        "id": "D",
+        "text": "操作する人のパスワード一覧を公開する"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "ARMテンプレートはJSONの宣言的な構成ファイルである。必要な資源、プロパティ、依存関係などを記述して展開する。",
+    "optionExplanations": {
+      "A": "構成を宣言的に定義する形式ではない。",
+      "B": "ARMテンプレートではない。",
+      "C": "何を配置するかを記述する。",
+      "D": "機密情報を公開するためのものではない。"
+    },
+    "keyPoint": "ARMテンプレートはJSONの宣言的な構成。",
+    "relatedTermIds": [
+      "arm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q117",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "IaC",
+    "difficulty": "standard",
+    "questionType": "single",
+    "questionText": "同じテンプレートを開発・本番へ使い、資源名やサイズを変更する方法として適切なのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "すべての機密情報を問題文へ埋め込む"
+      },
+      {
+        "id": "B",
+        "text": "環境ごとに完全に別の手順だけを手動実施する"
+      },
+      {
+        "id": "C",
+        "text": "毎回何も記録せず作業する"
+      },
+      {
+        "id": "D",
+        "text": "テンプレートのパラメーターで環境ごとの差を渡す"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "パラメーターで環境ごとの値を外から指定すると、構成の再利用と一貫性を保ちやすい。機密値は適切な安全な方法で扱う。",
+    "optionExplanations": {
+      "A": "構成の再利用と機密情報管理を損なう。",
+      "B": "再利用の利点を活用していない。",
+      "C": "変更追跡や再現性を損なう。",
+      "D": "構成を再利用しながら値を変えられる。"
+    },
+    "keyPoint": "共通の構成と環境差をパラメーターで管理。",
+    "relatedTermIds": [
+      "arm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q118",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "監視ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azure資源やアプリのメトリックとログを収集・分析する中心的なサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Monitor"
+      },
+      {
+        "id": "B",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "C",
+        "text": "Azure Files"
+      },
+      {
+        "id": "D",
+        "text": "Azure Data Box"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "Monitorは資源やアプリからメトリックとログを集め、分析やアラートに使う。",
+    "optionExplanations": {
+      "A": "監視用データの収集・分析・通知を提供する。",
+      "B": "名前解決サービス。",
+      "C": "ファイル共有。",
+      "D": "物理機器によるデータ移送。"
+    },
+    "keyPoint": "観測データを扱う中心はMonitor。",
+    "relatedTermIds": [
+      "monitor"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q119",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "監視ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "収集したログに対してクエリを実行し、直近のエラーを調べたい。使うMonitorのツールはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure料金計算ツール"
+      },
+      {
+        "id": "B",
+        "text": "Log Analytics"
+      },
+      {
+        "id": "C",
+        "text": "Azure Data Box"
+      },
+      {
+        "id": "D",
+        "text": "リソースロック"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "Log AnalyticsはAzure Monitorのログをクエリで分析するためのツールである。エラーの抽出や時間ごとの傾向調査に使える。",
+    "optionExplanations": {
+      "A": "配置前の費用を見積もる。",
+      "B": "収集したログへクエリを実行する。",
+      "C": "ログ解析ツールではない。",
+      "D": "管理操作の保護。"
+    },
+    "keyPoint": "ログをクエリで調べるのはLog Analytics。",
+    "relatedTermIds": [
+      "monitor"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q120",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "監視ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Webアプリの要求時間・失敗率・依存先呼び出しを調べたい。適した機能はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Policy"
+      },
+      {
+        "id": "B",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "C",
+        "text": "Application Insights"
+      },
+      {
+        "id": "D",
+        "text": "Virtual Machine Scale Sets"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "Application InsightsはAzure Monitorのアプリケーション監視機能である。要求、依存関係、応答時間、障害などを確認できる。",
+    "optionExplanations": {
+      "A": "リソース構成のルールを評価する。",
+      "B": "名前解決を提供する。",
+      "C": "アプリの性能・利用状況を監視する。",
+      "D": "VM群の構成と台数を管理する。"
+    },
+    "keyPoint": "アプリの性能監視はApplication Insights。",
+    "relatedTermIds": [
+      "monitor"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q121",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "監視ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "CPU使用率が一定条件を満たしたとき、運用担当者へ通知したい。構成するのはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Blobのアーカイブ層"
+      },
+      {
+        "id": "B",
+        "text": "Azure Filesの共有名"
+      },
+      {
+        "id": "C",
+        "text": "CostCenterタグだけ"
+      },
+      {
+        "id": "D",
+        "text": "Azure Monitorのアラートルールとアクショングループ"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "アラートルールがメトリックやログの条件を評価し、アクショングループが通知先や動作を指定する。",
+    "optionExplanations": {
+      "A": "低頻度データの保管用。",
+      "B": "監視の通知条件ではない。",
+      "C": "CPU値を評価して通知しない。",
+      "D": "条件と通知先・実行内容を設定する。"
+    },
+    "keyPoint": "アラートは条件と実行先を組み合わせる。",
+    "relatedTermIds": [
+      "monitor"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q122",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "監視ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azure資源の構成を評価し、コスト・性能・信頼性などの改善案を示すサービスはどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Advisor"
+      },
+      {
+        "id": "B",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "C",
+        "text": "Azure Queue Storage"
+      },
+      {
+        "id": "D",
+        "text": "Azure Virtual Desktop"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "Advisorは配置済み資源を評価し、ベストプラクティスに沿う改善を推奨する。ログ収集中心のMonitorとは役割が異なる。",
+    "optionExplanations": {
+      "A": "個別環境に合わせた推奨事項を示す。",
+      "B": "名前解決サービス。",
+      "C": "メッセージ保存。",
+      "D": "デスクトップの提供。"
+    },
+    "keyPoint": "改善の推奨はAdvisor、観測データはMonitor。",
+    "relatedTermIds": [
+      "advisor",
+      "monitor"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/2-describe-purpose-of-azure-advisor"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q123",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "監視ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "自分が利用しているAzureサービスと地域に影響する障害や計画メンテナンスを確認したい。使う機能はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "料金計算ツール"
+      },
+      {
+        "id": "B",
+        "text": "Azure Service Health"
+      },
+      {
+        "id": "C",
+        "text": "Azure DNS"
+      },
+      {
+        "id": "D",
+        "text": "AzCopy"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "Service Healthでは利用中のサービスやリージョンに関連した障害、計画メンテナンス、勧告を確認できる。",
+    "optionExplanations": {
+      "A": "費用の見積もり。",
+      "B": "自分の環境に関連するサービスのイベントを示す。",
+      "C": "名前解決。",
+      "D": "Storageのデータコピー。"
+    },
+    "keyPoint": "利用環境に関係するAzureのイベントはService Health。",
+    "relatedTermIds": [
+      "monitor"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/3-describe-azure-service-health"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q124",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "監視ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "特定の1台のAzure VMが正常か、Azure側の問題の影響を受けているかを調べたい。最も直接的な機能はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "全サービスの公開Azure Statusだけ"
+      },
+      {
+        "id": "B",
+        "text": "Azure料金計算ツール"
+      },
+      {
+        "id": "C",
+        "text": "Azure Resource Health"
+      },
+      {
+        "id": "D",
+        "text": "CostCenterタグ"
+      }
+    ],
+    "correctOptionIds": [
+      "C"
+    ],
+    "explanation": "Resource Healthは個別のAzure資源の状態を示す。広域の公開情報を示すAzure Statusや環境別Service Healthと範囲を区別する。",
+    "optionExplanations": {
+      "A": "広域の概要であり個別VMの状態に絞らない。",
+      "B": "個別VMの現在の健全性を示さない。",
+      "C": "個別資源の健全性を確認する。",
+      "D": "状態を診断する機能ではない。"
+    },
+    "keyPoint": "個別資源はResource Health。",
+    "relatedTermIds": [
+      "monitor",
+      "vm"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/3-describe-azure-service-health"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q125",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "監視ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "Azure全体のサービス・地域の健全性を公開情報で広く確認する入口はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "リソースグループのタグ"
+      },
+      {
+        "id": "B",
+        "text": "自分の学習履歴"
+      },
+      {
+        "id": "C",
+        "text": "Azure File Sync"
+      },
+      {
+        "id": "D",
+        "text": "Azure Status"
+      }
+    ],
+    "correctOptionIds": [
+      "D"
+    ],
+    "explanation": "Azure StatusはAzure全体の広い範囲の健全性を確認する入口である。自分の利用環境に絞るにはService Healthを使う。",
+    "optionExplanations": {
+      "A": "全体の障害情報を提供しない。",
+      "B": "Azureの稼働状態を示さない。",
+      "C": "同期サービス。",
+      "D": "Azureサービスの広域な健全性情報を提供する。"
+    },
+    "keyPoint": "全体はStatus、利用環境はService Health、個別はResource Health。",
+    "relatedTermIds": [
+      "monitor"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/3-describe-azure-service-health"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q126",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "監視ツール",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "監視と改善推奨の役割を正しく分けた説明はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "Monitorはログ・メトリック、Advisorは改善の推奨を扱う"
+      },
+      {
+        "id": "B",
+        "text": "Monitorは全資源の削除、Advisorはパスワード共有を行う"
+      },
+      {
+        "id": "C",
+        "text": "Monitorはドメイン購入専用、Advisorは物理輸送専用"
+      },
+      {
+        "id": "D",
+        "text": "どちらも利用状況を確認できない"
+      }
+    ],
+    "correctOptionIds": [
+      "A"
+    ],
+    "explanation": "Monitorは状態の観測と分析に、Advisorは構成や利用の改善推奨に使う。監視結果と推奨事項を合わせて運用を改善できる。",
+    "optionExplanations": {
+      "A": "両者は異なる役割で併用できる。",
+      "B": "どちらもその用途ではない。",
+      "C": "機能を表していない。",
+      "D": "監視と評価を支援する。"
+    },
+    "keyPoint": "観測するMonitor、改善を勧めるAdvisor。",
+    "relatedTermIds": [
+      "monitor",
+      "advisor"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor",
+      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/2-describe-purpose-of-azure-advisor"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  },
+  {
+    "id": "Q127",
+    "version": 1,
+    "domain": "management",
+    "subcategory": "ガバナンス",
+    "difficulty": "basic",
+    "questionType": "single",
+    "questionText": "管理グループへAzure Policyを割り当てる主な利点はどれか。",
+    "options": [
+      {
+        "id": "A",
+        "text": "すべての費用が自動でなくなる"
+      },
+      {
+        "id": "B",
+        "text": "配下の複数サブスクリプションへ共通の構成ルールを適用できる"
+      },
+      {
+        "id": "C",
+        "text": "すべてのユーザーが無制限の権限を持つ"
+      },
+      {
+        "id": "D",
+        "text": "タグが無条件で必ず自動継承される"
+      }
+    ],
+    "correctOptionIds": [
+      "B"
+    ],
+    "explanation": "管理グループへの割り当ては配下のサブスクリプションなどへ共通のルールを適用する。除外や免除の設計も含めて管理する。",
+    "optionExplanations": {
+      "A": "ポリシーを割り当てても料金はなくならない。",
+      "B": "上位スコープからガバナンスをまとめられる。",
+      "C": "Policyは構成ルールであり無制限の権限付与ではない。",
+      "D": "タグ継承には対応する設定が必要。"
+    },
+    "keyPoint": "上位のスコープで共通ルールを管理する。",
+    "relatedTermIds": [
+      "policy",
+      "subscription"
+    ],
+    "referenceUrls": [
+      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy",
+      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+    ],
+    "originType": "original",
+    "license": "CC-BY-4.0",
+    "lastVerifiedAt": "2026-10-10"
+  }
+]
