@@ -409,6 +409,82 @@ test("ブラウザプロセスを終了・再起動後も履歴とセッショ�
   expect(await readStore(page, "answerAttempts")).toHaveLength(1);
   await context.close();
 });
+test("改訂前の回答済み演習と中断模試をバックアップ復元して続行できる", async ({
+  page,
+}) => {
+  const now = Date.now(),
+    id = "Q043",
+    s = (sid: string, mode: string) => ({
+      id: sid,
+      mode,
+      questionIds: [id],
+      questionVersions: { [id]: 1 },
+      index: 0,
+      startedAt: now,
+      updatedAt: now,
+      answers: { [id]: ["C"] },
+      durations: { [id]: 1000 },
+      flags: [],
+      status: "active",
+      ...(mode === "mock"
+        ? { timeLimitMs: 2700000, pausedRemainingMs: 2700000 }
+        : {}),
+    });
+  const backup = {
+    format: "az900-dojo",
+    version: 1,
+    createdAt: new Date().toISOString(),
+    answerAttempts: [
+      {
+        id: `legacy-practice:${id}`,
+        questionId: id,
+        questionVersion: 1,
+        answeredAt: now,
+        selectedOptionIds: ["C"],
+        isCorrect: true,
+        durationMs: 1000,
+        mode: "random",
+        sessionId: "legacy-practice",
+      },
+    ],
+    questionProgress: [],
+    studySessions: [s("legacy-practice", "random"), s("legacy-mock", "mock")],
+    bookmarks: [],
+    glossaryBookmarks: [],
+    userSettings: [],
+    studyGoals: [],
+  };
+  await page.goto("./#/settings");
+  await page
+    .getByLabel("学習データを復元するJSONファイル")
+    .setInputFiles({
+      name: "legacy.json",
+      mimeType: "application/json",
+      buffer: Buffer.from(JSON.stringify(backup)),
+    });
+  await page.getByRole("button", { name: "この内容で復元" }).click();
+  await expect(page.getByText(/復元しました。/)).toBeVisible();
+  await page.goto("./#/session/legacy-practice");
+  await expect(page.getByText("正解！", { exact: true })).toBeVisible();
+  await expect(
+    page.getByText("問題が更新されています", { exact: true }),
+  ).toHaveCount(0);
+  expect(await readStore(page, "answerAttempts")).toHaveLength(1);
+  await page.goto("./#/session/legacy-mock");
+  await expect(
+    page.getByRole("heading", { name: "試験を一時停止しています" }),
+  ).toBeVisible();
+  page.once("dialog", (d) => d.accept());
+  await page.getByRole("button", { name: "試験終了", exact: true }).click();
+  await expect(
+    page.getByRole("heading", { name: "おつかれさまでした！" }),
+  ).toBeVisible();
+  const attempts = await readStore(page, "answerAttempts");
+  expect(attempts).toHaveLength(2);
+  expect(attempts.every((a) => a.isCorrect && a.questionVersion === 1)).toBe(
+    true,
+  );
+});
 test("PWA初回キャッシュ後、オフライン再読み込みで演習できる", async ({
   page,
   context,

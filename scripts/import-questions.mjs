@@ -57,6 +57,7 @@ if (isCsv) {
             "optionExplanations",
             "relatedTermIds",
             "referenceUrls",
+            "answerCompatibleVersions",
           ].includes(h)
             ? JSON.parse(raw)
             : h === "version"

@@ -50,6 +50,31 @@ export function validateContent(questions, terms, categories) {
     }
     const optionIds = q.options.map((o) => o.id);
     if (
+      q.answerCompatibleVersions !== undefined ||
+      q.compatibilityAnswerKey !== undefined
+    ) {
+      const compatible = q.answerCompatibleVersions;
+      if (
+        !Array.isArray(compatible) ||
+        !compatible.length ||
+        new Set(compatible).size !== compatible.length ||
+        compatible.some(
+          (v) => !Number.isInteger(v) || v < 1 || v >= q.version,
+        ) ||
+        !Array.isArray(q.correctOptionIds)
+      )
+        errors.push(`${q.id}: 互換バージョン不正`);
+      else if (
+        q.compatibilityAnswerKey !==
+        JSON.stringify({
+          type: q.questionType,
+          options: q.options.map((o) => [o.id, o.text]),
+          correct: [...q.correctOptionIds].sort(),
+        })
+      )
+        errors.push(`${q.id}: 互換性を確認した正答・選択肢が変更されています`);
+    }
+    if (
       new Set(optionIds).size !== optionIds.length ||
       q.options.some((o) => !nonempty(o.text) || !nonempty(o.id))
     )

@@ -427,7 +427,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"物理サーバーの冷却\"],[\"B\",\"Webアプリのソースコードを自動生成する\"],[\"C\",\"課金やアクセス管理の境界を提供する\"],[\"D\",\"Blobのファイル形式を必ず変更する\"]],\"correct\":[\"C\"]}"
   },
   {
     "id": "Q044",
@@ -1660,7 +1664,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"ZRS\"],[\"B\",\"LRS\"],[\"C\",\"GRS\"],[\"D\",\"タグ\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q070",
@@ -1708,7 +1716,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"ZRS\"],[\"B\",\"GRS\"],[\"C\",\"LRS\"],[\"D\",\"NSG\"]],\"correct\":[\"B\"]}"
   },
   {
     "id": "Q071",
@@ -1756,7 +1768,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"LRS\"],[\"B\",\"ZRS\"],[\"C\",\"RA-GRS\"],[\"D\",\"ReadOnlyロック\"]],\"correct\":[\"C\"]}"
   },
   {
     "id": "Q072",
@@ -1805,7 +1821,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"仮想マシンの実行しかできない\"],[\"B\",\"名前はどのアカウントとも同じでよい\"],[\"C\",\"すべてのデータを匿名公開しなければならない\"],[\"D\",\"Blob・Files・Queue・Tableなどを利用できる\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q073",

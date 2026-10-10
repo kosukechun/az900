@@ -18,6 +18,7 @@ import { savePracticeAnswer, gradeMock } from "../services/learning";
 import { QuestionCard } from "../components/QuestionCard";
 import { PageHeading, Explanation, Stat } from "../components/ui";
 import { modeNames, percent, isCorrect } from "../utils/study";
+import { canUseQuestionVersion } from "../utils/questionVersion";
 export function SessionPage() {
   const { id } = useParams();
   const saved = useLiveQuery(() => db.studySessions.get(id!), [id]);
@@ -29,11 +30,11 @@ export function SessionPage() {
   const latest = useRef<Session>();
   const finishing = useRef(false);
   useEffect(() => {
-    if (saved && !session) {
+    if (saved && saved.id === id && (!session || session.id !== id)) {
       setSession(saved);
       latest.current = saved;
     }
-  }, [saved, session]);
+  }, [saved, session, id]);
   useEffect(() => {
     const timer = setInterval(() => setTick(Date.now()), 1000);
     return () => clearInterval(timer);
@@ -45,7 +46,7 @@ export function SessionPage() {
   };
   const finish = async (confirm = true) => {
     const s = latest.current;
-    if (!s || finishing.current || retry.current) return;
+    if (!s || s.id !== id || finishing.current || retry.current) return;
     if (
       confirm &&
       s.mode === "mock" &&
@@ -78,14 +79,16 @@ export function SessionPage() {
   };
   useEffect(() => {
     if (
-      session?.mode === "mock" &&
+      session &&
+      session.id === id &&
+      session.mode === "mock" &&
       session.status === "active" &&
       session.deadline &&
       tick >= session.deadline
     )
       void finish(false);
-  }, [tick, session?.deadline, session?.status]);
-  if (!session || !d)
+  }, [tick, session?.deadline, session?.status, id]);
+  if (!session || session.id !== id || !d)
     return saved === undefined ? (
       <div className="card panel">
         <p>セッションを読み込んでいます…</p>
@@ -104,7 +107,10 @@ export function SessionPage() {
   if (
     s.questionIds.some(
       (id) =>
-        questions.find((q) => q.id === id)?.version !== s.questionVersions[id],
+        !canUseQuestionVersion(
+          questions.find((q) => q.id === id)!,
+          s.questionVersions[id],
+        ),
     )
   )
     return (
@@ -328,6 +334,7 @@ export function SessionPage() {
           onAnswer={(selected, duration) => {
             const nextSession = {
               ...s,
+              questionVersions: { ...s.questionVersions, [q.id]: q.version },
               answers: { ...s.answers, [q.id]: selected },
               durations: { ...s.durations, [q.id]: duration },
               updatedAt: Date.now(),

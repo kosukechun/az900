@@ -8,6 +8,8 @@ export interface Category {
 export interface Question {
   id: string;
   version: number;
+  answerCompatibleVersions?: number[];
+  compatibilityAnswerKey?: string;
   domain: Domain;
   subcategory: string;
   difficulty: string;

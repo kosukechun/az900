@@ -44,7 +44,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure Resource Health\"],[\"B\",\"Azure Monitor\"],[\"C\",\"Azure料金計算ツール\"],[\"D\",\"Azure VPN Gateway\"]],\"correct\":[\"C\"]}"
   },
   {
     "id": "Q089",
@@ -91,7 +95,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure DNS\"],[\"B\",\"可用性セット\"],[\"C\",\"Azure File Sync\"],[\"D\",\"Cost Managementのコスト分析\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q090",
@@ -138,7 +146,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"設定したしきい値に達したとき通知できるが、通知だけで全資源が自動停止するわけではない\"],[\"B\",\"予算を超えたらすべての資源が必ず削除される\"],[\"C\",\"料金が永久に固定される\"],[\"D\",\"課金記録が自動的に消去される\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q091",
@@ -186,7 +198,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azureでは削除済みVM本体を必ず永久課金する\"],[\"B\",\"残ったディスクなどの関連資源が料金を発生させる\"],[\"C\",\"問題演習の履歴が増えた\"],[\"D\",\"リソース名を短くした\"]],\"correct\":[\"B\"]}"
   },
   {
     "id": "Q092",
@@ -235,7 +251,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"multiple\",\"options\":[[\"A\",\"資源に付ける名前の文字数だけ\"],[\"B\",\"本アプリのテーマ設定\"],[\"C\",\"配置するリージョン\"],[\"D\",\"使用量とサービスのサイズ・層\"]],\"correct\":[\"C\",\"D\"]}"
   },
   {
     "id": "Q093",
@@ -282,7 +302,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure DNS\"],[\"B\",\"ReadOnlyロック\"],[\"C\",\"仮想ネットワークピアリング\"],[\"D\",\"Azure Reservations\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q094",
@@ -330,7 +354,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Spot Virtual Machines\"],[\"B\",\"必ず停止できない処理専用のSpot VM\"],[\"C\",\"ReadOnlyロック\"],[\"D\",\"Microsoft Purview\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q095",
@@ -377,7 +405,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"どのリソースにも無料タグを付ける\"],[\"B\",\"対象コンピューティング利用への1時間当たりの支出額\"],[\"C\",\"単一アカウントのパスワードの長さ\"],[\"D\",\"すべてのVMのOSを同じにすること\"]],\"correct\":[\"B\"]}"
   },
   {
     "id": "Q096",
@@ -425,7 +457,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"使っていない資源を作り続ける\"],[\"B\",\"すべてのVMを最大サイズに固定する\"],[\"C\",\"利用状況を確認し、不要資源を解放してサイズを適正化する\"],[\"D\",\"コスト分析を見ない\"]],\"correct\":[\"C\"]}"
   },
   {
     "id": "Q097",
@@ -473,7 +509,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"VPN Gateway\"],[\"B\",\"可用性ゾーン\"],[\"C\",\"アーカイブ層\"],[\"D\",\"タグ\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q098",
@@ -521,7 +561,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"通常、資源にタグが自動継承されるわけではない\"],[\"B\",\"すべての配下資源へ無条件に自動継承される\"],[\"C\",\"タグを付けると全資源が停止する\"],[\"D\",\"グループを削除しても資源が保護される\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q099",
@@ -570,7 +614,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure DNS\"],[\"B\",\"Azure Policy\"],[\"C\",\"Azure Virtual Desktop\"],[\"D\",\"Azure Queue Storage\"]],\"correct\":[\"B\"]}"
   },
   {
     "id": "Q100",
@@ -618,7 +666,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure Monitor\"],[\"B\",\"Azure Files\"],[\"C\",\"Azure Policy\"],[\"D\",\"Azure DNS\"]],\"correct\":[\"C\"]}"
   },
   {
     "id": "Q101",
@@ -667,7 +719,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"RBACはデータ移送、PolicyはDNS\"],[\"B\",\"RBACは費用推定、PolicyはVM実行\"],[\"C\",\"両方とも同じ権限管理だけを行う\"],[\"D\",\"RBACは誰が何を操作できるか、Policyは資源の構成ルール\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q102",
@@ -714,7 +770,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"イニシアティブ\"],[\"B\",\"サブネット\"],[\"C\",\"アクセス層\"],[\"D\",\"可用性ゾーン\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q103",
@@ -761,7 +821,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Deny\"],[\"B\",\"Audit\"],[\"C\",\"ReadOnly\"],[\"D\",\"Delete\"]],\"correct\":[\"B\"]}"
   },
   {
     "id": "Q104",
@@ -808,7 +872,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Audit\"],[\"B\",\"タグ\"],[\"C\",\"Deny\"],[\"D\",\"SSO\"]],\"correct\":[\"C\"]}"
   },
   {
     "id": "Q105",
@@ -857,7 +925,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure DNS\"],[\"B\",\"Virtual Machine Scale Sets\"],[\"C\",\"ExpressRoute\"],[\"D\",\"Microsoft Purview\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q106",
@@ -905,7 +977,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"CanNotDelete\"],[\"B\",\"ReadOnly\"],[\"C\",\"タグ\"],[\"D\",\"MFA\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q107",
@@ -953,7 +1029,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"CanNotDelete\"],[\"B\",\"ReadOnly\"],[\"C\",\"CostCenterタグ\"],[\"D\",\"Spot VM\"]],\"correct\":[\"B\"]}"
   },
   {
     "id": "Q108",
@@ -1002,7 +1082,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"料金計算ツール\"],[\"B\",\"Azure DNS\"],[\"C\",\"リソースロック\"],[\"D\",\"Blobのホット層\"]],\"correct\":[\"C\"]}"
   },
   {
     "id": "Q109",
@@ -1050,7 +1134,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"AzCopy\"],[\"B\",\"Azure CLI\"],[\"C\",\"ARMテンプレート\"],[\"D\",\"Azure portal\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q110",
@@ -1097,7 +1185,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure Cloud Shell\"],[\"B\",\"Azure DNS\"],[\"C\",\"Azure Filesだけ\"],[\"D\",\"Microsoft Purview\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q111",
@@ -1144,7 +1236,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure PowerShell\"],[\"B\",\"Azure CLI\"],[\"C\",\"Azure DNS\"],[\"D\",\"Azure Service Health\"]],\"correct\":[\"B\"]}"
   },
   {
     "id": "Q112",
@@ -1191,7 +1287,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"AzCopy\"],[\"B\",\"Azure DNS\"],[\"C\",\"Azure PowerShell\"],[\"D\",\"Blobのクール層\"]],\"correct\":[\"C\"]}"
   },
   {
     "id": "Q113",
@@ -1239,7 +1339,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure DNS\"],[\"B\",\"Azure Table Storage\"],[\"C\",\"Azure Virtual Desktop\"],[\"D\",\"Azure Arc\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q114",
@@ -1286,7 +1390,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"資源構成を記述し、繰り返し一貫して展開できる\"],[\"B\",\"すべての資源が無料になる\"],[\"C\",\"認証やアクセス管理が不要になる\"],[\"D\",\"どの失敗も起きなくなる\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q115",
@@ -1333,7 +1441,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure DNS\"],[\"B\",\"Azure Resource Manager（ARM）\"],[\"C\",\"Azure Queue Storage\"],[\"D\",\"SMB\"]],\"correct\":[\"B\"]}"
   },
   {
     "id": "Q116",
@@ -1380,7 +1492,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"音声ファイルで操作を録音する\"],[\"B\",\"画像でクリック位置だけを保存する\"],[\"C\",\"JSONで必要な資源と構成を宣言する\"],[\"D\",\"操作する人のパスワード一覧を公開する\"]],\"correct\":[\"C\"]}"
   },
   {
     "id": "Q117",
@@ -1427,7 +1543,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"すべての機密情報を問題文へ埋め込む\"],[\"B\",\"環境ごとに完全に別の手順だけを手動実施する\"],[\"C\",\"毎回何も記録せず作業する\"],[\"D\",\"テンプレートのパラメーターで環境ごとの差を渡す\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q118",
@@ -1474,7 +1594,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure Monitor\"],[\"B\",\"Azure DNS\"],[\"C\",\"Azure Files\"],[\"D\",\"Azure Data Box\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q119",
@@ -1521,7 +1645,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure料金計算ツール\"],[\"B\",\"Log Analytics\"],[\"C\",\"Azure Data Box\"],[\"D\",\"リソースロック\"]],\"correct\":[\"B\"]}"
   },
   {
     "id": "Q120",
@@ -1568,7 +1696,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure Policy\"],[\"B\",\"Azure DNS\"],[\"C\",\"Application Insights\"],[\"D\",\"Virtual Machine Scale Sets\"]],\"correct\":[\"C\"]}"
   },
   {
     "id": "Q121",
@@ -1616,7 +1748,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Blobのアーカイブ層\"],[\"B\",\"Azure Filesの共有名\"],[\"C\",\"CostCenterタグだけ\"],[\"D\",\"Azure Monitorのアラートルールとアクショングループ\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q122",
@@ -1664,7 +1800,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure Advisor\"],[\"B\",\"Azure DNS\"],[\"C\",\"Azure Queue Storage\"],[\"D\",\"Azure Virtual Desktop\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q123",
@@ -1711,7 +1851,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"料金計算ツール\"],[\"B\",\"Azure Service Health\"],[\"C\",\"Azure DNS\"],[\"D\",\"AzCopy\"]],\"correct\":[\"B\"]}"
   },
   {
     "id": "Q124",
@@ -1759,7 +1903,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"全サービスの公開Azure Statusだけ\"],[\"B\",\"Azure料金計算ツール\"],[\"C\",\"Azure Resource Health\"],[\"D\",\"CostCenterタグ\"]],\"correct\":[\"C\"]}"
   },
   {
     "id": "Q125",
@@ -1806,7 +1954,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"リソースグループのタグ\"],[\"B\",\"自分の学習履歴\"],[\"C\",\"Azure File Sync\"],[\"D\",\"Azure Status\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q126",
@@ -1855,7 +2007,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Monitorはログ・メトリック、Advisorは改善の推奨を扱う\"],[\"B\",\"Monitorは全資源の削除、Advisorはパスワード共有を行う\"],[\"C\",\"Monitorはドメイン購入専用、Advisorは物理輸送専用\"],[\"D\",\"どちらも利用状況を確認できない\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q127",
@@ -1904,6 +2060,10 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"すべての費用が自動でなくなる\"],[\"B\",\"配下の複数サブスクリプションへ共通の構成ルールを適用できる\"],[\"C\",\"すべてのユーザーが無制限の権限を持つ\"],[\"D\",\"タグが無条件で必ず自動継承される\"]],\"correct\":[\"B\"]}"
   }
 ]

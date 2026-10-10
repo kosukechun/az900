@@ -1345,7 +1345,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"Azure DNS\"],[\"B\",\"Azure Files\"],[\"C\",\"Azure Policy\"],[\"D\",\"Azure Functions\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q029",
@@ -1537,7 +1541,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"保存したデータは自動的にすべて公開される\"],[\"B\",\"誰でも他社の仮想マシンを操作できる\"],[\"C\",\"すべての通信が暗号化できない\"],[\"D\",\"サービスが広く利用者に提供される\"]],\"correct\":[\"D\"]}"
   },
   {
     "id": "Q033",
@@ -1587,7 +1595,11 @@
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
-    "lastVerifiedAt": "2026-10-10"
+    "lastVerifiedAt": "2026-10-10",
+    "answerCompatibleVersions": [
+      1
+    ],
+    "compatibilityAnswerKey": "{\"type\":\"single\",\"options\":[[\"A\",\"距離に起因する通信遅延を小さくしやすい\"],[\"B\",\"すべての法令確認が不要になる\"],[\"C\",\"利用料が必ずゼロになる\"],[\"D\",\"認証を省略できる\"]],\"correct\":[\"A\"]}"
   },
   {
     "id": "Q034",

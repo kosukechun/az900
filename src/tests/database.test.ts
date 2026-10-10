@@ -3,6 +3,7 @@ import { DojoDB } from "../db/database";
 import { savePracticeAnswer, gradeMock } from "../services/learning";
 import { exportBackup, importBackup, parseBackup } from "../services/backup";
 import { question, session } from "./factories";
+import { questionAnswerKey } from "../utils/questionVersion";
 let db: DojoDB;
 beforeEach(() => {
   db = new DojoDB(`test-${crypto.randomUUID()}`);
@@ -11,6 +12,21 @@ afterEach(async () => {
   await db.delete();
 });
 describe("回答の保存と復習", () => {
+  it("正答が同じと確認した旧版の中断模試は採点でき、元の回答版を記録", async () => {
+    const s = { ...session("legacy-mock", "mock"), answers: { Q001: ["A"] } };
+    const revised = {
+      ...question,
+      version: 2,
+      answerCompatibleVersions: [1],
+      compatibilityAnswerKey: questionAnswerKey(question),
+    };
+    await db.studySessions.add(s);
+    await gradeMock(s, [revised], db);
+    const a = (await db.answerAttempts.toArray())[0];
+    expect(a.isCorrect).toBe(true);
+    expect(a.questionVersion).toBe(1);
+    expect((await db.studySessions.get(s.id))?.status).toBe("completed");
+  });
   it("進捗の保存に失敗すると回答も戻り、再試行で1件だけ保存", async () => {
     const s = session("retry");
     const spy = vi

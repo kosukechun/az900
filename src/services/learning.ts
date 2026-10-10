@@ -1,6 +1,7 @@
 import { db, type DojoDB } from "../db/database";
 import type { Attempt, Question, Session } from "../types";
 import { isCorrect, rebuildProgress } from "../utils/study";
+import { canUseQuestionVersion } from "../utils/questionVersion";
 export async function savePracticeAnswer(
   session: Session,
   q: Question,
@@ -43,6 +44,7 @@ export async function savePracticeAnswer(
         (await database.studySessions.get(session.id)) ?? session;
       await database.studySessions.put({
         ...persisted,
+        questionVersions: { ...persisted.questionVersions, [q.id]: q.version },
         answers: { ...persisted.answers, [q.id]: selected },
         durations: { ...persisted.durations, [q.id]: durationMs },
         updatedAt: Date.now(),
@@ -70,7 +72,7 @@ export async function gradeMock(
       for (const id of session.questionIds) {
         const q = questions.find((q) => q.id === id);
         if (!q) throw new Error("模擬試験の問題データが見つかりません。");
-        if (session.questionVersions[id] !== q.version)
+        if (!canUseQuestionVersion(q, session.questionVersions[id]))
           throw new Error("問題が更新されたため、この試験は採点できません。");
         const selected = session.answers[id] ?? [];
         const history = await database.answerAttempts
