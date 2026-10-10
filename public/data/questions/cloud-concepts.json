@@ -1300,12 +1300,12 @@
   },
   {
     "id": "Q028",
-    "version": 1,
+    "version": 2,
     "domain": "cloud",
     "subcategory": "サーバーレス",
     "difficulty": "basic",
     "questionType": "single",
-    "questionText": "ファイル到着をきっかけに短い処理を実行したい。イベント駆動のサーバーレス実行に適したサービスはどれか。",
+    "questionText": "Azure Blob Storageへのファイルのアップロードをきっかけに短いコード処理を実行したい。イベント駆動のサーバーレス実行に適したサービスはどれか。",
     "options": [
       {
         "id": "A",
@@ -1327,19 +1327,21 @@
     "correctOptionIds": [
       "D"
     ],
-    "explanation": "Azure Functionsはイベント駆動で処理を実行できる。課金や実行制限はホスティングプランによって異なる。",
+    "explanation": "Azure FunctionsはBlobトリガーを設定し、Blobの作成や更新を検出してコードを実行できる。課金や実行制限はホスティングプランによって異なる。",
     "optionExplanations": {
       "A": "名前解決のサービス。",
       "B": "ファイル共有のサービス。",
       "C": "構成ルールの評価・適用を行う。",
-      "D": "イベントやタイマーをきっかけにコードを実行する。"
+      "D": "Blobの作成・更新などのイベントをトリガーにコードを実行できる。"
     },
     "keyPoint": "イベントをきっかけに実行する処理にはFunctions。",
     "relatedTermIds": [
       "functions"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/6-functions"
+      "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview",
+      "https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-blob-trigger",
+      "https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1491,7 +1493,7 @@
   },
   {
     "id": "Q032",
-    "version": 1,
+    "version": 2,
     "domain": "cloud",
     "subcategory": "クラウド展開モデル",
     "difficulty": "basic",
@@ -1521,7 +1523,7 @@
     "explanation": "パブリッククラウドはサービスの提供対象を表す。保存したデータの公開設定やアクセス権を表す言葉ではない。",
     "optionExplanations": {
       "A": "公開・非公開は権限や設定で制御する。",
-      "B": "他組織の資源への権限は与えられない。",
+      "B": "パブリッククラウドであるというだけで、他組織の資源への操作権限を得られるわけではない。外部利用者にも、適切な権限を付与すればアクセスを許可できる。",
       "C": "暗号化や安全な接続を利用できる。",
       "D": "単一組織だけに限定されない提供モデル。"
     },
@@ -1530,7 +1532,8 @@
       "public-cloud"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
+      "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models",
+      "https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-external-users"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1538,7 +1541,7 @@
   },
   {
     "id": "Q033",
-    "version": 1,
+    "version": 2,
     "domain": "cloud",
     "subcategory": "クラウドの利点",
     "difficulty": "basic",
@@ -1579,7 +1582,8 @@
     ],
     "referenceUrls": [
       "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/3-what-cloud-compute",
-      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/3-reliability-predictability-cloud"
+      "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/3-reliability-predictability-cloud",
+      "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/regions"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",

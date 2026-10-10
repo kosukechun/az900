@@ -9,6 +9,7 @@ export function QuestionCard({
   selected: stored,
   onAnswer,
   onNext,
+  nextDisabled = false,
   bookmarked,
   onBookmark,
   mock = false,
@@ -19,6 +20,7 @@ export function QuestionCard({
   selected?: string[];
   onAnswer: (selected: string[], durationMs: number) => void;
   onNext?: () => void;
+  nextDisabled?: boolean;
   bookmarked: boolean;
   onBookmark: () => void;
   mock?: boolean;
@@ -32,7 +34,7 @@ export function QuestionCard({
   const started = useRef(performance.now());
   const nextRef = useRef(onNext);
   nextRef.current = onNext;
-  const canNext = !!onNext;
+  const canNext = !!onNext && !nextDisabled;
   const correct = isCorrect(chosen, question.correctOptionIds);
   const answer = (ids: string[]) => {
     if (!mock && lock.current) return;
@@ -72,7 +74,7 @@ export function QuestionCard({
         e.preventDefault();
         choose(question.options[n - 1].id);
       }
-      if (e.key === "Enter" && locked && onNext) {
+      if (e.key === "Enter" && locked && onNext && !nextDisabled) {
         e.preventDefault();
         onNext();
       }
@@ -153,20 +155,30 @@ export function QuestionCard({
       )}
       {locked && !mock && (
         <>
-          <Explanation question={question} correct={correct} onTerm={setTerm} />
-          {onNext && (
-            <div className="next-bar">
-              <span className="muted small">
-                {autoAdvance
-                  ? `${autoAdvanceSeconds}秒後に自動で進みます`
-                  : "Enter キーでも次へ"}
-              </span>
-              <button className="btn primary" onClick={onNext}>
-                次の問題へ
-                <ChevronRight size={18} />
-              </button>
-            </div>
-          )}
+          <Explanation
+            question={question}
+            correct={correct}
+            onTerm={setTerm}
+            action={
+              onNext && (
+                <div className="result-action">
+                  <button
+                    className="btn primary"
+                    onClick={onNext}
+                    disabled={nextDisabled}
+                  >
+                    次の問題へ
+                    <ChevronRight size={18} />
+                  </button>
+                  <span className="muted small">
+                    {autoAdvance
+                      ? `${autoAdvanceSeconds}秒後に自動で進みます`
+                      : "Enter キーでも次へ"}
+                  </span>
+                </div>
+              )
+            }
+          />
         </>
       )}
       {term && (

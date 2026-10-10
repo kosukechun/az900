@@ -336,7 +336,8 @@ export function SessionPage() {
             if (mock) enqueue(() => db.studySessions.put(nextSession));
             else enqueue(() => savePracticeAnswer(s, q, selected, duration));
           }}
-          onNext={!mock && !saving && !error ? next : undefined}
+          onNext={!mock ? next : undefined}
+          nextDisabled={saving || !!error}
           autoAdvance={d.settings.autoAdvance}
           autoAdvanceSeconds={d.settings.autoAdvanceSeconds}
         />

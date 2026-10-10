@@ -41,6 +41,80 @@ describe("出題・判定", () => {
       selectQuestions(qs, "domain", 5, [], [], "cloud", "ないテーマ"),
     ).toHaveLength(0);
   });
+  it("複数分野・複数テーマは各条件の和集合を取り、分野とテーマの両方で絞る", () => {
+    const multi = [
+      {
+        ...question,
+        id: "a",
+        domain: "cloud" as const,
+        subcategory: "共有責任",
+      },
+      {
+        ...question,
+        id: "b",
+        domain: "services" as const,
+        subcategory: "ストレージ",
+      },
+      {
+        ...question,
+        id: "c",
+        domain: "management" as const,
+        subcategory: "コスト",
+      },
+      {
+        ...question,
+        id: "d",
+        domain: "services" as const,
+        subcategory: "ネットワーク",
+      },
+    ];
+    expect(
+      selectQuestions(
+        multi,
+        "domain",
+        0,
+        [],
+        [],
+        ["cloud", "services"],
+        ["共有責任", "ストレージ"],
+      )
+        .map((q) => q.id)
+        .sort(),
+    ).toEqual(["a", "b"]);
+    expect(selectQuestions(multi, "domain", 0, [], [], [], [])).toHaveLength(4);
+    expect(
+      selectQuestions(multi, "domain", 0, [], [], ["services"], []),
+    ).toHaveLength(2);
+    expect(
+      selectQuestions(multi, "domain", 0, [], [], [], ["共有責任", "コスト"])
+        .map((q) => q.id)
+        .sort(),
+    ).toEqual(["a", "c"]);
+    expect(
+      selectQuestions(
+        multi,
+        "domain",
+        0,
+        [],
+        [],
+        ["management"],
+        ["ストレージ"],
+      ),
+    ).toHaveLength(0);
+  });
+  it("苦手分野は選択した分野とテーマの範囲で判定する", () => {
+    const cloud = { ...question, id: "Q001", domain: "cloud" as const },
+      service = { ...question, id: "Q002", domain: "services" as const };
+    const p = rebuildProgress([
+      attempt("bad", false, 1),
+      { ...attempt("good", true, 2), questionId: "Q002" },
+    ]);
+    expect(
+      selectQuestions([cloud, service], "weak", 10, p, [], ["services"]).map(
+        (q) => q.id,
+      ),
+    ).toEqual(["Q002"]);
+  });
   it("未回答・未克服・間違い履歴・ブックマークを分離", () => {
     const p = rebuildProgress([
       attempt("s1", false, 1),

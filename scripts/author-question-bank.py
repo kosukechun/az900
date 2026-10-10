@@ -354,6 +354,12 @@ def write_bank():
     assert len({x['questionText'] for x in BANK}) == len(BANK)
     for domain, name, expected in targets:
         items = [x for x in BANK if x['domain'] == domain]
+        # Published revisions are authoritative. Never roll a reviewed question
+        # back to the embedded initial version when regenerating the seed bank.
+        destination = target_dir / name
+        if destination.exists():
+            previous = {x['id']: x for x in json.loads(destination.read_text(encoding='utf-8'))}
+            items = [previous[x['id']] if x['id'] in previous and previous[x['id']]['version'] > x['version'] else x for x in items]
         assert len(items) == expected, (domain, len(items))
         for item in items:
             ids = {opt['id'] for opt in item['options']}

@@ -38,6 +38,7 @@ async function readStore(page: Page, store: string) {
 async function answerIndividual(page: Page, optionId: string) {
   await page.goto(`./#/practice?question=${q.id}`);
   await expect(page.locator(".question-text")).toHaveText(q.questionText);
+  await expect(page.getByText(/指定の10問から減らして出題/)).toHaveCount(0);
   await page
     .locator(".option")
     .filter({
@@ -102,9 +103,7 @@ test("1タップ即時解説・二重クリック防止・Enterで次へ", async
 });
 test("分野別5問・未回答モード・不足の案内", async ({ page }) => {
   await page.goto("./#/domains");
-  await page
-    .getByRole("combobox", { name: "分野", exact: true })
-    .selectOption("management");
+  await page.getByRole("checkbox", { name: /Azureの管理とガバナンス/ }).check();
   await page
     .getByRole("combobox", { name: "問題数", exact: true })
     .selectOption("5");
@@ -127,9 +126,8 @@ test("分野別5問・未回答モード・不足の案内", async ({ page }) =>
   await page
     .getByRole("combobox", { name: "出題モード", exact: true })
     .selectOption("unanswered");
-  await page
-    .getByRole("combobox", { name: "分野", exact: true })
-    .selectOption("cloud");
+  await page.getByRole("button", { name: "すべての分野", exact: true }).click();
+  await page.getByRole("checkbox", { name: /クラウドの概念/ }).check();
   await page
     .getByRole("combobox", { name: "問題数", exact: true })
     .selectOption("50");
@@ -153,6 +151,131 @@ test("複数選択のみ確定操作を要求", async ({ page }) => {
   await page.getByRole("button", { name: "回答を確定" }).click();
   await expect(page.getByText("正解！", { exact: true })).toBeVisible();
 });
+test("複数分野・複数テーマを組み合わせた全問出題と条件解除", async ({
+  page,
+}) => {
+  const services = JSON.parse(
+    fs.readFileSync("public/data/questions/azure-services.json", "utf8"),
+  );
+  const chosenThemes = [data[0].subcategory, services[0].subcategory];
+  await page.goto("./#/practice");
+  await page.getByRole("checkbox", { name: /クラウドの概念/ }).check();
+  await page
+    .getByRole("checkbox", { name: /Azureのアーキテクチャとサービス/ })
+    .check();
+  const themeGroup = page.getByRole("group", { name: "テーマ複数選択可" });
+  for (const theme of chosenThemes)
+    await themeGroup.getByRole("checkbox", { name: new RegExp(theme) }).check();
+  await expect(
+    page.getByRole("checkbox", { name: /クラウドの概念/ }),
+  ).toBeChecked();
+  await expect(
+    page.getByRole("checkbox", { name: /Azureのアーキテクチャとサービス/ }),
+  ).toBeChecked();
+  await page
+    .getByRole("combobox", { name: "問題数", exact: true })
+    .selectOption("0");
+  await page.getByRole("button", { name: "演習をはじめる" }).click();
+  await expect(page.locator(".question-text")).toBeVisible();
+  const expected = [...data, ...services]
+    .filter((q) => chosenThemes.includes(q.subcategory))
+    .map((q) => q.id)
+    .sort();
+  const sessions = await readStore(page, "studySessions");
+  expect(sessions[0].questionIds.slice().sort()).toEqual(expected);
+  expect(new Set(sessions[0].questionIds).size).toBe(expected.length);
+  await page.goto("./#/practice");
+  await page
+    .getByRole("checkbox", { name: /Azureのアーキテクチャとサービス/ })
+    .check();
+  await themeGroup
+    .getByRole("checkbox", { name: new RegExp(chosenThemes[1]) })
+    .check();
+  await page.getByRole("checkbox", { name: /クラウドの概念/ }).check();
+  await page
+    .getByRole("checkbox", { name: /Azureのアーキテクチャとサービス/ })
+    .uncheck();
+  await expect(
+    themeGroup.getByRole("checkbox", { name: new RegExp(chosenThemes[1]) }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByText("選択した分野に含まれないテーマを解除しました。"),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "すべての分野", exact: true }).click();
+  await page
+    .getByRole("button", { name: "すべてのテーマ", exact: true })
+    .click();
+  await expect(
+    page.getByRole("button", { name: "すべての分野", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
+});
+for (const label of ["正解", "不正解"])
+  test(`${label}の判定の近くに次ボタンがあり、長い解説までスクロールせず進める`, async ({
+    page,
+  }) => {
+    await page.goto("./#/practice");
+    await page
+      .getByRole("combobox", { name: "問題数", exact: true })
+      .selectOption("5");
+    await page.getByRole("button", { name: "演習をはじめる" }).click();
+    await expect(page.locator(".question-text")).toBeVisible();
+    const files = JSON.parse(
+      fs.readFileSync("public/data/question-files.json", "utf8"),
+    );
+    const bank = files.flatMap((f: string) =>
+      JSON.parse(fs.readFileSync(`public/data/questions/${f}`, "utf8")),
+    );
+    const text = await page.locator(".question-text").innerText();
+    const displayed = bank.find(
+      (item: { questionText: string }) => item.questionText === text,
+    );
+    expect(displayed).toBeTruthy();
+    const optionIds =
+      label === "正解"
+        ? displayed.correctOptionIds
+        : [
+            displayed.options.find(
+              (o: { id: string }) => !displayed.correctOptionIds.includes(o.id),
+            ).id,
+          ];
+    for (const width of [1440, 375, 320]) {
+      await page.setViewportSize({ width, height: 900 });
+      if (width === 1440) {
+        for (const optionId of optionIds)
+          await page
+            .locator(".option")
+            .filter({
+              has: page.locator(".option-letter", {
+                hasText: new RegExp(`^${optionId}$`),
+              }),
+            })
+            .click();
+        if (displayed.questionType === "multiple")
+          await page.getByRole("button", { name: "回答を確定" }).click();
+      }
+      const heading = page.getByRole("heading", {
+          name: label === "正解" ? "正解！" : "不正解 — ここで覚えよう",
+          exact: true,
+        }),
+        button = page.getByRole("button", { name: "次の問題へ" });
+      await expect(button).toBeVisible();
+      const h = (await heading.boundingBox())!,
+        b = (await button.boundingBox())!;
+      expect(Math.abs(b.y - h.y)).toBeLessThan(90);
+      expect(b.y).toBeLessThan(
+        (await page
+          .getByRole("heading", { name: "解説", exact: true })
+          .boundingBox())!.y,
+      );
+      expect(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= innerWidth,
+        ),
+      ).toBe(true);
+    }
+    await page.getByRole("button", { name: "次の問題へ" }).click();
+    await expect(page.locator(".session-progress")).toContainText("第 2 問");
+  });
 test("復習まとめ出題は未克服だけ・克服後は対象から外れる", async ({ page }) => {
   await answerIndividual(page, wrong);
   await page.goto("./#/review");

@@ -7,6 +7,55 @@ const wrapper = ({ children }: { children: React.ReactNode }) => (
   <MemoryRouter>{children}</MemoryRouter>
 );
 describe("1タップ演習UI", () => {
+  it("保存中も次ボタンを判定の近くに表示し、保存が終わるまで押せない", () => {
+    const next = vi.fn();
+    const props = {
+      question,
+      selected: ["A"],
+      onAnswer: vi.fn(),
+      onNext: next,
+      bookmarked: false,
+      onBookmark: vi.fn(),
+    };
+    const r = render(<QuestionCard {...props} nextDisabled />, { wrapper });
+    const button = screen.getByRole("button", { name: "次の問題へ" });
+    expect(button).toBeDisabled();
+    fireEvent.click(button);
+    fireEvent.keyDown(window, { key: "Enter" });
+    expect(next).not.toHaveBeenCalled();
+    r.rerender(<QuestionCard {...props} nextDisabled={false} />);
+    expect(button).toBeEnabled();
+    fireEvent.click(button);
+    expect(next).toHaveBeenCalledOnce();
+  });
+  it.each([
+    ["A", "正解！"],
+    ["B", "不正解 — ここで覚えよう"],
+  ])("回答%sでは次ボタンを判定の近く・解説本文の前に表示", (id, result) => {
+    const next = vi.fn();
+    render(
+      <QuestionCard
+        question={question}
+        onAnswer={vi.fn()}
+        onNext={next}
+        bookmarked={false}
+        onBookmark={() => {}}
+      />,
+      { wrapper },
+    );
+    fireEvent.click(
+      screen.getByRole("button", { name: id === "A" ? /A IaaS/ : /B PaaS/ }),
+    );
+    const resultHeading = screen.getByRole("heading", { name: result }),
+      button = screen.getByRole("button", { name: "次の問題へ" });
+    expect(resultHeading.parentElement).toContainElement(button);
+    expect(
+      button.compareDocumentPosition(screen.getByText(question.explanation)) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
+    fireEvent.click(button);
+    expect(next).toHaveBeenCalledOnce();
+  });
   it("1タップで正解・解説を即表示、回答確定ボタンなし", () => {
     const answer = vi.fn();
     render(

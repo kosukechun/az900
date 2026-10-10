@@ -7,14 +7,20 @@ import { useContent } from "../context";
 import type { Mode, Session } from "../types";
 import { selectQuestions, modeNames } from "../utils/study";
 import { PageHeading } from "../components/ui";
+import { FilterChoices } from "../components/FilterChoices";
 export function Practice({ domainPage = false }: { domainPage?: boolean }) {
   const d = useStudyData(),
     { questions, categories } = useContent();
   const [params] = useSearchParams(),
     navigate = useNavigate();
   const [mode, setMode] = useState<Mode>(domainPage ? "domain" : "random"),
-    [domain, setDomain] = useState(params.get("domain") ?? ""),
-    [subcategory, setSubcategory] = useState(""),
+    [domains, setDomains] = useState<string[]>(
+      categories.some((c) => c.id === params.get("domain"))
+        ? [params.get("domain")!]
+        : [],
+    ),
+    [subcategories, setSubcategories] = useState<string[]>([]),
+    [filterNotice, setFilterNotice] = useState(""),
     [count, setCount] = useState(10),
     [error, setError] = useState(""),
     [busy, setBusy] = useState(false);
@@ -29,8 +35,8 @@ export function Practice({ domainPage = false }: { domainPage?: boolean }) {
         0,
         d.progress,
         d.bookmarks.map((b) => b.id),
-        domain,
-        subcategory,
+        domains,
+        subcategories,
       )
     : [];
   async function start(quick?: Mode, questionId?: string) {
@@ -45,15 +51,21 @@ export function Practice({ domainPage = false }: { domainPage?: boolean }) {
             quick === "unresolved" ? 0 : quick ? 10 : count,
             d.progress,
             d.bookmarks.map((b) => b.id),
-            quick ? "" : domain,
-            quick ? "" : subcategory,
+            quick ? [] : domains,
+            quick ? [] : subcategories,
             quick === "daily" ? seededDailyRandom() : Math.random,
           );
       if (!selected.length) {
         setError("出題できる問題がありません。条件を変更してください。");
         return;
       }
-      const requested = quick === "unresolved" ? 0 : quick ? 10 : count;
+      const requested = questionId
+        ? 1
+        : quick === "unresolved"
+          ? 0
+          : quick
+            ? 10
+            : count;
       const s: Session = {
         id: crypto.randomUUID(),
         mode: questionId ? "individual" : (quick ?? mode),
@@ -104,6 +116,25 @@ export function Practice({ domainPage = false }: { domainPage?: boolean }) {
       );
     }
   }, [d, params]);
+  const available = questions.filter(
+    (q) => !domains.length || domains.includes(q.domain),
+  );
+  const themes = [...new Set(available.map((q) => q.subcategory))].sort();
+  const changeDomains = (next: string[]) => {
+    setDomains(next);
+    const allowed = new Set(
+      questions
+        .filter((q) => !next.length || next.includes(q.domain))
+        .map((q) => q.subcategory),
+    );
+    const remaining = subcategories.filter((s) => allowed.has(s));
+    setSubcategories(remaining);
+    setFilterNotice(
+      remaining.length < subcategories.length
+        ? "選択した分野に含まれないテーマを解除しました。"
+        : "",
+    );
+  };
   return (
     <>
       <PageHeading
@@ -111,27 +142,6 @@ export function Practice({ domainPage = false }: { domainPage?: boolean }) {
         title={domainPage ? "分野別演習" : "問題演習"}
         description="1タップで回答、すぐに解説。あなたのペースで理解を深めよう。"
       />
-      {domainPage && (
-        <div className="domain-cards">
-          {categories.map((c, i) => (
-            <button
-              className={`card domain-choice ${domain === c.id ? "selected" : ""}`}
-              key={c.id}
-              onClick={() => {
-                setDomain(c.id);
-                setSubcategory("");
-              }}
-            >
-              <span className="eyebrow">DOMAIN 0{i + 1}</span>
-              <h3>{c.name}</h3>
-              <small>
-                {questions.filter((q) => q.domain === c.id).length}問 · 公式比率{" "}
-                {["25–30", "35–40", "30–35"][i]}%
-              </small>
-            </button>
-          ))}
-        </div>
-      )}
       <section className="card panel setup-panel">
         <div className="section-title">
           <h2>
@@ -159,43 +169,6 @@ export function Practice({ domainPage = false }: { domainPage?: boolean }) {
             </select>
           </label>
           <label>
-            分野
-            <select
-              value={domain}
-              onChange={(e) => {
-                setDomain(e.target.value);
-                setSubcategory("");
-              }}
-            >
-              <option value="">すべての分野</option>
-              {categories.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.name}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            テーマ
-            <select
-              value={subcategory}
-              onChange={(e) => setSubcategory(e.target.value)}
-            >
-              <option value="">すべてのテーマ</option>
-              {[
-                ...new Set(
-                  questions
-                    .filter((q) => !domain || q.domain === domain)
-                    .map((q) => q.subcategory),
-                ),
-              ]
-                .sort()
-                .map((s) => (
-                  <option key={s}>{s}</option>
-                ))}
-            </select>
-          </label>
-          <label>
             問題数
             <select
               value={count}
@@ -209,6 +182,36 @@ export function Practice({ domainPage = false }: { domainPage?: boolean }) {
             </select>
           </label>
         </div>
+        <p className="small muted">
+          分野とテーマは複数選択できます。選択しなければ、すべてが対象です。
+        </p>
+        <FilterChoices
+          label="分野"
+          allLabel="すべての分野"
+          choices={categories.map((c) => ({
+            id: c.id,
+            label: c.name,
+            count: questions.filter((q) => q.domain === c.id).length,
+          }))}
+          selected={domains}
+          onChange={changeDomains}
+        />
+        <FilterChoices
+          label="テーマ"
+          allLabel="すべてのテーマ"
+          choices={themes.map((s) => ({
+            id: s,
+            label: s,
+            count: available.filter((q) => q.subcategory === s).length,
+          }))}
+          selected={subcategories}
+          onChange={setSubcategories}
+        />
+        {filterNotice && (
+          <p className="small muted" role="status">
+            {filterNotice}
+          </p>
+        )}
         <div className="setup-summary">
           <p>
             <strong>{pool.length}問</strong> が出題対象です。

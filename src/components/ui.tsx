@@ -62,20 +62,25 @@ export function Explanation({
   correct,
   showResult = true,
   onTerm,
+  action,
 }: {
   question: Question;
   correct?: boolean;
   showResult?: boolean;
   onTerm?: (id: string) => void;
+  action?: ReactNode;
 }) {
   const { terms } = useContent();
   return (
     <section className="explanation" aria-label="解説" aria-live="polite">
       {showResult && (
-        <h2 className={correct ? "success-text" : "danger-text"}>
-          {correct ? <CheckCircle2 /> : <XCircle />}
-          {correct ? "正解！" : "不正解 — ここで覚えよう"}
-        </h2>
+        <div className="result-header">
+          <h2 className={correct ? "success-text" : "danger-text"}>
+            {correct ? <CheckCircle2 /> : <XCircle />}
+            {correct ? "正解！" : "不正解 — ここで覚えよう"}
+          </h2>
+          {action}
+        </div>
       )}
       <p className="answer-label">
         正解：

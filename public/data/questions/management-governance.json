@@ -1,7 +1,7 @@
 [
   {
     "id": "Q088",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "コスト管理",
     "difficulty": "basic",
@@ -48,7 +48,7 @@
   },
   {
     "id": "Q089",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "コスト管理",
     "difficulty": "basic",
@@ -87,7 +87,7 @@
       "cost-management"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/6-describe-azure-tool"
+      "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -95,7 +95,7 @@
   },
   {
     "id": "Q090",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "コスト管理",
     "difficulty": "standard",
@@ -122,7 +122,7 @@
     "correctOptionIds": [
       "A"
     ],
-    "explanation": "予算アラートは費用のしきい値到達を通知する。アクショングループなどによる追加の自動化を構成しなければ、通常の資源が自動停止するわけではない。",
+    "explanation": "????????????????????????????????????????????????????????????????????????????????????????????????????????",
     "optionExplanations": {
       "A": "自動停止などは別途連携と設定が必要。",
       "B": "予算アラート自体は削除を保証しない。",
@@ -134,7 +134,7 @@
       "cost-management"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/6-describe-azure-tool"
+      "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -142,7 +142,7 @@
   },
   {
     "id": "Q091",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "コスト管理",
     "difficulty": "basic",
@@ -190,7 +190,7 @@
   },
   {
     "id": "Q092",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "コスト管理",
     "difficulty": "standard",
@@ -239,7 +239,7 @@
   },
   {
     "id": "Q093",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "コスト管理",
     "difficulty": "basic",
@@ -266,7 +266,7 @@
     "correctOptionIds": [
       "D"
     ],
-    "explanation": "予約は対象資源の継続利用が見込める場合の費用削減に役立つ。割引適用条件や利用見込みを確認して選ぶ。",
+    "explanation": "Azure Reservations?1????3???????????????????????????????????????????????????????????????VM?????????????????????????????????",
     "optionExplanations": {
       "A": "名前解決サービス。",
       "B": "管理操作を制限する。",
@@ -278,7 +278,7 @@
       "cost-management"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7a-describe-cost-optimization-options"
+      "https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -286,7 +286,7 @@
   },
   {
     "id": "Q094",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "コスト管理",
     "difficulty": "basic",
@@ -326,7 +326,7 @@
       "cost-management"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7a-describe-cost-optimization-options"
+      "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -334,7 +334,7 @@
   },
   {
     "id": "Q095",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "コスト管理",
     "difficulty": "standard",
@@ -361,7 +361,7 @@
     "correctOptionIds": [
       "B"
     ],
-    "explanation": "Savings plan for computeは一定期間、1時間当たりの対象利用の支出を約束する。特定のVM構成への予約と比べて適用の柔軟性がある。",
+    "explanation": "Savings plan for compute?1????3??????????????????1??????????????????VM?????????????????????????????????????????????????????????????????????????????????",
     "optionExplanations": {
       "A": "タグは無料利用契約を作らない。",
       "B": "一定期間の支出を約束し対象利用に割引を適用する。",
@@ -373,7 +373,7 @@
       "cost-management"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7a-describe-cost-optimization-options"
+      "https://learn.microsoft.com/en-us/azure/cost-management-billing/savings-plan/savings-plan-overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -381,7 +381,7 @@
   },
   {
     "id": "Q096",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "コスト管理",
     "difficulty": "basic",
@@ -421,8 +421,7 @@
       "advisor"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/2-describe-factors-affect-costs-azure",
-      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/6-describe-azure-tool"
+      "https://learn.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -430,7 +429,7 @@
   },
   {
     "id": "Q097",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "タグ",
     "difficulty": "basic",
@@ -470,7 +469,7 @@
       "resource-group"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7-describe-purpose-of-tags"
+      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -478,7 +477,7 @@
   },
   {
     "id": "Q098",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "タグ",
     "difficulty": "basic",
@@ -518,7 +517,7 @@
       "policy"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7-describe-purpose-of-tags"
+      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -526,12 +525,12 @@
   },
   {
     "id": "Q099",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "タグ",
     "difficulty": "basic",
     "questionType": "single",
-    "questionText": "すべての資源にCostCenterタグを付ける規則を強制・監査したい。適したサービスはどれか。",
+    "questionText": "?????????Azure???CostCenter??????????????????????????????",
     "options": [
       {
         "id": "A",
@@ -553,7 +552,7 @@
     "correctOptionIds": [
       "B"
     ],
-    "explanation": "Azure Policyで必要なタグに関するルールを定義できる。選択する効果により監査、拒否、変更などの動作が異なる。",
+    "explanation": "Azure Policy???????????????????????????????????????????????????????????????????????????????????????????????????????",
     "optionExplanations": {
       "A": "タグ規則を評価しない。",
       "B": "必要なタグなどの構成ルールを適用する。",
@@ -566,8 +565,8 @@
       "cost-management"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7-describe-purpose-of-tags",
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy"
+      "https://learn.microsoft.com/en-us/azure/governance/policy/overview",
+      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -575,12 +574,12 @@
   },
   {
     "id": "Q100",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "ガバナンス",
     "difficulty": "basic",
     "questionType": "single",
-    "questionText": "資源を特定リージョンだけに作成できるよう制限したい。使う機能はどれか。",
+    "questionText": "Azure VM?????????????????????????????????????",
     "options": [
       {
         "id": "A",
@@ -602,7 +601,7 @@
     "correctOptionIds": [
       "C"
     ],
-    "explanation": "Policyは許可するリージョンやVMサイズなどを制御できる。ユーザーに操作権限があっても、構成が拒否ルールに違反すれば作成できない。",
+    "explanation": "Azure Policy?????VM?????????????????????????????????????????????Deny?????????????????????????????????????????",
     "optionExplanations": {
       "A": "監視用データの収集・分析。",
       "B": "マネージドファイル共有。",
@@ -615,7 +614,7 @@
       "region"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy"
+      "https://learn.microsoft.com/en-us/azure/governance/policy/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -623,7 +622,7 @@
   },
   {
     "id": "Q101",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "ガバナンス",
     "difficulty": "basic",
@@ -650,11 +649,11 @@
     "correctOptionIds": [
       "D"
     ],
-    "explanation": "RBACはアクセス権を、Policyは資源の構成やコンプライアンスを扱う。両方を使い、権限と許可された構成を管理する。",
+    "explanation": "Azure RBAC??????????????????????????????????Azure Policy??????????????????????????????????????Policy???????????????????????????????RBAC?????????",
     "optionExplanations": {
       "A": "どちらも記載の用途ではない。",
       "B": "権限と構成ルールの役割を表していない。",
-      "C": "Policyは資源の構成を評価する。",
+      "C": "Policy???????????????????RBAC?????????????????????",
       "D": "役割が異なるため併用できる。"
     },
     "keyPoint": "RBACは操作権、Policyは構成条件。",
@@ -663,8 +662,8 @@
       "policy"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/6-role-based-access-control",
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy"
+      "https://learn.microsoft.com/en-us/azure/governance/policy/overview",
+      "https://learn.microsoft.com/en-us/azure/role-based-access-control/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -672,7 +671,7 @@
   },
   {
     "id": "Q102",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "ガバナンス",
     "difficulty": "basic",
@@ -711,7 +710,7 @@
       "policy"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy"
+      "https://learn.microsoft.com/en-us/azure/governance/policy/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -719,7 +718,7 @@
   },
   {
     "id": "Q103",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "ガバナンス",
     "difficulty": "standard",
@@ -758,8 +757,7 @@
       "policy"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy",
-      "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-basics"
+      "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-audit"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -767,7 +765,7 @@
   },
   {
     "id": "Q104",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "ガバナンス",
     "difficulty": "standard",
@@ -806,8 +804,7 @@
       "policy"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy",
-      "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-basics"
+      "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-deny"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -815,7 +812,7 @@
   },
   {
     "id": "Q105",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "ガバナンス",
     "difficulty": "basic",
@@ -855,7 +852,8 @@
       "policy"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/2-describe-purpose-microsoft-purview"
+      "https://learn.microsoft.com/en-us/purview/purview",
+      "https://learn.microsoft.com/en-us/purview/data-map"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -863,7 +861,7 @@
   },
   {
     "id": "Q106",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "リソースロック",
     "difficulty": "basic",
@@ -890,7 +888,7 @@
     "correctOptionIds": [
       "A"
     ],
-    "explanation": "CanNotDeleteは削除を防ぐロックである。ロックは主にARMを介した管理面の操作に作用し、すべてのデータ操作を止めるものではない。",
+    "explanation": "CanNotDelete?????????????????????????????????????ARM?????????????????Blob???????????????????????",
     "optionExplanations": {
       "A": "管理面の削除を禁止し、変更は通常許可する。",
       "B": "削除だけでなく管理面の変更も制限する。",
@@ -903,7 +901,6 @@
       "resource-group"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/4-describe-purpose-resource-locks",
       "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
     ],
     "originType": "original",
@@ -912,7 +909,7 @@
   },
   {
     "id": "Q107",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "リソースロック",
     "difficulty": "basic",
@@ -939,20 +936,19 @@
     "correctOptionIds": [
       "B"
     ],
-    "explanation": "ReadOnlyロックは管理面の変更と削除を制限する。サービスによっては読み取りに見える管理操作もPOSTを使うなどの理由で影響を受ける。",
+    "explanation": "ReadOnly?????????????????????????????????POST?????????????????????????????????????????????????????????",
     "optionExplanations": {
       "A": "通常は更新を許可する。",
       "B": "読み取り以外の管理操作を制限する。",
       "C": "費用分類のためのメタデータ。",
       "D": "VMの価格方式。"
     },
-    "keyPoint": "ReadOnlyは更新にも影響する。",
+    "keyPoint": "ReadOnly????????????????????????????",
     "relatedTermIds": [
       "arm",
       "resource-group"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/4-describe-purpose-resource-locks",
       "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
     ],
     "originType": "original",
@@ -961,7 +957,7 @@
   },
   {
     "id": "Q108",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "リソースロック",
     "difficulty": "basic",
@@ -1001,9 +997,8 @@
       "arm"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/4-describe-purpose-resource-locks",
-      "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/6-role-based-access-control",
-      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
+      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources",
+      "https://learn.microsoft.com/en-us/azure/role-based-access-control/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1011,7 +1006,7 @@
   },
   {
     "id": "Q109",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "管理ツール",
     "difficulty": "basic",
@@ -1051,7 +1046,7 @@
       "azure"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
+      "https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1059,7 +1054,7 @@
   },
   {
     "id": "Q110",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "管理ツール",
     "difficulty": "basic",
@@ -1098,7 +1093,7 @@
       "arm"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
+      "https://learn.microsoft.com/en-us/azure/cloud-shell/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1106,7 +1101,7 @@
   },
   {
     "id": "Q111",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "管理ツール",
     "difficulty": "basic",
@@ -1145,7 +1140,7 @@
       "arm"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
+      "https://learn.microsoft.com/en-us/cli/azure/what-is-azure-cli"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1153,7 +1148,7 @@
   },
   {
     "id": "Q112",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "管理ツール",
     "difficulty": "basic",
@@ -1192,7 +1187,7 @@
       "arm"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
+      "https://learn.microsoft.com/en-us/powershell/azure/what-is-azure-powershell"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1200,7 +1195,7 @@
   },
   {
     "id": "Q113",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "管理ツール",
     "difficulty": "basic",
@@ -1240,7 +1235,7 @@
       "hybrid-cloud"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/3-describe-purpose-of-azure-arc"
+      "https://learn.microsoft.com/en-us/azure/azure-arc/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1248,7 +1243,7 @@
   },
   {
     "id": "Q114",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "IaC",
     "difficulty": "basic",
@@ -1287,7 +1282,7 @@
       "arm"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates"
+      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1295,7 +1290,7 @@
   },
   {
     "id": "Q115",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "IaC",
     "difficulty": "basic",
@@ -1334,7 +1329,7 @@
       "arm"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates"
+      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1342,7 +1337,7 @@
   },
   {
     "id": "Q116",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "IaC",
     "difficulty": "basic",
@@ -1381,7 +1376,7 @@
       "arm"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates"
+      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1389,7 +1384,7 @@
   },
   {
     "id": "Q117",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "IaC",
     "difficulty": "standard",
@@ -1428,7 +1423,7 @@
       "arm"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates"
+      "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/parameters"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1436,7 +1431,7 @@
   },
   {
     "id": "Q118",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "監視ツール",
     "difficulty": "basic",
@@ -1475,7 +1470,7 @@
       "monitor"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor"
+      "https://learn.microsoft.com/en-us/azure/azure-monitor/fundamentals/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1483,7 +1478,7 @@
   },
   {
     "id": "Q119",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "監視ツール",
     "difficulty": "basic",
@@ -1522,7 +1517,7 @@
       "monitor"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor"
+      "https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1530,7 +1525,7 @@
   },
   {
     "id": "Q120",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "監視ツール",
     "difficulty": "basic",
@@ -1569,7 +1564,7 @@
       "monitor"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor"
+      "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1577,7 +1572,7 @@
   },
   {
     "id": "Q121",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "監視ツール",
     "difficulty": "basic",
@@ -1616,7 +1611,8 @@
       "monitor"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor"
+      "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview",
+      "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1624,7 +1620,7 @@
   },
   {
     "id": "Q122",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "監視ツール",
     "difficulty": "basic",
@@ -1664,7 +1660,7 @@
       "monitor"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/2-describe-purpose-of-azure-advisor"
+      "https://learn.microsoft.com/en-us/azure/advisor/advisor-overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1672,7 +1668,7 @@
   },
   {
     "id": "Q123",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "監視ツール",
     "difficulty": "basic",
@@ -1711,7 +1707,7 @@
       "monitor"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/3-describe-azure-service-health"
+      "https://learn.microsoft.com/en-us/azure/service-health/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1719,7 +1715,7 @@
   },
   {
     "id": "Q124",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "監視ツール",
     "difficulty": "basic",
@@ -1759,7 +1755,7 @@
       "vm"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/3-describe-azure-service-health"
+      "https://learn.microsoft.com/en-us/azure/service-health/resource-health-overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1767,7 +1763,7 @@
   },
   {
     "id": "Q125",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "監視ツール",
     "difficulty": "basic",
@@ -1806,7 +1802,7 @@
       "monitor"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/3-describe-azure-service-health"
+      "https://learn.microsoft.com/en-us/azure/service-health/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1814,7 +1810,7 @@
   },
   {
     "id": "Q126",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "監視ツール",
     "difficulty": "basic",
@@ -1854,8 +1850,8 @@
       "advisor"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor",
-      "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/2-describe-purpose-of-azure-advisor"
+      "https://learn.microsoft.com/en-us/azure/azure-monitor/fundamentals/overview",
+      "https://learn.microsoft.com/en-us/azure/advisor/advisor-overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1863,7 +1859,7 @@
   },
   {
     "id": "Q127",
-    "version": 1,
+    "version": 2,
     "domain": "management",
     "subcategory": "ガバナンス",
     "difficulty": "basic",
@@ -1903,8 +1899,8 @@
       "subscription"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy",
-      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+      "https://learn.microsoft.com/en-us/azure/governance/management-groups/overview",
+      "https://learn.microsoft.com/en-us/azure/governance/policy/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",

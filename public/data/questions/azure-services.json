@@ -381,7 +381,7 @@
   },
   {
     "id": "Q043",
-    "version": 1,
+    "version": 2,
     "domain": "services",
     "subcategory": "Azureの基本構造",
     "difficulty": "basic",
@@ -408,19 +408,22 @@
     "correctOptionIds": [
       "C"
     ],
-    "explanation": "サブスクリプションはAzureサービスの利用、課金、アクセス管理の単位である。用途や部門に応じて複数に分ける設計もできる。",
+    "explanation": "サブスクリプションはAzureリソースの利用・課金・アクセス管理を区切るスコープである。管理グループは複数サブスクリプションをまとめる上位階層、Microsoft EntraテナントはIDを管理するディレクトリであり、役割が異なる。請求書や支払方法は契約に応じた請求アカウントや請求プロファイルで管理されるため、サブスクリプションと請求書が常に1対1とは限らない。",
     "optionExplanations": {
       "A": "クラウド施設の設備運用。",
       "B": "サブスクリプションの役割ではない。",
       "C": "Azureサービスの利用と費用・権限管理の単位となる。",
       "D": "ストレージデータの形式とは無関係。"
     },
-    "keyPoint": "課金・管理の境界はサブスクリプション。",
+    "keyPoint": "サブスクリプションはリソースの課金・アクセス管理の境界。ID管理や請求書の管理とは区別する。",
     "relatedTermIds": [
       "subscription"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+      "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure",
+      "https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/mca-overview",
+      "https://learn.microsoft.com/en-us/entra/fundamentals/how-subscriptions-associated-directory",
+      "https://learn.microsoft.com/en-us/azure/governance/management-groups/overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1613,12 +1616,12 @@
   },
   {
     "id": "Q069",
-    "version": 1,
+    "version": 2,
     "domain": "services",
     "subcategory": "ストレージ",
     "difficulty": "basic",
     "questionType": "single",
-    "questionText": "同一リージョン内の3つの可用性ゾーンへ同期複製する冗長化方式はどれか。",
+    "questionText": "同一リージョン内の3つ以上の可用性ゾーンへ同期複製する冗長化方式はどれか。",
     "options": [
       {
         "id": "A",
@@ -1640,10 +1643,10 @@
     "correctOptionIds": [
       "A"
     ],
-    "explanation": "ZRSは主リージョンの複数の可用性ゾーンへ同期複製する。リージョン全体の障害に備える地理冗長性とは区別する。",
+    "explanation": "ZRSは主リージョンの3つ以上の可用性ゾーンへ同期複製する。ゾーン障害に備える方式であり、リージョン全体の障害に備える地理冗長性とは区別する。",
     "optionExplanations": {
       "A": "ゾーン間で同期複製する。",
-      "B": "主リージョンの単一施設内で複製する。",
+      "B": "LRSは主リージョン内の局所的な冗長化。ZRSのようなゾーン間の耐障害性を保証する方式ではない。",
       "C": "主リージョンのLRSから別リージョンへ非同期複製する。",
       "D": "データを複製する機能ではない。"
     },
@@ -1653,7 +1656,7 @@
       "blob-storage"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/3-redundancy"
+      "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1661,7 +1664,7 @@
   },
   {
     "id": "Q070",
-    "version": 1,
+    "version": 2,
     "domain": "services",
     "subcategory": "ストレージ",
     "difficulty": "basic",
@@ -1692,7 +1695,7 @@
     "optionExplanations": {
       "A": "主リージョン内のゾーンへ同期複製する。",
       "B": "主リージョンとセカンダリリージョンへ複製する。",
-      "C": "単一施設内の冗長性であり別リージョンへ複製しない。",
+      "C": "LRSは主リージョン内で局所的に複製する方式であり、別リージョンへ複製しない。",
       "D": "ネットワーク通信のフィルター。"
     },
     "keyPoint": "地理複製は非同期によるデータ差に注意。",
@@ -1701,7 +1704,7 @@
       "region"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/3-redundancy"
+      "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1709,12 +1712,12 @@
   },
   {
     "id": "Q071",
-    "version": 1,
+    "version": 2,
     "domain": "services",
     "subcategory": "ストレージ",
     "difficulty": "standard",
     "questionType": "single",
-    "questionText": "地理冗長なセカンダリのデータを、フェールオーバー前から読み取りたい。選択する方式はどれか。",
+    "questionText": "地理冗長なセカンダリのBlobデータを、フェールオーバー前から読み取りたい。選択する方式はどれか。",
     "options": [
       {
         "id": "A",
@@ -1736,7 +1739,7 @@
     "correctOptionIds": [
       "C"
     ],
-    "explanation": "RA-GRSは読み取りアクセス付き地理冗長ストレージである。複製が非同期のため、セカンダリのデータが最新とは限らない。",
+    "explanation": "RA-GRSは読み取りアクセス付き地理冗長ストレージであり、セカンダリエンドポイントからBlobデータを読み取れる。複製が非同期のため、セカンダリのデータが最新とは限らない。すべてのStorageサービスがRA-GRSに対応するわけではなく、Azure Filesは対応しない。",
     "optionExplanations": {
       "A": "別リージョンの読み取り先を提供しない。",
       "B": "同一リージョン内の冗長性。",
@@ -1749,7 +1752,7 @@
       "region"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/3-redundancy"
+      "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",
@@ -1757,7 +1760,7 @@
   },
   {
     "id": "Q072",
-    "version": 1,
+    "version": 2,
     "domain": "services",
     "subcategory": "ストレージ",
     "difficulty": "basic",
@@ -1798,7 +1801,7 @@
       "queue-storage"
     ],
     "referenceUrls": [
-      "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/2-accounts"
+      "https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview"
     ],
     "originType": "original",
     "license": "CC-BY-4.0",

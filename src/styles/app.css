@@ -1136,14 +1136,109 @@ select {
   display: block;
   font-size: 10px;
 }
-.next-bar {
-  border-top: 1px solid var(--border);
-  padding-top: 20px;
-  margin-top: 20px;
+.result-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.result-header h2 {
+  margin-bottom: 0;
+}
+.result-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+}
+.result-action .small {
+  font-size: 10px;
+}
+.filter-choices {
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 22px 0;
+}
+.filter-choices legend {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.filter-choices legend .muted {
+  font-size: 10px;
+  font-weight: 400;
+  margin-left: 12px;
+}
+.filter-options {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.filter-choice,
+.filter-all {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  min-height: 44px;
+  padding: 10px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 1.6;
+  max-width: 100%;
+}
+.filter-choice input {
+  width: 16px;
+  height: 16px;
+  min-height: 0;
+  padding: 0;
+  flex-shrink: 0;
+  accent-color: #0078d4;
+}
+.filter-choice span {
+  overflow-wrap: anywhere;
+}
+.filter-choice small {
+  font-size: 10px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.filter-choice:focus-within {
+  outline: 3px solid #50a8ec;
+  outline-offset: 3px;
+}
+.filter-all.selected,
+.filter-choice.selected {
+  color: var(--azure);
+}
+.filter-all svg {
+  flex-shrink: 0;
+}
+@media (max-width: 560px) {
+  .result-header {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .result-action {
+    margin-left: 0;
+    align-items: stretch;
+  }
+  .result-action .small {
+    text-align: center;
+  }
+  .filter-choice,
+  .filter-all {
+    font-size: 11px;
+    padding: 10px;
+    gap: 7px;
+  }
 }
 .shortcut-note,
 .save-status {
@@ -1887,17 +1982,6 @@ th {
   }
   .explanation h3 {
     font-size: 14px;
-  }
-  .next-bar {
-    align-items: stretch;
-    flex-direction: column;
-  }
-  .next-bar > .muted {
-    text-align: center;
-    order: 2;
-  }
-  .next-bar .btn {
-    order: 1;
   }
   .session-progress {
     font-size: 12px;

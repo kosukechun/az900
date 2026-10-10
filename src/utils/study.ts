@@ -38,15 +38,23 @@ export function selectQuestions(
   count: number,
   progress: Progress[],
   bookmarks: string[],
-  domain = "",
-  subcategory = "",
+  domain: string | readonly string[] = [],
+  subcategory: string | readonly string[] = [],
   random = Math.random,
 ): Question[] {
   const pm = new Map(progress.map((p) => [p.questionId, p]));
+  const domains =
+    typeof domain === "string" ? (domain ? [domain] : []) : domain;
+  const subcategories =
+    typeof subcategory === "string"
+      ? subcategory
+        ? [subcategory]
+        : []
+      : subcategory;
   let pool = questions.filter(
     (q) =>
-      (!domain || q.domain === domain) &&
-      (!subcategory || q.subcategory === subcategory),
+      (!domains.length || domains.includes(q.domain)) &&
+      (!subcategories.length || subcategories.includes(q.subcategory)),
   );
   if (mode === "unanswered") pool = pool.filter((q) => !pm.has(q.id));
   if (mode === "ever-wrong")
@@ -56,7 +64,7 @@ export function selectQuestions(
   if (mode === "bookmarks") pool = pool.filter((q) => bookmarks.includes(q.id));
   if (mode === "weak") {
     const stats = new Map<string, { wrong: number; total: number }>();
-    for (const q of questions) {
+    for (const q of pool) {
       const p = pm.get(q.id);
       if (p) {
         const s = stats.get(q.domain) ?? { wrong: 0, total: 0 };
